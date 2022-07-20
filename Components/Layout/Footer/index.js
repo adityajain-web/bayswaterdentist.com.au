@@ -226,10 +226,10 @@ const index = () => {
               <Box py={2}>
                 <Grid container>
                   <Grid item xs={12} md={6}>
-                    <Typography className="text-md-start text-center"><Link href="/privacy-policy/">Privacy Policy</Link> | <Link href="/terms-and-conditions/">Terms & Condition</Link></Typography>
+                    <Typography className="text-md-left text-center"><Link href="/privacy-policy/">Privacy Policy</Link> | <Link href="/terms-and-conditions/">Terms & Condition</Link></Typography>
                   </Grid>
                   <Grid item xs={12} md={6}>
-                    <Typography className="text-md-end text-center"><Copyright /> {new Date().getFullYear()} | All Rights Reserved.</Typography>
+                    <Typography className="text-md-right text-center"><Copyright /> {new Date().getFullYear()} | All Rights Reserved.</Typography>
                   </Grid>
                 </Grid>
               </Box>

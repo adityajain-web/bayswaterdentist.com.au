@@ -1,6 +1,19 @@
+import Head from 'next/head'
+import { About, Hero, ServiceSec } from '../Components/components'
+import Styles from '../styles/Home/Home.module.css'
+
 const Home = () => {
-    return(<>
-    <h1 className="text-success">Home</h1>
+    return (<>
+        <Head></Head>
+        <Hero />
+        <main>
+            <section>
+                <ServiceSec />
+            </section>
+            <section>
+                <About />
+            </section>
+        </main>
     </>)
 }
 
