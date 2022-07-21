@@ -4,6 +4,7 @@ import '../styles/globals.css'
 import '../styles/Footer.css'
 import '../styles/Header.css'
 import '../styles/media.css'
+import "swiper/css/bundle";
 
 
 import { Header, Footer } from '../Components/components'

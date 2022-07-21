@@ -10,7 +10,7 @@ const BlueBtn = ({anchor, navlink, link, text}) => {
   return (
     <>
     {
-        anchor || navlink ? <Button className="blueBtn mx-2" variant="contained" onClick={navlink ? handleOnClick : null}>{navlink && link ? <Link href={link}>
+        anchor || navlink ? <Button className="blueBtn mr-2" onClick={navlink ? handleOnClick : null}>{navlink && link ? <Link href={link}>
         <a className='text-white text-decoration-none'>{text}</a>
         </Link> : anchor ?  <a href={link} className='text-white text-decoration-none'>{text}</a> : null}</Button> : null
     } 

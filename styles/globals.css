@@ -65,6 +65,26 @@ h6 {
   font-size: var(--h6) !important;
 }
 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: var(--blue);
+  font-family: var(--heading-font-family) !important;
+  text-decoration: none !important;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  color: var(--navy) !important;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -79,6 +99,7 @@ p,
   font-family: var(--para-font-family) !important;
   font-size: 1rem;
   margin-bottom: 0.67rem;
+  display: block;
 }
 
 .css-1p823my-MuiListItem-root {
@@ -117,8 +138,60 @@ p,
   background-color: #dfe3e4 !important;
 }
 
+.sectionalTitle {
+  color: var(--navy);
+  font-size: 3.2rem !important;
+  font-family: var(--heading-font-family);
+}
+
+.isColor {
+  background: var(--blue);
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.cardHead a,
+.cardHead {
+  color: var(--blue) !important;
+}
+
+.isColor .cardHead,
+.isColor .cardHead a {
+  color: #fff;
+}
+
+.isColor .para {
+  color: #fff;
+}
+
+#addressMap ul li .MuiTypography-root {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+}
+
+#addressBox {
+  width: 74%;
+}
+
+#addressBox ul li {
+  margin-bottom: 1rem;
+}
+
 @media only screen and (max-width:600px) {
   h2 {
     font-size: var(--h2-mob) !important;
+  }
+
+  .sectionalTitle {
+    font-size: 2.5rem !important;
+  }
+
+  #addressBox {
+    width: 100%;
   }
 }

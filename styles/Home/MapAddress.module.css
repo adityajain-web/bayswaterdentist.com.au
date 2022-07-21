@@ -1,0 +1,13 @@
+.address{
+    background-image: url('../../public/MapAddress/map-view.jpg');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.text{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
