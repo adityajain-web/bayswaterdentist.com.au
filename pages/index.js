@@ -7,7 +7,7 @@ const Home = () => {
         <Head></Head>
         <Hero />
         <main>
-            <section style={{overflowX:"hidden"}}>
+            <section>
                 <ServiceSec />
             </section>
             <section style={{overflowX:"hidden"}}>
