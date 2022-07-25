@@ -118,20 +118,20 @@ p,
 }
 
 .blueBtn {
-  background-color: var(--blue);
-  padding: 0.7rem 1.6rem;
-  border: none;
-  outline: none;
+  background-color: var(--blue) !important;
+  padding: 0.7rem 1.6rem !important;
+  border: none !important;
+  outline: none !important;
 }
 
 .blueBtn a {
-  font-weight: 600;
-  font-size: 1rem;
-  font-family: var(--para-font-family);
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  font-family: var(--para-font-family) !important;
 }
 
 .blueBtn:hover {
-  background-color: var(--navy);
+  background-color: var(--navy) !important;
 }
 
 .bg-light {
