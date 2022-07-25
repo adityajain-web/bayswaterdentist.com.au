@@ -44,10 +44,10 @@ const CustomCard = ({ height, cardMedia, cardMediaAlt, mediaHeight, navlink, anc
                         }
                     </CardContent> : null}
                 {
-                    offerBtn && small ? <CardActions className={`d-block ${Styles.OfferBtnSmall}`}><Box py={2} style={{ backgroundColor: "var(--navy)", borderRadius: "0.5rem", width:"100%", display:"block" }}>
+                    offerBtn ? <CardActions className={`d-block ${Styles.OfferBtnSmall} mt-1`}><Box py={2} style={{ backgroundColor: "var(--navy)", borderRadius: "0.5rem", width:"100%", display:"block" }}>
                         <Typography align="center" style={{ color: "#fff", fontWeight: "600", fontSize: "1.5rem" }}>{price}</Typography>
                     </Box>
-                        <Typography className="para font-weight-bold" style={{ color: "var(--blue)" }} align="center">{small}</Typography>
+                       <Typography className="para font-weight-bold" style={{ color: "var(--blue)" }} align="center">{small}</Typography>
                     </CardActions> : null
                 }
 
