@@ -1,6 +1,6 @@
 const index = () => {
   return (
-    <>patient-referral-program</>
+    <></>
   )
 }
 

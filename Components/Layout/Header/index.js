@@ -26,9 +26,14 @@ const Header = () => {
       background-color: #fff;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
       `
-    } else if (scrollY < 50) {
+    } else if (scrollY < 50 && width > 1199) {
       document.querySelector('header').style.cssText = `
       background-color: rgba(255, 255, 255, 0.171);
+      box-shadow: none;
+      `
+    }else if(width <= 1199){
+      document.querySelector('header').style.cssText = `
+      background-color: #fff;
       box-shadow: none;
       `
     }
@@ -189,9 +194,9 @@ const Header = () => {
               </a>
             </Link>
             <Box>
-            <button className="mx-3" style={{backgroundColor:"var(--blue)", height:"2.5rem", width:"2.5rem", borderRadius:"50%", border:"none", outline:"none"}}>
+            <button className="mx-3" style={{backgroundColor:"var(--blue)", height:"2rem", width:"2rem", borderRadius:"50%", border:"none", outline:"none"}}>
               <a href="tel:(03)-9069 3100">
-              <Phone className="text-white" />
+              <Phone className="text-white" style={{fontSize:"0.9rem"}} />
               </a>
             </button>
             <BlueBtn navlink={true} link="/book/" text="BOOK NOW" />

@@ -13,7 +13,7 @@ const CustomCard = ({ height, cardMedia, cardMediaAlt, mediaHeight, navlink, anc
 
     return (
         <>
-            <Card className={`shadow`} style={{ height: height && width > 900 ? height : "auto", position:"relative" }}>
+            <Card className={`shadow grow`} style={{ height: height && width > 900 ? height : "auto", position:"relative" }}>
                 {
                     cardMedia ? <CardMedia component="img" image={cardMedia.src} alt={cardMediaAlt} height={mediaHeight ? mediaHeight : "200"} /> : null
                 }

@@ -1,0 +1,10 @@
+.heading {
+    font-size: 2.8rem !important;
+    color: var(--navy);
+}
+
+@media only screen and (max-width: 600px){
+    .heading{
+        font-size: 2.3rem !important;
+    }
+}
