@@ -19,8 +19,6 @@ const BlogSec = () => {
         fetchBlog()
     }, [blogs])
 
-    console.log(blogs)
-
     return (
         <>
             {

@@ -11,7 +11,7 @@ const MapAddress = () => {
                 <Grid container>
                     <Grid item xs={12} md={6}>
                         <Box className="embed-responsive embed-responsive-1by1">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25206.167519011815!2d145.263!3d-37.842248!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7283430ff311551e!2sBayswater%20Dentist!5e0!3m2!1sen!2sin!4v1658405619818!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowFullScreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25206.167519011815!2d145.263!3d-37.842248!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7283430ff311551e!2sBayswater%20Dentist!5e0!3m2!1sen!2sin!4v1658405619818!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>

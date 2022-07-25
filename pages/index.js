@@ -7,25 +7,25 @@ const Home = () => {
         <Head></Head>
         <Hero />
         <main>
-            <section>
+            <section style={{overflowX:"hidden"}}>
                 <ServiceSec />
             </section>
-            <section>
+            <section style={{overflowX:"hidden"}}>
                 <About />
             </section>
             <section className='mt-md-5 mt-3 py-md-3 py-4'>
                 <ServiceSlider />
             </section>
-            <section className='mt-md-5 mt-3 py-md-3 py-4 bg-light'>
+            <section style={{overflowX:"hidden"}} className='mt-md-5 mt-3 py-md-3 py-4 bg-light'>
                 <Offer />
             </section>
-            <section className='mt-md-2 mt-3 py-md-3 py-4'>
+            <section style={{overflowX:"hidden"}} className='mt-md-2 mt-3 py-md-3 py-4'>
                 <PaymentOpt />
             </section>
-            <section className='mt-md-2 mt-3 py-md-3 py-4'>
+            <section style={{overflowX:"hidden"}} className='mt-md-2 mt-3 py-md-3 py-4'>
                 <MapAddress />
             </section>
-            <section className='mt-md-2 mt-3 py-md-3 py-4'>
+            <section style={{overflowX:"hidden"}} className='mt-md-2 mt-3 py-md-3 py-4'>
                 <BlogSec />
             </section>
         </main>
