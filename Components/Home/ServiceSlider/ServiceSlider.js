@@ -21,7 +21,7 @@ const ServiceSlider = () => {
         <>
             <Container maxWidth="xxl">
                 <Grid container>
-                    <Grid item xs={11} md={10} className="mx-auto">
+                    <Grid item xs={12} md={10} className="mx-auto">
                         <Box mt={2}>
                             <SectionalHeading variant="h2" align="center" title="OUR DENTAL SERVICES" />
                         <Box alignSelf="center">

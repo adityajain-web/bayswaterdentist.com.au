@@ -2,40 +2,55 @@ import { Container, Grid, Box, Typography } from '@mui/material';
 import { useRouter } from 'next/router'
 import Styles from '../../styles/CommonHero.module.css'
 
-import AboutBg from '../../public/About/Hero/about-bg.jpg'
-import { useEffect, useState } from 'react';
 import { BlueBtn } from '../components';
 import { SignalWifiStatusbarNull } from '@mui/icons-material';
 
-const CommonHero = () => {
+import AboutBg from '../../public/About/Hero/about-bg.jpg'
+import PatientRefBg from '../../public/Patient Referral Program/Hero.jpg'
+import PaymentPlan from '../../public/Payment Plan/pyament-plan-banner.jpg'
+import TeamBg from '../../public/Team/team-bg.jpg'
+
+const CommonHero = ({ grid, align }) => {
     const { pathname } = useRouter()
 
     const background = [
-        { id: "about", slug: "/about", bg: AboutBg, title: "Bayswater Dental Clinic", subtitle: "Bayswater Dentist is delighted to provide residents with high-quality and comprehensive dental care to meet their needs.", bookNow: true }
+        { id: "about", slug: "/about", bg: AboutBg, title: "<span class='text-white headingHead'>Bayswater Dental Clinic</span>", subtitle: '<span class="text-white para">Bayswater Dentist is delighted to provide residents with high-quality and comprehensive dental care to meet their needs.</span>', bookNow: true },
+
+        { id: "patient-referral-program", slug: "/patient-referral-program", bg: PatientRefBg, title: `<span class='headingSpan1'>Patient Referral</span> <br /> <span class='headingSpan2'>Program</span>`, subtitle: null, bookNow: true }, 
+
+        { id: "payment-plans", slug: "/payment-plans", bg: PaymentPlan, title: "<span class='headingSpan1'>Payment Plans For Your</span> <br /> <span class='headingSpan2'>Dental Treatment</span>", subtitle: null, bookNow: true },
+
+        { id: "team", slug: "/team", bg: TeamBg, title: "<span class='headingSpan1'>Meet Our Professional</span> <br /> <span class='headingSpan2'>Dental Care Team</span>", subtitle: null, bookNow: true }
     ]
 
     const bgImage = background.filter(entries => entries.slug === pathname)
 
     return (
         <>
-            <Container maxWidth="xxl" className={Styles.hero} style={{ backgroundImage: bgImage.length > 0 ? `url(${bgImage[0].bg.src})` : null }}>
+            <Container maxWidth="xxl"  className={`${Styles.hero}`} style={{ backgroundImage: bgImage.length > 0 ? `url(${bgImage[0].bg.src})` : null }}>
                 <Grid container style={{ height: "inherit" }}>
-                    <Grid item xs={11} md={10} className="mx-auto d-flex justify-content-center align-items-center" style={{ height: "inherit" }}>
-                        {
-                            bgImage.length > 0 ? <Box id="heroText">
-                                {
-                                    bgImage[0].title !== null ? <Typography variant='h1' align='center' className={Styles.head}>{bgImage[0].title}</Typography> : null
-                                }
-                                {
-                                    bgImage[0].subtitle !== null ? <Typography className={Styles.para} align='center'>{bgImage[0].subtitle}</Typography> : null
-                                }
-                                {
-                                    bgImage[0].bookNow ? <Box className='text-center' mt={2}>
-                                        <BlueBtn navlink={true} link="/book/" text="BOOK NOW" />
-                                    </Box> : SignalWifiStatusbarNull
-                                }
-                            </Box> : null
-                        }
+                    <Grid item xs={12} md={10} className={`mx-auto d-flex align-items-center ${align === "center" ? "justify-content-center" : align === "left" ? "justify-content-start" : align === "right" ? "justify-content-end" : null}`} style={{ height: "inherit" }}>
+                        <Box style={{width:"100%"}}>
+                            <Grid container>
+                                <Grid item xs={12} md={grid ? 8 : 12}>
+                                    {
+                                        bgImage.length > 0 ? <Box id="heroText">
+                                            {
+                                                bgImage[0].title !== null ? <Typography variant='h1' align={align} className={`${Styles.head} `} dangerouslySetInnerHTML={{ __html: bgImage[0].title }} /> : null
+                                            }
+                                            {
+                                                bgImage[0].subtitle !== null ? <Typography className={Styles.para} align={align} dangerouslySetInnerHTML={{ __html: bgImage[0].subtitle }} /> : null
+                                            }
+                                            {
+                                                bgImage[0].bookNow ? <Box className={align === 'center' ? 'text-center' : align === 'left' ? 'text-left' : align === 'right' === 'text-right'} mt={2}>
+                                                    <BlueBtn navlink={true} link="/book/" text="BOOK NOW" />
+                                                </Box> : SignalWifiStatusbarNull
+                                            }
+                                        </Box> : null
+                                    }
+                                </Grid>
+                            </Grid>
+                        </Box>
                     </Grid>
                 </Grid>
             </Container>

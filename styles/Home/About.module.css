@@ -4,7 +4,7 @@
 }
 
 .span2 {
-    color: var(--blue);
+    color: #117295;
 }
 
 .ImageContainer {
@@ -36,7 +36,7 @@
 }
 
 .bluePara{
-    color: var(--blue);
+    color: #117295;
     font-weight: 600;
     font-size: 1.1rem;
 }

@@ -8,7 +8,8 @@ export { default as SectionalHeading } from './SectionalHeading/SectionalHeading
 export { default as PaymentOptComp } from './PaymentOptComp/PaymentOptComp';
 export { default as TNC } from './TNC/TNC';
 export { default as CommonHero } from './CommonHero/CommonHero';
-export { default as PageSectionalHeading } from './PageSectionalHeading/PageSectionalHeading'
+export { default as PageSectionalHeading } from './PageSectionalHeading/PageSectionalHeading';
+export {default as InterestFree} from './InterestFree/InterestFree'
 
 
 //Home page Sections

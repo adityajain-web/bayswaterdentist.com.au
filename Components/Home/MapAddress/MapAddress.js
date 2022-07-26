@@ -22,7 +22,7 @@ const MapAddress = () => {
                                     <List>
                                         <ListItem>
                                             <ListItemIcon>
-                                                <FiPhone style={{ color: "var(--blue)", fontSize:"1.8rem", marginRight:"0.8rem" }} />
+                                                <FiPhone style={{ color: "#117295", fontSize:"1.8rem", marginRight:"0.8rem" }} />
                                             </ListItemIcon>
                                             <a href="tel:(03)-9069 3100">
                                                 <ListItemText primary="(03)-9069 3100"  />
@@ -30,13 +30,13 @@ const MapAddress = () => {
                                         </ListItem>
                                         <ListItem>
                                             <ListItemIcon>
-                                                <LocationOnOutlined style={{ color: "var(--blue)", fontSize:"1.8rem", marginRight:"0.8rem" }} />
+                                                <LocationOnOutlined style={{ color: "#117295", fontSize:"1.8rem", marginRight:"0.8rem" }} />
                                             </ListItemIcon>
                                                 <ListItemText primary="664 Mountain Hwy, Bayswater VIC 3153, Australia"  />
                                         </ListItem>
                                         <ListItem>
                                             <ListItemIcon>
-                                                <MailOutline style={{ color: "var(--blue)", fontSize:"1.8rem", marginRight:"0.8rem" }} />
+                                                <MailOutline style={{ color: "#117295", fontSize:"1.8rem", marginRight:"0.8rem" }} />
                                             </ListItemIcon>
                                             <a href="mailto:bayswaterdentist@gmail.com">
                                                 <ListItemText primary="bayswaterdentist@gmail.com"  />

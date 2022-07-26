@@ -26,7 +26,7 @@ const index = () => {
                         <ListItem className="p-0 mr-3">
                           <a href="https://www.facebook.com/Bayswaterdentist.com.au/" target="_blank" rel="noreferrer">
                             <ListItemAvatar>
-                              <Avatar style={{ background: "var(--blue)" }}>
+                              <Avatar style={{ background: "#117295" }}>
                                 <FaFacebookF />
                               </Avatar>
                             </ListItemAvatar>
@@ -35,7 +35,7 @@ const index = () => {
                         <ListItem className="p-0 mr-3">
                           <a href="https://www.pinterest.com.au/bayswaterdentist/" target="_blank" rel="noreferrer">
                             <ListItemAvatar>
-                              <Avatar style={{ background: "var(--blue)" }}>
+                              <Avatar style={{ background: "#117295" }}>
                                 <FaPinterestP />
                               </Avatar>
                             </ListItemAvatar>
@@ -44,7 +44,7 @@ const index = () => {
                         <ListItem className="p-0 mr-3">
                           <a href="https://twitter.com/bayswaterdentst/" target="_blank" rel="noreferrer">
                             <ListItemAvatar>
-                              <Avatar style={{ background: "var(--blue)" }}>
+                              <Avatar style={{ background: "#117295" }}>
                                 <FaTwitter />
                               </Avatar>
                             </ListItemAvatar>
@@ -53,7 +53,7 @@ const index = () => {
                         <ListItem className="p-0 mr-3">
                           <a href="https://www.instagram.com/bayswaterdentist/" target="_blank" rel="noreferrer">
                             <ListItemAvatar>
-                              <Avatar style={{ background: "var(--blue)" }}>
+                              <Avatar style={{ background: "#117295" }}>
                                 <FaInstagram />
                               </Avatar>
                             </ListItemAvatar>

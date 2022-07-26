@@ -20,11 +20,11 @@
   }
 
   #footer_top li a:hover{
-    color: var(--blue);
+    color: #117295;
   }
 
 footer p a, footer p{
-  color: var(--blue);
+  color: #117295;
   font-size: 1rem;
   font-weight: 600 !important;
 }

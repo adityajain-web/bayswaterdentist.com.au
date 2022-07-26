@@ -10,7 +10,7 @@ const About = () => {
         <>
             <Container maxWidth="xxl" className="bg-light">
                 <Grid container>
-                    <Grid item xs={11} md={10} className="mx-auto">
+                    <Grid item xs={12} md={10} className="mx-auto">
                         <Box py={8}>
                             <Grid container spacing={5}>
                                 <Grid item xs={12} lg={6}>

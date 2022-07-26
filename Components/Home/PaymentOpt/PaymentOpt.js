@@ -7,7 +7,7 @@ const PaymentOpt = () => {
         <>
             <Container maxWidth="xxl" className="py-md-5">
                 <Grid container>
-                    <Grid item xs={11} md={10} className="mx-auto">
+                    <Grid item xs={12} md={10} className="mx-auto">
                         <Box>
                             <SectionalHeading variant={'subtitle1'} align="center" title="FLEXIBLE PAYMENT" />
                             <Box>

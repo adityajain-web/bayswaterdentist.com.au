@@ -71,7 +71,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-  color: var(--blue);
+  color: #117295 !important;
   font-family: var(--heading-font-family) !important;
   text-decoration: none !important;
 }
@@ -118,7 +118,7 @@ p,
 }
 
 .blueBtn {
-  background-color: var(--blue) !important;
+  background-color: #117295 !important;
   padding: 0.7rem 1.6rem !important;
   border: none !important;
   outline: none !important;
@@ -145,7 +145,7 @@ p,
 }
 
 .isColor {
-  background: var(--blue);
+  background: #117295;
   height: 100%;
   position: relative;
   left: 0;
@@ -156,7 +156,7 @@ p,
 
 .cardHead a,
 .cardHead {
-  color: var(--blue) !important;
+  color: #117295 !important;
 }
 
 .isColor .cardHead,
@@ -182,7 +182,7 @@ p,
   margin-bottom: 1rem;
 }
 
-.grow{
+.grow {
   transition: all 0.6s ease;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
@@ -190,7 +190,7 @@ p,
   -o-transition: all 0.6s ease;
 }
 
-.grow:hover{
+.grow:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -198,22 +198,48 @@ p,
   -o-transform: scale(1.1);
 }
 
-.subtitle{
+.subtitle {
   color: var(--navy);
   font-family: var(--heading-font-family) !important;
 }
 
-h3.subtitle{
+h3.subtitle {
   font-size: 2rem !important;
 }
 
-.font-weight-bold span{
+.font-weight-bold span {
   font-weight: 600;
 }
 
-.he-row h2{
+.he-row h2 {
   font-size: 1rem !important;
 }
+
+.headingSpan1 {
+  font-size: 3.6rem !important;
+  color: var(--navy);
+}
+
+.headingSpan2 {
+  font-size: 6rem !important;
+  color: #117295;
+}
+
+.paymentPlanCircle {
+  height: 6rem;
+  width: 6rem;
+  background-color: #117295;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
 
 @media only screen and (max-width:600px) {
   h2 {
@@ -229,7 +255,28 @@ h3.subtitle{
     width: 100%;
   }
 
-  h3.subtitle{
+  h3.subtitle {
     font-size: 1.7rem !important;
+  }
+
+  .grow:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+
+  #podium-bubble {
+    bottom: 5rem !important;
+    right: -1rem !important;
+  }
+
+  .headingSpan1 {
+    font-size: 2.5rem !important;
+  }
+
+  .headingSpan2 {
+    font-size: 3.9rem !important;
   }
 }

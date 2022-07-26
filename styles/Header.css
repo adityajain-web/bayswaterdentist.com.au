@@ -46,10 +46,6 @@ header ul li.nav-item.dropdown:hover .dropdown-menu {
     background-color: #fff;
     }
 
-    nav{
-        background-color: red !important;
-    }
-
     .nav-menu {
         flex-direction: column;
         width: 100%;

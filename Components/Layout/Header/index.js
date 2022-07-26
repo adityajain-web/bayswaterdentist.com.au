@@ -194,7 +194,7 @@ const Header = () => {
               </a>
             </Link>
             <Box>
-            <button className="mx-3" style={{backgroundColor:"var(--blue)", height:"2rem", width:"2rem", borderRadius:"50%", border:"none", outline:"none"}}>
+            <button className="mx-3" style={{backgroundColor:"#117295", height:"2rem", width:"2rem", borderRadius:"50%", border:"none", outline:"none"}}>
               <a href="tel:(03)-9069 3100">
               <Phone className="text-white" style={{fontSize:"0.9rem"}} />
               </a>

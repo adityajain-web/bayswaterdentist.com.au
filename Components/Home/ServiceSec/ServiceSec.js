@@ -12,7 +12,7 @@ const ServiceSec = () => {
         <>
             <Container maxWidth="xxl" className='bg-light'>
                 <Grid container>
-                    <Grid item xs={11} md={10} className="mx-auto">
+                    <Grid item xs={12} md={10} className="mx-auto">
                         <Box px={3} py={5} component={Paper} className={`shadow rounded-lg ${Styles.serviceBox}`}>
                             <Grid container spacing={5} justifyContent="center">
                                 {

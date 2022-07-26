@@ -16,6 +16,7 @@ const index = () => {
         <meta name="description" content="Meet our professional team of Bayswater dentists offering dental emergency treatment using new technologies that is tried and tested and following Covid-19 protocols." />
         <meta name="robots" content="index" />
         <link rel="canonical" href="/about/" />
+        <title>About Us | Bayswater Family Dental Clinic | Bayswater Dentist</title>
         <script type="application/ld+json">
           {
             JSON.stringify({
@@ -64,7 +65,7 @@ const index = () => {
           }
         </script>
       </Head>
-      <CommonHero />
+      <CommonHero grid={false} align="center" />
       <main>
         <Container maxWidth="xxl">
           <Grid container>
