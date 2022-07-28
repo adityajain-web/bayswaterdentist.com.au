@@ -35,7 +35,7 @@ const Covid = () => {
                   </Box>
                   <Box mb={3}>
                     <PageSectionalHeading title="Sterilization Protocols and hygiene" variant="h2" align={width > 600 ? 'left' : 'center'} />
-                    <Typography className='para'>We putour client's health first and observe the required sterilization and hygiene guidelines to prevent pathogen infections in our premises by disinfecting all our surroundings with disinfectants that are ADA-approved.</Typography>
+                    <Typography className='para'>We putour client&apos;s health first and observe the required sterilization and hygiene guidelines to prevent pathogen infections in our premises by disinfecting all our surroundings with disinfectants that are ADA-approved.</Typography>
                     <Typography className='para'>We use medical-grade disinfectants and cleaners to eliminate 100% of bacteria,viruses, and other pathogens.</Typography>
                     <Typography className='para'>We also integrate ADA-approved sterilization methods to ensure our carriers and instruments are pathogen and virus-free. In addition, we incorporate smart technology to guarantee that temperature recording is effective for eliminating pathogens</Typography>
                     <Typography className='para'>Our sterilization equipment go through regular maintenance and certification</Typography>
