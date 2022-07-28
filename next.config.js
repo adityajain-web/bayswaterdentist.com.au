@@ -5,6 +5,7 @@ const nextConfig = {
   images:{
     domains:[
       'https:/s4.gifyu.com/',
+      "https://bayswaterdentist.com.au"
     ]
   }
 }

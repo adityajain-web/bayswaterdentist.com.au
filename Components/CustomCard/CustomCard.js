@@ -4,7 +4,7 @@ import { Check } from '@mui/icons-material'
 import Styles from '../../styles/Home/Offer.module.css'
 import { useEffect, useState } from "react"
 
-const CustomCard = ({ height, cardMedia, cardMediaAlt, mediaHeight, navlink, anchor, link, cardText, cardTitle, bgColor, cardList, icon, offerBtn, price, small, blogMedia }) => {
+const CustomCard = ({ height, cardMedia, cardMediaAlt, mediaHeight, navlink, anchor, link, cardText, cardTitle, bgColor, cardList, icon, offerBtn, price, small, blogMedia, cls }) => {
     const [width, setWidth] = useState();
 
     useEffect(()=>{
@@ -13,7 +13,7 @@ const CustomCard = ({ height, cardMedia, cardMediaAlt, mediaHeight, navlink, anc
 
     return (
         <>
-            <Card className={`shadow grow`} style={{ height: height && width > 900 ? height : "auto", position:"relative" }}>
+            <Card className={`shadow grow ${cls}`} style={{ height: height && width > 900 ? height : "auto", position:"relative" }}>
                 {
                     cardMedia ? <CardMedia component="img" image={cardMedia.src} alt={cardMediaAlt} height={mediaHeight ? mediaHeight : "200"} /> : null
                 }
@@ -21,7 +21,7 @@ const CustomCard = ({ height, cardMedia, cardMediaAlt, mediaHeight, navlink, anc
                     blogMedia ? <CardMedia component="img" image={blogMedia} alt={cardMediaAlt} height={mediaHeight ? mediaHeight : "200"} /> : null
                 }
                 {
-                    cardText || cardText || cardList ? <CardContent className={bgColor ? 'isColor' : null}  >
+                    cardTitle || cardText || cardList ? <CardContent className={bgColor ? 'isColor' : null}  >
                         {
                             cardTitle ? <Typography variant="h5" className="cardHead" gutterBottom>{navlink ? <Link href={link}>
                                 <a>{cardTitle}</a>

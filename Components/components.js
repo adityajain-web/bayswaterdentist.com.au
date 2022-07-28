@@ -9,7 +9,9 @@ export { default as PaymentOptComp } from './PaymentOptComp/PaymentOptComp';
 export { default as TNC } from './TNC/TNC';
 export { default as CommonHero } from './CommonHero/CommonHero';
 export { default as PageSectionalHeading } from './PageSectionalHeading/PageSectionalHeading';
-export {default as InterestFree} from './InterestFree/InterestFree'
+export {default as InterestFree} from './InterestFree/InterestFree';
+export {default as BlogSideBar} from './BlogSideBar/BlogSideBar';
+export {default as BlogBanner} from './BlogBanner/BlogBanner';
 
 
 //Home page Sections
