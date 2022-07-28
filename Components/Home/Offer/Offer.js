@@ -15,7 +15,7 @@ const Offer = () => {
                                 <Grid container spacing={3} justifyContent="center">
                                     {
                                         offer.map(item => <Grid key={item.id} item xs={12} md={6} lg={4}>
-                                            <CustomCard cardMedia={item.image} cardMediaAlt={item.alt} cardTitle={item.title} cardList={item.list} height="36rem" icon={true} offerBtn={true} price={item.price} small={item.small} />
+                                            <CustomCard cardMedia={item.image} cardMediaAlt={item.alt} cardTitle={item.title} cardList={item.list} height="37rem" icon={true} offerBtn={true} price={item.price} small={item.small} />
                                         </Grid>)
                                     }
                                 </Grid>

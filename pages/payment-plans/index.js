@@ -79,7 +79,7 @@ function PaymentPlan() {
             <Grid item xs={12} md={9} className="mx-auto">
               <Box py={5}>
                 <section>
-                  <PageSectionalHeading title="PAYMENT PLANS FOR YOUR DENTAL TREATMENT" variant="h2" align="center" />
+                  <PageSectionalHeading title="Payment Plans for your dental treatment" variant="h2" align="center" />
                   <Box>
                     <InterestFree />
                   </Box>
@@ -98,7 +98,7 @@ function PaymentPlan() {
                       </Grid>
                       <Grid item xs={12} md={7}>
                         <Box>
-                          <PageSectionalHeading title="YOUR PLAN FOR A BETTER YOU" align={width < 600 ? 'center' : 'left'} variant="h2" />
+                          <PageSectionalHeading title="Your Plan For A Better You" align={width < 600 ? 'center' : 'left'} variant="h2" />
                           <Typography className="para">We care about making sure you get the best dental treatment you deserve which is why we offer DentiCare Payment Plans as a convenient and easy way to budget and pay for your dental care. DentiCare Payment Plans are simple, flexible and are tailored to suit you. There are no complicated finance contracts, no credit checks or any interest to pay.</Typography>
                           <Box mt={2}>
                             <List>
@@ -143,17 +143,17 @@ function PaymentPlan() {
               <Grid item xs={12} md={9} className="mx-auto">
                 <Container maxWidth="xxl">
                   <Box>
-                    <PageSectionalHeading title="INTEREST FREE PATIENT PAYMENT PLANS AVAILABLE:" variant="h2" align="center" />
+                    <PageSectionalHeading title="Interest Free Patient Payment Plans available:" variant="h2" align="center" />
                     <Divider style={{ background: "#117295" }} />
                     <Box mt={2}>
-                      <Typography className='subtitle' variant="h3" gutterBottom>Specifically designated for clients having Dental & Orthodontic related treatments</Typography>
+                      <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Specifically designated for clients having Dental & Orthodontic related treatments</Typography>
                       <Typography className="para">At Bayswater Dentist we want to put the smile back on our patients and therefore would like to offer best payment plan options so you can receive the high quality dental care needed without worrying about cost. We are excited to bring you DentiCare: a completely automated payment plan system which is a convenient and affordable way to pay the cost of the dental treatment over time. And what’s more you won’t pay any interest or go through any complicated finance contracts. Now there’s no reason for you to delay your treatment. Ask our Dentist about how a no interest DentiCare payment plan can get you into treatment straight away.</Typography>
                       <Typography className="para">The DentiCare Payment Plan can be used for a wide range of general dentistry, cosmetic dentistry and orthodontic treatments. You can use a payment plan for teeth whitening, dental implants, crowns and veneers and most other dental procedures. You can also use a payment plan to cover the cost of your Orthodontic treatment (Invisalign)</Typography>
                       <Typography className="para">Speak to our friendly dental staff to help set up a <a style={{ color: "#117295" }} className="font-weight-bold" href="https://denticarepaymentplans.com.au/for-dental-practices/" rel="noreferrer" target="_blank">DentiCare Payment Plan</a>. All you pay is a minimum of 20%* of your treatment cost directly and $35* payment plan set up fees, after which you can make either weekly, fortnightly or monthly payments!</Typography>
                       <Typography className="para">We are great with kids; our dentists love working with kids. We know how to make them feel ease and make their dental experience a pleasant one. We even go the extent of playing the kid with his/her favourite channel/movie and give them gifts as an appreciation.</Typography>
                     </Box>
                     <Box mt={2}>
-                      <Typography className='subtitle' variant="h3" gutterBottom>Advantages of DentiCare:</Typography>
+                      <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Advantages of DentiCare:</Typography>
                       <Box>
                         <List>
                           <ListItem>
@@ -202,11 +202,11 @@ function PaymentPlan() {
                       </Box>
                     </Box>
                     <Box mt={2}>
-                      <Typography className='subtitle' variant="h3" gutterBottom>DentiCare Payment Solutions 1300 633 472</Typography>
+                      <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>DentiCare Payment Solutions 1300 633 472</Typography>
                       <Typography className="para font-weight-bold">To find out more about payment plans with Bayswater Dentist please do not hesitate to contact us.</Typography>
                     </Box>
                     <Box mt={2}>
-                      <Typography className='subtitle' variant="h3" gutterBottom>How It Works</Typography>
+                      <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>How It Works</Typography>
                       <Box mt={3}>
                         <Grid container spacing={3}>
                           <Grid item xs={12} sm={6} lg={3}>

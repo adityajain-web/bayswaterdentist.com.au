@@ -8,8 +8,15 @@ import about1 from '../../public/About/1.jpg';
 import about2 from '../../public/About/2.jpg'
 import about3 from '../../public/About/3.jpg'
 import about4 from '../../public/About/4.jpg'
+import { useEffect, useState } from 'react';
 
-const index = () => {
+const About = () => {
+const [width, setWidth] = useState();
+
+useEffect(()=>{
+  setWidth(window.innerWidth)
+}, [width])
+
   return (
     <>
       <Head>
@@ -74,7 +81,7 @@ const index = () => {
                 <section>
                   <Container maxWidth="xxl">
                     <Box>
-                      <PageSectionalHeading title="OUR MISSION" variant="h2" align="center" />
+                      <PageSectionalHeading title="Our Mission" variant="h2" align="center" />
                       <Typography className="para">At Bayswater Dentist, we delight in providing high-quality dental care while maintaining a gentle and professional touch. Our clinic’s mission is to ensure that all residents of Bayswater get the best dental care at all times.</Typography>
                     </Box>
                   </Container>
@@ -90,7 +97,7 @@ const index = () => {
                         </Grid>
                         <Grid item xs={12} lg={6}>
                           <Box>
-                            <PageSectionalHeading title="How we achieve it:" variant="h3" align="left" />
+                          <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>How we achieve it:</Typography>
                             <Box>
                               <List>
                                 <ListItem>
@@ -128,7 +135,7 @@ const index = () => {
                 <section className='mt-md-4 mt-3'>
                   <Container maxWidth="xxl">
                     <Box>
-                      <PageSectionalHeading title="WHY CHOOSE US?" align="center" variant="h2" />
+                      <PageSectionalHeading title="Why Choose Us?" align="center" variant="h2" />
                       <Box>
                         <Typography className='subtitle' variant="h3" gutterBottom>We provide safe and clean practices.</Typography>
                         <Typography className="para">At Bayswater Dentist, we abide by Australian Dental Association (ADA) standards to provide clean and safe dental practice. You can rest assured that you and your family access the most pristine and safest dental care at Bayswater Dentist. We rely on the state-of-the-art sterilization tech to disinfect every instrument before every visit.</Typography>
@@ -158,20 +165,20 @@ const index = () => {
                         </Box>
                       </Box>
                       <Box>
-                        <Typography className='subtitle' variant="h3" gutterBottom>Best dental experience</Typography>
+                        <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Best dental experience</Typography>
                         <Typography className='para'>Our Bayswater dentist and the team are fully qualified to provide you and your family the best dental care possible. On arrival at our clinic, our receptionists will welcome you with a smile and ensure that you are comfortable before any procedures begin. Our dental services require minimal waiting time, and you can schedule an appointment with us at your comfort.</Typography>
                       </Box>
                       <Box>
-                        <Typography className='subtitle' variant="h3" gutterBottom>Detailed patient consultation</Typography>
+                        <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Detailed patient consultation</Typography>
                         <Typography className='para'>We believe that empowering the patient will help them make the most informed decisions regarding their dental care. At Bayswater Dentist, we start by examining each dental condition and then consult the patient about the diagnosis before bringing up the treatment options.</Typography>
                         <Typography className='para'>At every step of the treatment plan, we endeavor to fully inform our patients and learn as much as we can about their medical history and current medications that might affect the outcomes of dental care.</Typography>
                       </Box>
                       <Box>
-                        <Typography className='subtitle' variant="h3" gutterBottom>Providing training and continuous education</Typography>
+                        <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Providing training and continuous education</Typography>
                         <Typography className='para'>At Bayswater Dentist, all our members fulfill their responsibility of pursuing more training and continuing their education by attending lectures, conventions, and dental seminars. All our teams stay up-to-date on new treatment procedures and technologies in dentistry to ensure that you and your family get the best dental care.</Typography>
                       </Box>
                       <Box>
-                        <Typography className='subtitle' variant="h3" gutterBottom>Insurance and payment options</Typography>
+                        <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Insurance and payment options</Typography>
                         <List>
                           <ListItem>
                             <ListItemIcon>
@@ -225,34 +232,34 @@ const index = () => {
                 <section className='mt-md-4 mt-3'>
                   <Container maxWidth="xxl">
                     <Box>
-                      <PageSectionalHeading title="NEW TECHNOLOGIES AT BAYSWATER DENTAL CLINIC" align="center" variant="h2" />
+                      <PageSectionalHeading title="New Technologies at Bayswater dental clinic" align="center" variant="h2" />
                       <Typography className='para'>In line with our mission to improve our overall dental service delivery, Bayswater Dentist has invested in the following technologies:</Typography>
                       <Box>
-                        <Typography className='subtitle' variant="h3" gutterBottom>Trios 3 Shape dental intraoral scanner</Typography>
+                        <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Trios 3 Shape dental intraoral scanner</Typography>
                         <Typography className="para">To provide high-quality impressions and with impressive accuracy, our dentists at Bayswater clinic have adopted 3Shape Trios dental intraoral scanners. The result is a significant dental restoration that’s also aesthetically appealing and looks natural. On top of lowering the procedure time, the technologies also cut down on the need for frequent adjustments and repairs. The patient also feels more comfortable compared to traditional impressions.</Typography>
                       </Box>
                       <Box>
-                        <Typography className='subtitle' variant="h3" gutterBottom>Intraoral camera</Typography>
+                        <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Intraoral camera</Typography>
                         <Typography className="para">At Bayswater Dentist, we rely on intraoral cameras to make better and more precise diagnoses. The camera takes detailed pictures of your teeth, and it’s designed to fit in the mouth without much intrusion. Dentists can then analyse the photos to identify cavities and other dental issues such as gum disease. After the procedure, your dentist will discuss the problems with you and take you through the available treatment plans. After the dental operation, the intraoral camera is used to take more photos to compare the before and after the treatment.</Typography>
                       </Box>
                       <Box>
-                        <Typography className='subtitle' variant="h3" gutterBottom>Digital x-ray</Typography>
+                        <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Digital x-ray</Typography>
                         <Typography className="para">With the recent advances in digital x-ray technologies, you no longer have to worry about ionizing radiation from such procedures. Our Bayswater dentist rely on digital x-rays, which emit way lower radiation, and they can be stored digitally for future sharing and referencing during referrals. The digital x-rays allow our dentists to make an informed diagnosis and providing the most effective treatment plan. Another advantage of digital x-rays over traditional x-rays is that you can ask your dentist at Bayswater Dentist to share with you all your x-rays when you need to get a second opinion.</Typography>
                       </Box>
                       <Box>
-                        <Typography className='subtitle' variant="h3" gutterBottom>Soft tissue laser</Typography>
+                        <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Soft tissue laser</Typography>
                         <Typography className="para">Soft tissue laser technologies come in handy when operating on soft tissues where focusing electronic laser beams on a target area gently removes the tissue without damaging adjacent tissues. At Bayswater Dentist, we rely on soft tissue laser technology in various procedures such as gingival contouring. The dentist relies on the laser beams to shape the gum tissue as needed. The technology is less invasive, and the adjacent deep tissues heal much faster as they are not damaged during the procedure.</Typography>
                       </Box>
                       <Box>
-                        <Typography className='subtitle' variant="h3" gutterBottom>Advanced Sterilization techniques</Typography>
+                        <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Advanced Sterilization techniques</Typography>
                         <Typography className="para">All our dental offices are sterilized to observe maximum hygiene at all times. Our Bayswater dentist utilizes ultrasonic cleaning and pressure sterilization to maintain maximum hygiene during every dental procedure. The clinic has numerous hand scrubbing spots for our staff and visitors to reduce the probability of any contamination.</Typography>
                       </Box>
                       <Box>
-                        <Typography className='subtitle' variant="h3" gutterBottom>Amalgam filtration system</Typography>
+                        <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Amalgam filtration system</Typography>
                         <Typography className="para">Some dental procedures utilize harmful substances such as mercury and amalgam material, resulting in the public water system if not carefully filtered out. Our clinic relies on an amalgam filtration system to filter out these dangerous substances that would otherwise cause harmful side effects on the local population if left to drain out with the rest of the wastewater from the clinic.</Typography>
                       </Box>
                       <Box>
-                        <Typography className='subtitle' variant="h3" gutterBottom>Nitrous oxide for dental patients’ comfort</Typography>
+                        <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Nitrous oxide for dental patients’ comfort</Typography>
                         <Typography className="para">At Bayswater Dentist, we recognize that dental anxiety can make patients compromise their dental hygiene out of fear of the dentist’s seat. To help our patients curb their dental anxiety, we provide nitrous oxide sedation with powerful sedative properties that kick in immediately. On top of relieving pain, nitrous oxide makes patients relax during the procedure. The gas is administered via a mask, and the dentist can control how much of the gas gets mixed with oxygen to maintain the ideal sedation. The laughing effect wears out pretty quickly after the mask is withdrawn, allowing patients to resume their daily activities after the dental procedure.</Typography>
                       </Box>
                       <Box mt={2}>
@@ -270,4 +277,4 @@ const index = () => {
   )
 }
 
-export default index
+export default About

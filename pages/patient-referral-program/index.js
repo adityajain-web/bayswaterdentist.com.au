@@ -73,7 +73,7 @@ const PatientReferralProgram = () => {
             <Grid item xs={12} md={9} className="mx-auto">
               <section>
                 <Box py={5}>
-                  <PageSectionalHeading title="WHAT TO EXPECT AT BAYSWATER DENTIST" variant="h2" align="center" />
+                  <PageSectionalHeading title="What to expect at Bayswater Dentist" variant="h2"  align={width > 600 ? 'left' : 'center'} />
                   <Typography className="para">Let’s agree, we know there many dental providers in the Bayswater area, and we are truly delighted that you trust us as your best dental provider in Bayswater. Your referrals and testimonials go a long way to spreading the word about the services and care we provide.</Typography>
                   <Typography className="para">To show our appreciation, we offer a patient referral reward program. We will be giving you a $25.00* credit towards your next dental visit for any successful referral. We credit your account as well as send you an SMS notification. During your next visit, just show us the referral credit and enjoy your bonus.</Typography>
                   <Typography className="para">Entering our dental patient referral program is simple. All you need is to go ahead and refer a friend or family member to your clinic. Once they show up for the initial examination, you will receive your credit.</Typography>

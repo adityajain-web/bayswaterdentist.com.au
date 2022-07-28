@@ -1,30 +1,59 @@
+/* Organization */
+
+                Nonstop Corporation
+                website: https://nonstopcorp.com/
+                linkedin: https://www.linkedin.com/company/nonstopcorporation/
+                Address: Nagpur, Maharashtra, India
+
+                Pritam Shinde
+                linkedin: https://in.linkedin.com/in/pritamshinde/
+                From: Nagpur, Maharashtra, India
+
+                Vikram Shinde
+                linkedin: https://www.linkedin.com/in/thevikramshinde/
+                From: Nagpur, Maharashtra, India
+
+                Hemant Swami
+                linkedin: https://in.linkedin.com/in/hemant-swami
+                From: Nagpur, Maharashtra, India
+
+
 /* TEAM */
-        Front-End Developer: Aditya Nitin Burse (Jain)
-        linkedin: https://www.linkedin.com/in/adityaburse-jain
-        Instagram: imaditya_jain
-        From: Nagpur, Maharashtra, India
 
-        Back-End Developer: Ankit Shahu
-        https://www.linkedin.com/in/ankit-shahu-464b28140/
-        Instagram: ankit.shahu_
-        From: Nagpur, Maharashtra, India
+                Front-End Developer: Aditya Nitin Burse (Jain)
+                linkedin: https://www.linkedin.com/in/adityaburse-jain/
+                From: Nagpur, Maharashtra, India
 
-        Designer: Moreshwar Sahare
-        From: Nagpur, Maharashtra, India
+                Back-End Developer: Ankit Shahu
+                https://www.linkedin.com/in/ankit-shahu-464b28140/
+                From: Nagpur, Maharashtra, India
 
-        Designer: Himanshu Bakal
-        Instagram: oyyyy_himanshu
-        From: Nagpur, Maharashtra, India
+                Designer: Moreshwar Sahare
+                linkedin: https://www.linkedin.com/in/moreshwar-sahare-98a4b910/
+                From: Nagpur, Maharashtra, India
+
+                Designer: Himanshu Bakal
+                linkedin: https://www.linkedin.com/in/himanshu-bakal/
+                From: Nagpur, Maharashtra, India
+
+                SEO Specialist: Sunil Chaodhary
+                linkedin: https://www.linkedin.com/in/sunil-choudhary-2586b7115/?originalSubdomain=in
+                From: Nagpur, Maharashtra, India
+
+                SEO Specialist: James Dushing
+                https://www.linkedin.com/in/jamesdushingseo/?originalSubdomain=in
+                From: Nagpur, Maharashtra, India
+
 
 /* Technology */
 
-        Front-End Technology: 1] NEXT.JS
-                              2] Material Ui
-                              3] Bootstrap
+                Front-End Technology: 1] NEXT.JS
+                                      2] Material Ui
+                                      3] Bootstrap
 
-        Headless-CMS          1] WordPress
+                Headless-CMS:         1] WordPress
 
-        Backend Technology:   1] PHP 
+                Backend Technology:   1] PHP 
 
-        IDE:                  1] Microsoft Visual Studio Code
+                IDE:                  1] Microsoft Visual Studio Code
 

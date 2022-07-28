@@ -50,7 +50,6 @@ const CustomCard = ({ height, cardMedia, cardMediaAlt, mediaHeight, navlink, anc
                        <Typography className="para font-weight-bold" style={{ color: "#117295" }} align="center">{small}</Typography>
                     </CardActions> : null
                 }
-
             </Card>
         </>
     )
