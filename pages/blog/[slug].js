@@ -8,6 +8,7 @@ import Image from "next/image";
 
 const SingleBlog = () => {
   const [blog, setBlog] = useState([])
+  const [randomBanner, setRandomBanner] = useState(0)
   const router = useRouter();
   const slug = router.query.slug
 
@@ -26,10 +27,10 @@ const SingleBlog = () => {
     }
   }, [slug]);
 
-  let randomBanner = Math.floor(Math.random()*3);
-
-  console.log(blog)
-
+  useEffect(() => {
+    const randomBanner = Math.floor(Math.random() * 3);
+    setRandomBanner(randomBanner)
+  }, [slug])
   return (
     <>
       {

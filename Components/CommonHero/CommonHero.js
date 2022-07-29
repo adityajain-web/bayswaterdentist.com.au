@@ -13,6 +13,8 @@ import OfferBg from '../../public/Offer/offerBg.jpg';
 import ChildBenefitBg from '../../public/Child Benefit/child-benefits-bg.jpg'
 import BlogBg from '../../public/Blog/Blog-bg.jpg'
 import CovidBg from '../../public/Covid/covid-1.jpg'
+import ContactBg from '../../public/Contact/contact-us-compressed.jpg'
+import SubUrbBg from '../../public/Suburb/suburb-bg.jpg';
 
 const CommonHero = ({ grid, align }) => {
     const { pathname } = useRouter()
@@ -32,7 +34,11 @@ const CommonHero = ({ grid, align }) => {
 
         { id: "blog", slug: "/blog", bg: BlogBg, title: "<span class='headingSpan1'>Blog</span>", subtitle: null, bookNow: false },
 
-        { id: "covid", slug: "/covid-19", bg: CovidBg, title: "<span class='headingSpan1'>How We Can Overcome the</span> <br /> <span class='headingSpan2'>Spread of Coronavirus Together</span>", subtitle: null, bookNow: false }
+        { id: "covid", slug: "/covid-19", bg: CovidBg, title: "<span class='headingSpan1'>How We Can Overcome the</span> <br /> <span class='headingSpan2'>Spread of Coronavirus Together</span>", subtitle: null, bookNow: false },
+
+        { id: "contact", slug: "/contact", bg: ContactBg, title: "<span class='headingSpan1'>Contact Us</span>", subtitle: "<span class='text-white'>Our Dental clinic is dedicated to provide you with the most up to date General, Cosmetic, Restorative and Family Dentistry.</span>", bookNow: true },
+
+        { id: "boronia", slug: "/suburb/boronia", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Boronia</span>", bookNow: true }
     ]
 
     const bgImage = background.filter(entries => entries.slug === pathname)

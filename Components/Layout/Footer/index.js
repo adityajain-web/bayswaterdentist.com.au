@@ -215,6 +215,30 @@ const index = () => {
                       </List>
                     </Box>
                   </Grid>
+                  <Grid item xs={12} sm={6} lg={12} >
+                    <Box mb={2} py={1} style={{borderBottom:"1px solid #fff", borderTop:"1px solid #fff"}}>
+                      <List className="d-flex flex-wrap justify-content-center">
+                        {
+                          [
+                            { id: "subUrb-1", text: "Boronia", link: "/suburb/boronia/" },
+                            { id: "subUrb-2", text: "Heathmont", link: "/suburb/heathmont/" },
+                            { id: "subUrb-3", text: "Kilsyth", link: "/suburb/kilsyth/" },
+                            { id: "subUrb-4", text: "Knox", link: "/suburb/knox/" },
+                            { id: "subUrb-5", text: "Mooroolbark", link: "/suburb/mooroolbark/" },
+                            { id: "subUrb-6", text: "Ringwood", link: "/suburb/ringwood/" },
+                            { id: "subUrb-7", text: "The Basin", link: "/suburb/the-basin/" },
+                            { id: "subUrb-8", text: "Vermont", link: "/suburb/vermont/" },
+                            { id: "subUrb-9", text: "Wantirna South", link: "/suburb/wantirna-south/" },
+                            { id: "subUrb-10", text: "Wantirna", link: "/suburb/wantirna/" },
+                          ].map(item => <ListItem key={item.id} className="p-1 m-1" style={{width:"fit-content"}}>
+                            <Link href={item.link}>
+                              <a className="text-white">{item.text}</a>
+                            </Link>
+                          </ListItem>)
+                        }
+                      </List>
+                    </Box>
+                  </Grid>
                 </Grid>
               </Box>
             </Grid>
@@ -225,11 +249,8 @@ const index = () => {
             <Grid item xs={11} md={10} className="mx-auto">
               <Box py={2}>
                 <Grid container>
-                  <Grid item xs={12} md={6}>
-                    <Typography className="text-md-left text-center"><Link href="/privacy-policy/">Privacy Policy</Link> | <Link href="/terms-and-conditions/">Terms & Condition</Link></Typography>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Typography className="text-md-right text-center"><Copyright /> {new Date().getFullYear()} | All Rights Reserved.</Typography>
+                  <Grid item xs={12} justifyContent="center">
+                    <Typography className="text-center"><Copyright /> {new Date().getFullYear()} All Rights Reserved. <Link href="/privacy-policy/">Privacy Policy</Link> | <Link href="/terms-and-conditions/">Terms & Condition</Link></Typography>
                   </Grid>
                 </Grid>
               </Box>

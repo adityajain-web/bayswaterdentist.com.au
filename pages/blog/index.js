@@ -24,9 +24,8 @@ const Blog = () => {
 
   useEffect(() => {
     setWidth(window.innerWidth)
-  });
+  }, [width]);
 
-  console.log(blogs);
 
   return (
     <>
