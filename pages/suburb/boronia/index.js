@@ -15,9 +15,9 @@ const Boronia = () => {
         <>
 
             <Head>
-                <meta name="description" content="" />
+                <meta name="description" content="boronia" />
                 <meta name="robots" content="index" />
-                <link rel="canonical" href="" />
+                <link rel="canonical" href="/suburb/boronia/" />
                 <title>Boronia</title>
             </Head>
             <CommonHero />

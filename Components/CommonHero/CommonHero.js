@@ -38,7 +38,13 @@ const CommonHero = ({ grid, align }) => {
 
         { id: "contact", slug: "/contact", bg: ContactBg, title: "<span class='headingSpan1'>Contact Us</span>", subtitle: "<span class='text-white'>Our Dental clinic is dedicated to provide you with the most up to date General, Cosmetic, Restorative and Family Dentistry.</span>", bookNow: true },
 
-        { id: "boronia", slug: "/suburb/boronia", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Boronia</span>", bookNow: true }
+        { id: "boronia", slug: "/suburb/boronia", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Boronia</span>", bookNow: true },
+
+        { id: "boronia", slug: "/suburb/heathmont", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Heathmont</span>", bookNow: true },
+
+        { id: "boronia", slug: "/suburb/kilsyth", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Kilsyth</span>", bookNow: true },
+
+        { id: "knox", slug: "/suburb/knox", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Knox</span>", bookNow: true }
     ]
 
     const bgImage = background.filter(entries => entries.slug === pathname)
