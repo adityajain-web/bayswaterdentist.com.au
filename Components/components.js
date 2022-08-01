@@ -12,6 +12,7 @@ export { default as PageSectionalHeading } from './PageSectionalHeading/PageSect
 export {default as InterestFree} from './InterestFree/InterestFree';
 export {default as BlogSideBar} from './BlogSideBar/BlogSideBar';
 export {default as BlogBanner} from './BlogBanner/BlogBanner';
+export {default as ServiceSidebar} from './ServiceSidebar/ServiceSidebar'
 
 
 //Home page Sections

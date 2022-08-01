@@ -7,9 +7,8 @@ import '../styles/Header.css'
 import '../styles/media.css'
 import "swiper/css/bundle";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { useRouter } from 'next/router'
-import { gtmVirtualPageView } from '../lib/gtm';
-
+import AOS from 'aos';
+import '../node_modules/aos/dist/aos.css'
 
 import { Header, Footer } from '../Components/components'
 
@@ -18,17 +17,14 @@ function MyApp({ Component, pageProps }) {
     import("bootstrap/dist/js/bootstrap.bundle");
   }, []);
 
-  const router = useRouter()
-
   useEffect(() => {
-    const mainDataLayer = {
-      pageTypeName: pageProps.page || null,
-      url: router.pathname,
-    };
+    AOS.init({
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 50,
+    });
+  })
 
-    gtmVirtualPageView(mainDataLayer);
-
-  }, [pageProps])
   return (<>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />

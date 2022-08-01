@@ -5,7 +5,7 @@ import { SectionalHeading, PaymentOptComp } from '../../components'
 const PaymentOpt = () => {
     return (
         <>
-            <Container maxWidth="xxl" className="py-md-5">
+            <Container maxWidth="xxl" className="py-md-3">
                 <Grid container>
                     <Grid item xs={12} md={10} className="mx-auto">
                         <Box>

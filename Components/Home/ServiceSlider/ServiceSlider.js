@@ -22,7 +22,7 @@ const ServiceSlider = () => {
             <Container maxWidth="xxl">
                 <Grid container>
                     <Grid item xs={12} md={10} className="mx-auto">
-                        <Box mt={2}>
+                        <Box>
                             <SectionalHeading variant="h2" align="center" title="OUR DENTAL SERVICES" />
                         <Box alignSelf="center">
                             <Swiper

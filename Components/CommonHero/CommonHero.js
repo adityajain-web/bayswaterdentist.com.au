@@ -15,6 +15,8 @@ import BlogBg from '../../public/Blog/Blog-bg.jpg'
 import CovidBg from '../../public/Covid/covid-1.jpg'
 import ContactBg from '../../public/Contact/contact-us-compressed.jpg'
 import SubUrbBg from '../../public/Suburb/suburb-bg.jpg';
+import ServiceBg from '../../public/Services/servises-bg.jpg';
+import DentalImplantsBg from '../../public/Dental-Implants/Dental-implant-bg.jpg'
 
 const CommonHero = ({ grid, align }) => {
     const { pathname } = useRouter()
@@ -44,7 +46,23 @@ const CommonHero = ({ grid, align }) => {
 
         { id: "boronia", slug: "/suburb/kilsyth", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Kilsyth</span>", bookNow: true },
 
-        { id: "knox", slug: "/suburb/knox", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Knox</span>", bookNow: true }
+        { id: "knox", slug: "/suburb/knox", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Knox</span>", bookNow: true },
+
+        { id: "mooroolbark", slug: "/suburb/mooroolbark", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Mooroolbark</span>", bookNow: true },
+
+        { id: "ringwood", slug: "/suburb/ringwood", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Ringwood</span>", bookNow: true },
+
+        { id: "the-basin", slug: "/suburb/the-basin", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>The Basin</span>", bookNow: true },
+
+        { id: "vermont", slug: "/suburb/vermont", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Vermont</span>", bookNow: true },
+
+        { id: "wantirna", slug: "/suburb/wantirna", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Wantirna</span>", bookNow: true },
+
+        { id: "wantirna-south", slug: "/suburb/wantirna-south", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Wantirna South</span>", bookNow: true },
+
+        { id: "services", slug: "/services", bg: ServiceBg, title: "<span class='text-white headingHead'>Dental Health Services</span>", bookNow: true, subtitle:"<span class='text-white para'>Our team of experts is dedicated to providing you with advanced dental services forFamily, Restorative, Cosmetic,Prosthetic and General Dentistry services.</span>" },
+
+        { id: "dental-implants", slug: "/dental-implants", bg: DentalImplantsBg, title: "<span class='text-white headingHead'>Dental Implant Services at Bayswater</span>", bookNow: true, subtitle:"<span class='text-white para'>Our facility offers a solution to missing teeth. <br /> We use dental implants of the highest quality to restore your confidence and enhance your smile</span>" },
     ]
 
     const bgImage = background.filter(entries => entries.slug === pathname)

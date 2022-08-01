@@ -25,7 +25,7 @@ const BlogSec = () => {
                 blogs.length > 0 ? <Container maxWidth="xxl">
                     <Grid container>
                         <Grid item xs={12} md={10} className="mx-auto">
-                            <Box mt={2}>
+                            <Box >
                                 <SectionalHeading variant={'subtitle1'} align="center" title="LATEST BLOGS" />
                                 <Box py={2}>
                                     <Grid container spacing={3} justifyContent="center">

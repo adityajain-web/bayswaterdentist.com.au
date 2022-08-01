@@ -11,12 +11,12 @@ const About = () => {
             <Container maxWidth="xxl" className="bg-light">
                 <Grid container>
                     <Grid item xs={12} md={10} className="mx-auto">
-                        <Box py={8}>
+                        <Box py={4}>
                             <Grid container spacing={5}>
                                 <Grid item xs={12} lg={6}>
                                     <Box className={Styles.ImageContainer}>
                                         <Image src={Clinic} alt="Bayswater Dentist Clinic" />
-                                        <Box className={Styles.aboutAppointment}>
+                                        <Box className={`${Styles.aboutAppointment} shadow-lg`}>
                                             <Typography className={Styles.head} gutterBottom>BOOK YOUR DENTAL APPOINTMENT ONLINE</Typography>
                                             <Typography className={Styles.bluePara} gutterBottom>We are here for you, always!</Typography>
                                             <BlueBtn navlink={true} link="/book/" text="BOOK NOW" />
