@@ -9,7 +9,7 @@ const ServiceSidebar = () => {
 
     return (
         <>
-            <Container maxWidth="xxl">
+            <Container maxWidth="xxl" className={Styles.serviceSidebar}>
                 <Box>
                     {
                         [

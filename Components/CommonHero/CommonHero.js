@@ -16,7 +16,13 @@ import CovidBg from '../../public/Covid/covid-1.jpg'
 import ContactBg from '../../public/Contact/contact-us-compressed.jpg'
 import SubUrbBg from '../../public/Suburb/suburb-bg.jpg';
 import ServiceBg from '../../public/Services/servises-bg.jpg';
-import DentalImplantsBg from '../../public/Dental-Implants/Dental-implant-bg.jpg'
+import DentalImplantsBg from '../../public/Dental-Implants/Dental-implant-bg.jpg';
+import DentureBg from '../../public/Denture/Dentures.jpg'
+import TeethWhitening from '../../public/Teeth-Whitening/teeth-whitening-2.jpg'
+import RootCanal from '../../public/Root-Canal/root-canal-2.jpg'
+import ScaleClean from '../../public/Scale-Clean/scb.jpg'
+import Venners from '../../public/Veeneers/veneers-1.jpg';
+import CNB from '../../public/CNB/crown-bridges-banner.webp'
 
 const CommonHero = ({ grid, align }) => {
     const { pathname } = useRouter()
@@ -63,6 +69,18 @@ const CommonHero = ({ grid, align }) => {
         { id: "services", slug: "/services", bg: ServiceBg, title: "<span class='text-white headingHead'>Dental Health Services</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Our team of experts is dedicated to providing you with advanced dental services forFamily, Restorative, Cosmetic,Prosthetic and General Dentistry services.</span>" },
 
         { id: "dental-implants", slug: "/dental-implants", bg: DentalImplantsBg, title: "<span class='text-white headingHead'>Dental Implant Services at Bayswater</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Our facility offers a solution to missing teeth. <br /> We use dental implants of the highest quality to restore your confidence and enhance your smile</span>" },
+
+        { id: "dentures", slug: "/dentures", bg: DentureBg, title: "<span class='text-white headingHead'>Dentures in Bayswater Dentist</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Our experienced and qualified dentists use advanced technology <br /> to ensure that the dentures are not only comfortable to wear but look and feel natural.</span>" },
+
+        { id: "teeth-whitening", slug: "/teeth-whitening", bg: TeethWhitening, title: "<span class='text-white headingHead'>Professional teeth whitening at Bayswter Dentist</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>The Pola Advanced Tooth Whitening gives you a fast whiter smile. <br /> An instant whiter smile boosts your self-image and confidence..</span>" },
+
+        { id: "root-canal", slug: "/root-canal", bg: RootCanal, title: "<span class='text-white headingHead'>Root Canal Dentist at Bayswater</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>At Bayswater Dentist, we believe in root canal treatment because it allows you to keep the teeth instead of removing them.</span>" },
+
+        { id: "scale-clean", slug: "/scale-clean", bg: ScaleClean, title: "<span class='text-white headingHead'>Scale and Clean at Bayswater</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>A proper dental care routine that entails brushing twice a day, <br /> regular flossing, and routine dental check-ups are essential in maintaining good oral hygiene.</span>" },
+
+        { id: "veneers", slug: "/veneers", bg: Venners, title: "<span class='text-white headingHead'>Veneers Teeth</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Achieve Hollywood smile by using Dental Veneers. Perfect set of teeth is not far away.</span>" },
+
+        { id: "crowns-bridges", slug: "/crowns-bridges", bg: CNB, title: "<span class='text-white headingHead'>Crowns & Bridges Dental Services</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Restore your natural and beautiful smile using Crowns & Bridges.</span>" },
     ]
 
     const bgImage = background.filter(entries => entries.slug === pathname)
