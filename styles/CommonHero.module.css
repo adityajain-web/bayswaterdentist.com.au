@@ -9,7 +9,7 @@
 }
 
 .head {
-    font-size: 4rem;
+    font-size: 4rem !important;
 }
 
 .para {

@@ -22,7 +22,7 @@ const CommonHero = ({ grid, align }) => {
     const { pathname } = useRouter()
 
     const background = [
-        { id: "about", slug: "/about", bg: AboutBg, title: "<span class='text-white headingHead'>Bayswater Dental Clinic</span>", subtitle: '<span class="text-white para">Bayswater Dentist is delighted to provide residents with high-quality and comprehensive dental care to meet their needs.</span>', bookNow: true},
+        { id: "about", slug: "/about", bg: AboutBg, title: "<span class='text-white headingHead'>Bayswater Dental Clinic</span>", subtitle: '<span class="text-white HeroPara">Bayswater Dentist is delighted to provide residents with high-quality and comprehensive dental care to meet their needs.</span>', bookNow: true},
 
         { id: "patient-referral-program", slug: "/patient-referral-program", bg: PatientRefBg, title: `<span class='headingSpan1'>Patient Referral</span> <br /> <span class='headingSpan2'>Program</span>`, subtitle: null, bookNow: true },
 
@@ -60,9 +60,9 @@ const CommonHero = ({ grid, align }) => {
 
         { id: "wantirna-south", slug: "/suburb/wantirna-south", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Wantirna South</span>", bookNow: true },
 
-        { id: "services", slug: "/services", bg: ServiceBg, title: "<span class='text-white headingHead'>Dental Health Services</span>", bookNow: true, subtitle:"<span class='text-white para'>Our team of experts is dedicated to providing you with advanced dental services forFamily, Restorative, Cosmetic,Prosthetic and General Dentistry services.</span>" },
+        { id: "services", slug: "/services", bg: ServiceBg, title: "<span class='text-white headingHead'>Dental Health Services</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Our team of experts is dedicated to providing you with advanced dental services forFamily, Restorative, Cosmetic,Prosthetic and General Dentistry services.</span>" },
 
-        { id: "dental-implants", slug: "/dental-implants", bg: DentalImplantsBg, title: "<span class='text-white headingHead'>Dental Implant Services at Bayswater</span>", bookNow: true, subtitle:"<span class='text-white para'>Our facility offers a solution to missing teeth. <br /> We use dental implants of the highest quality to restore your confidence and enhance your smile</span>" },
+        { id: "dental-implants", slug: "/dental-implants", bg: DentalImplantsBg, title: "<span class='text-white headingHead'>Dental Implant Services at Bayswater</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Our facility offers a solution to missing teeth. <br /> We use dental implants of the highest quality to restore your confidence and enhance your smile</span>" },
     ]
 
     const bgImage = background.filter(entries => entries.slug === pathname)
@@ -81,7 +81,7 @@ const CommonHero = ({ grid, align }) => {
                                                 bgImage[0].title !== null ? <Typography variant='h1' align={align} className={`${Styles.head} `} dangerouslySetInnerHTML={{ __html: bgImage[0].title }} /> : null
                                             }
                                             {
-                                                bgImage[0].subtitle !== null ? <Typography className={Styles.para} align={align} dangerouslySetInnerHTML={{ __html: bgImage[0].subtitle }} /> : null
+                                                bgImage[0].subtitle !== null ? <Typography className={Styles.HeroPara} align={align} dangerouslySetInnerHTML={{ __html: bgImage[0].subtitle }} /> : null
                                             }
                                             {
                                                 bgImage[0].bookNow  ? <Box className={align === 'center' ? 'text-center' : align === 'left' ? 'text-left' : align === 'right' === 'text-right'} mt={2}>
