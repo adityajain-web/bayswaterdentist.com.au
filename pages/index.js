@@ -9,8 +9,13 @@ import { Close } from '@mui/icons-material'
 import { useRouter } from 'next/router'
 
 const Home = () => {
+    const [width, setWidth] = useState()
     const router = useRouter()
     const [open, setOpen] = useState(false)
+
+    useEffect(() => {
+        setWidth(window.innerWidth)
+    }, [width])
 
     useEffect(() => {
         if (open === false) {
@@ -33,20 +38,20 @@ const Home = () => {
     const Popup = () => {
         return (<>
             <Container maxWidth="xxl" style={{ height: "100%", backgroundColor: "rgba(0,0,0,0.7)", position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }} className="d-flex justify-content-center align-items-center">
-                <Box p={3}>
+                <Box p={3} mt={2}>
                     <Box className='d-flex justify-content-end'>
                         <IconButton onClick={() => setOpen(true)}>
                             <Close style={{ color: "#fff" }} />
                         </IconButton>
                     </Box>
                     <Box mt={2}>
-                        <Card className='shadow grow' style={{ width: "20rem" }}>
+                        <Card className='shadow grow' style={{ width: width > 600 ? "20rem" : "18rem" }}>
                             <CardMedia component="img" image={PopupImage.src} alt="scale and clean" />
                             <CardContent>
                                 <Typography variant='h3' align='center' className='subtitle'>$149 Scale & Clean and Check-up Offer*</Typography>
                                 <Typography className='para' align="center"><strong>*Limited time offer.</strong></Typography>
                                 <Box mt={3}>
-                                    <Button fullWidth className="blueBtn" onClick={()=>setOpen(true)}>
+                                    <Button fullWidth className="blueBtn" onClick={() => setOpen(true)}>
                                         <Link href="/book/">
                                             <a style={{ color: "#fff", fontWeight: "bold", textDecoration: "none" }}>BOOK NOW</a>
                                         </Link>

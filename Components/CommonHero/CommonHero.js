@@ -26,6 +26,8 @@ import CNB from '../../public/CNB/crown-bridges-banner.webp';
 import DentalEmergency from '../../public/Dental-Emergency/dental emergency.jpg'
 import Invisalign from '../../public/Invisalign/invisalign-bg.jpg'
 import DentalFillings from '../../public/Dental-Fillings/dentalfillings-bg.jpg'
+import Book from '../../public/Book/ap-2.jpg'
+import ThankU from '../../public/Thank-You/ThankYou.jpg'
 
 const CommonHero = ({ grid, align }) => {
     const { pathname } = useRouter()
@@ -90,6 +92,10 @@ const CommonHero = ({ grid, align }) => {
         { id: "invisalign", slug: "/invisalign", bg: Invisalign, title: "<span class='text-white headingHead'>Invisalign at Bayswater Dentist</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>The most effective and invisible way to correct crooked teeth and transform your smile without having to drain your pockets.</span>" },
 
         { id: "dental-fillings", slug: "/dental-fillings", bg: DentalFillings, title: "<span class='text-white headingHead'>Dental Fillings at Bayswater</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Cavity results from tooth decay, and if left untreated, it can lead to severe teeth damage.</span>" },
+
+        { id: "book", slug: "/book", bg: Book, title: "<span class='headingSpan1'>Book Bayswater Dentist</span> <br /> <span class='headingSpan2'>Appointment Online</span>", bookNow: false, subtitle:"" },
+
+        { id: "thank-you", slug: "/thank-you", bg: ThankU, title: "<span class='headingSpan2'>THANK YOU!</span>", bookNow: false, subtitle:"<span class='HeroPara'>We will get back to you. Having trouble?   <a href='/contact/'>Contact us</a></span>" },
     ]
 
     const bgImage = background.filter(entries => entries.slug === pathname)

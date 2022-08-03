@@ -1,4 +1,4 @@
-import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography, IconButton, Card, CardMedia, CardContent, Button,  } from '@mui/material'
+import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography, IconButton, Card, CardMedia, CardContent, Button, } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link';
@@ -13,55 +13,55 @@ import PopupImage from '../../public/Home/Popup/Scale & Clean.jpg';
 
 const ScaleClean = () => {
   const router = useRouter()
-    const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
-    useEffect(() => {
-        if (open === false) {
-            document.querySelector('footer').style.display = "none"
-        } else if (open === true) {
-            document.querySelector('footer').style.display = "block"
-        }
-    }, [open])
-
-    useEffect(() => {
-        if (router.pathname === "/scale-clean") {
-            let timer1 = setTimeout(setOpen(false), 30000)
-
-            return () => {
-                clearTimeout(timer1)
-            }
-        }
-    }, [router.pathname])
-
-    const Popup = () => {
-        return (<>
-            <Container maxWidth="xxl" style={{ height: "100%", backgroundColor: "rgba(0,0,0,0.7)", position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }} className="d-flex justify-content-center align-items-center">
-                <Box p={3}>
-                    <Box className='d-flex justify-content-end'>
-                        <IconButton onClick={() => setOpen(true)}>
-                            <Close style={{ color: "#fff" }} />
-                        </IconButton>
-                    </Box>
-                    <Box mt={2}>
-                        <Card className='shadow grow' style={{ width: "20rem" }}>
-                            <CardMedia component="img" image={PopupImage.src} alt="scale and clean" />
-                            <CardContent>
-                                <Typography variant='h3' align='center' className='subtitle'>$149 Scale & Clean and Check-up Offer*</Typography>
-                                <Typography className='para' align="center"><strong>*Limited time offer.</strong></Typography>
-                                <Box mt={3}>
-                                    <Button fullWidth className="blueBtn">
-                                        <Link href="/book/">
-                                            <a style={{ color: "#fff", fontWeight: "bold", textDecoration: "none" }}>BOOK NOW</a>
-                                        </Link>
-                                    </Button>
-                                </Box>
-                            </CardContent>
-                        </Card>
-                    </Box>
-                </Box>
-            </Container>
-        </>)
+  useEffect(() => {
+    if (open === false) {
+      document.querySelector('footer').style.display = "none"
+    } else if (open === true) {
+      document.querySelector('footer').style.display = "block"
     }
+  }, [open])
+
+  useEffect(() => {
+    if (router.pathname === "/scale-clean") {
+      let timer1 = setTimeout(setOpen(false), 30000)
+
+      return () => {
+        clearTimeout(timer1)
+      }
+    }
+  }, [router.pathname])
+
+  const Popup = () => {
+    return (<>
+      <Container maxWidth="xxl" style={{ height: "100%", backgroundColor: "rgba(0,0,0,0.7)", position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }} className="d-flex justify-content-center align-items-center">
+        <Box p={3}>
+          <Box className='d-flex justify-content-end'>
+            <IconButton onClick={() => setOpen(true)}>
+              <Close style={{ color: "#fff" }} />
+            </IconButton>
+          </Box>
+          <Box mt={2}>
+            <Card className='shadow grow' style={{ width: width > 600 ? "20rem" : "18rem" }}>
+              <CardMedia component="img" image={PopupImage.src} alt="scale and clean" />
+              <CardContent>
+                <Typography variant='h3' align='center' className='subtitle'>$149 Scale & Clean and Check-up Offer*</Typography>
+                <Typography className='para' align="center"><strong>*Limited time offer.</strong></Typography>
+                <Box mt={3}>
+                  <Button fullWidth className="blueBtn">
+                    <Link href="/book/">
+                      <a style={{ color: "#fff", fontWeight: "bold", textDecoration: "none" }}>BOOK NOW</a>
+                    </Link>
+                  </Button>
+                </Box>
+              </CardContent>
+            </Card>
+          </Box>
+        </Box>
+      </Container>
+    </>)
+  }
   const [width, setWidth] = useState();
 
   useEffect(() => {
