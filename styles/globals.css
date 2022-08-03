@@ -46,7 +46,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--h2) !important;
+  font-size: var(--h2);
 }
 
 h3 {

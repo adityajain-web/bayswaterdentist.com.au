@@ -11,6 +11,7 @@ const BlogsPerCategory = () => {
   const [blogs, setBlogs] = useState([])
   const [category, setCategory] = useState([])
   const [randomBanner, setRandomBanner] = useState(0)
+  const [totalPages, seTotalPages] = useState()
     const router = useRouter();
     const {slug, pageNo} = router.query
 
@@ -44,6 +45,14 @@ const BlogsPerCategory = () => {
       const randomBanner = Math.floor(Math.random() * 3);
       setRandomBanner(randomBanner)
     }, [slug])
+
+    useEffect(() => {
+      if (blogs && blogs._paging && blogs._paging.totalPages) {
+        seTotalPages(blogs._paging.totalPages);
+      } else {
+        seTotalPages(100)
+      }
+    }, [blogs])
 
   return (
     <>
@@ -79,10 +88,10 @@ const BlogsPerCategory = () => {
 														pageNo === '2' ? <BlueBtn navlink={true} link={`/blog/`} text="First" /> : null
 													}
 													{
-														blogs ?  blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn navlink={true} link={`/blog/page/${Number(pageNo) + 1}`} text="NEXT" /> : null : null : null : null 
+														totalPages > Number(pageNo) ? <BlueBtn text="Next" navlink={true} link={`/blog/page/${Number(pageNo) + 1}`} functionality={true} /> : null
 													}
 													{
-														pageNo !== '2' ? blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.prev ? <BlueBtn navlink={true} link={`/blog/page/${Number(pageNo) - 1}`} text="Prev" /> : null : null : null : null : null
+														pageNo !== '2' && totalPages >= Number(pageNo) ? <BlueBtn text="Prev" navlink={true} link={`/blog/page/${Number(pageNo) - 1}`} /> : null
 													}
                           </Box>
                     </Grid>

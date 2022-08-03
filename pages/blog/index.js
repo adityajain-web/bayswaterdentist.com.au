@@ -60,9 +60,8 @@ const Blog = () => {
                             </XMasonry>
                           </Box>
                           <Box className="d-flex justify-content-center align-items-center py-2">
-                            {
-                              blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn navlink={true} link={'/blog/page/2'} text="NEXT" /> : null : null : null : null
-                            }
+                            <BlueBtn navlink={true} link={'/blog/page/2'} text="NEXT" /> 
+                            
                           </Box>
                         </Grid>
                         <Grid item xs={12} lg={4}>

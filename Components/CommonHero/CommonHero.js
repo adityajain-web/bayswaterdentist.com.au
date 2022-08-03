@@ -22,7 +22,10 @@ import TeethWhitening from '../../public/Teeth-Whitening/teeth-whitening-2.jpg'
 import RootCanal from '../../public/Root-Canal/root-canal-2.jpg'
 import ScaleClean from '../../public/Scale-Clean/scb.jpg'
 import Venners from '../../public/Veeneers/veneers-1.jpg';
-import CNB from '../../public/CNB/crown-bridges-banner.webp'
+import CNB from '../../public/CNB/crown-bridges-banner.webp';
+import DentalEmergency from '../../public/Dental-Emergency/dental emergency.jpg'
+import Invisalign from '../../public/Invisalign/invisalign-bg.jpg'
+import DentalFillings from '../../public/Dental-Fillings/dentalfillings-bg.jpg'
 
 const CommonHero = ({ grid, align }) => {
     const { pathname } = useRouter()
@@ -81,6 +84,12 @@ const CommonHero = ({ grid, align }) => {
         { id: "veneers", slug: "/veneers", bg: Venners, title: "<span class='text-white headingHead'>Veneers Teeth</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Achieve Hollywood smile by using Dental Veneers. Perfect set of teeth is not far away.</span>" },
 
         { id: "crowns-bridges", slug: "/crowns-bridges", bg: CNB, title: "<span class='text-white headingHead'>Crowns & Bridges Dental Services</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Restore your natural and beautiful smile using Crowns & Bridges.</span>" },
+
+        { id: "dental-emergency", slug: "/dental-emergency", bg: DentalEmergency, title: "<span class='text-white headingHead'>Emergency Dentist at Bayswater</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Have a broken tooth? or got severe tooth pain? We can provide same day appointment in most cases.</span>" },
+
+        { id: "invisalign", slug: "/invisalign", bg: Invisalign, title: "<span class='text-white headingHead'>Invisalign at Bayswater Dentist</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>The most effective and invisible way to correct crooked teeth and transform your smile without having to drain your pockets.</span>" },
+
+        { id: "dental-fillings", slug: "/dental-fillings", bg: DentalFillings, title: "<span class='text-white headingHead'>Dental Fillings at Bayswater</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Cavity results from tooth decay, and if left untreated, it can lead to severe teeth damage.</span>" },
     ]
 
     const bgImage = background.filter(entries => entries.slug === pathname)

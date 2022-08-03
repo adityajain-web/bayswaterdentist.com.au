@@ -12,13 +12,19 @@ const SingleBlog = () => {
   const router = useRouter();
   const slug = router.query.slug
 
+
   const wp = new WPAPI({
     endpoint: 'https://bayswaterdentist.com.au/blog/wp-json/'
   });
 
   const fetchBlog = async (slug) => {
-    const [post] = await wp.posts().slug(slug).embed().get();
-    setBlog(post)
+    const post = await wp.posts().slug(slug).embed().get();
+
+    if (post.length > 0) {
+      setBlog(post[0])
+    } else {
+      router.push("/404/")
+    }
   }
 
   useEffect(() => {
@@ -31,16 +37,15 @@ const SingleBlog = () => {
     const randomBanner = Math.floor(Math.random() * 3);
     setRandomBanner(randomBanner)
   }, [slug])
+
   return (
     <>
-      {
-        blog ? blog.yoast_head_json ? <Head>
+       <Head>
           <meta name="description" content={blog.yoast_head_json.description ? blog.yoast_head_json.description : ""} />
           <meta name="robots" content="index" />
           <link rel="canonical" href={`/blog/${blog.slug}/`} />
           <title>{blog.yoast_head_json.title ? blog.yoast_head_json.title : null}</title>
-        </Head> : null : null
-      }
+        </Head> 
       <BlogBanner title={blog ? blog.title ? blog.title.rendered ? blog.title.rendered : null : null : null} hero={randomBanner} />
       <main className="singleBlog">
         <section>

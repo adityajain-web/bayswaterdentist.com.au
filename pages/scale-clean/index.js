@@ -1,14 +1,67 @@
-import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
+import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography, IconButton, Card, CardMedia, CardContent, Button,  } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link';
 import { CommonHero, InterestFree, PageSectionalHeading, ServiceSidebar, TNC } from '../../Components/components';
 import pageImage1 from '../../public/Scale-Clean/What’s-the-Deal-With-Plaque.png.webp'
 import pageImage2 from '../../public/Scale-Clean/scale and clean 1.jpg'
 import pageImage3 from '../../public/Scale-Clean/teeth cleaning.jpg'
 import { useEffect, useState } from 'react';
-import { CheckCircleOutline } from '@mui/icons-material'
+import { CheckCircleOutline, Close } from '@mui/icons-material'
+import { useRouter } from 'next/router'
+import PopupImage from '../../public/Home/Popup/Scale & Clean.jpg';
 
 const ScaleClean = () => {
+  const router = useRouter()
+    const [open, setOpen] = useState(false)
+
+    useEffect(() => {
+        if (open === false) {
+            document.querySelector('footer').style.display = "none"
+        } else if (open === true) {
+            document.querySelector('footer').style.display = "block"
+        }
+    }, [open])
+
+    useEffect(() => {
+        if (router.pathname === "/scale-clean") {
+            let timer1 = setTimeout(setOpen(false), 30000)
+
+            return () => {
+                clearTimeout(timer1)
+            }
+        }
+    }, [router.pathname])
+
+    const Popup = () => {
+        return (<>
+            <Container maxWidth="xxl" style={{ height: "100%", backgroundColor: "rgba(0,0,0,0.7)", position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }} className="d-flex justify-content-center align-items-center">
+                <Box p={3}>
+                    <Box className='d-flex justify-content-end'>
+                        <IconButton onClick={() => setOpen(true)}>
+                            <Close style={{ color: "#fff" }} />
+                        </IconButton>
+                    </Box>
+                    <Box mt={2}>
+                        <Card className='shadow grow' style={{ width: "20rem" }}>
+                            <CardMedia component="img" image={PopupImage.src} alt="scale and clean" />
+                            <CardContent>
+                                <Typography variant='h3' align='center' className='subtitle'>$149 Scale & Clean and Check-up Offer*</Typography>
+                                <Typography className='para' align="center"><strong>*Limited time offer.</strong></Typography>
+                                <Box mt={3}>
+                                    <Button fullWidth className="blueBtn">
+                                        <Link href="/book/">
+                                            <a style={{ color: "#fff", fontWeight: "bold", textDecoration: "none" }}>BOOK NOW</a>
+                                        </Link>
+                                    </Button>
+                                </Box>
+                            </CardContent>
+                        </Card>
+                    </Box>
+                </Box>
+            </Container>
+        </>)
+    }
   const [width, setWidth] = useState();
 
   useEffect(() => {
@@ -70,7 +123,7 @@ const ScaleClean = () => {
         </script>
       </Head>
       <CommonHero align="center" />
-      <main>
+      {open ? <main>
         <Container maxWidth="xxl">
           <Grid container>
             <Grid item xs={12} md={10} className="mx-auto">
@@ -92,7 +145,7 @@ const ScaleClean = () => {
                           <Grid item xs={12} md={6}>
                             <Typography className='para'>Keeping healthy and bright teeth is a strategic process that can be tasking sometimes. Apart from flossing and brushing daily, you should visit your clean and scale dentist at least every six months for dental cleaning. Your dentist is better posed to know what you’re doing right or wrong.</Typography>
                           </Grid>
-                          <Grid xs={12} className="pt-0">
+                          <Grid item xs={12} className="pt-0">
                             <Typography className='para' dangerouslySetInnerHTML={{ __html: `They can advise you on how best to take care of your teeth and keep your gums at their optimal functional state. You run the risk of developing dental issues such as gum disease if you fail to schedule an appointment for teeth cleaning for more than a year. As part of deep cleaning and scaling, the dentist will conduct a check-up for potential diseases that can compromise your <a href="/blog/everything-you-need-to-know-about-oral-health/">oral health</a>. They can track gum diseases such as periodontitis at their earlier stage and help you combat them. If you’re a smoker, regular scale and clean can help you keep up with the ever-building stains and soot that accumulate between the teeth when you smoke. These are just some of the few reasons why you need to make a reservation with the Bayswater Dentist for a professional scale and clean procedure NOW.` }} />
                           </Grid>
                         </Grid>
@@ -250,7 +303,7 @@ const ScaleClean = () => {
             </Grid>
           </Grid>
         </Container>
-      </main>
+      </main> : <Popup />}
     </>
   )
 }

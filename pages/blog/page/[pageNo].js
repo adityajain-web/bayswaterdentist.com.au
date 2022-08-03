@@ -11,6 +11,7 @@ const MultpleBlogs = () => {
 	const [randomBanner, setRandomBanner] = useState(0)
 	const router = useRouter();
 	const pageNo = router.query.pageNo;
+	const [totalPages, seTotalPages] = useState()
 
 	const wp = new WPAPI({
 		endpoint: "https://bayswaterdentist.com.au/blog/wp-json/"
@@ -22,7 +23,7 @@ const MultpleBlogs = () => {
 	}
 
 	useEffect(() => {
-		if(pageNo){
+		if (pageNo) {
 			fetchBlog(pageNo)
 		}
 	}, [blogs, pageNo])
@@ -30,7 +31,15 @@ const MultpleBlogs = () => {
 	useEffect(() => {
 		const randomBanner = Math.floor(Math.random() * 3);
 		setRandomBanner(randomBanner)
-	  }, [pageNo])
+	}, [pageNo]);
+
+	useEffect(() => {
+		if (blogs && blogs._paging && blogs._paging.totalPages) {
+			seTotalPages(blogs._paging.totalPages);
+		} else {
+			seTotalPages(100)
+		}
+	}, [blogs])
 
 	return (
 		<>
@@ -69,10 +78,10 @@ const MultpleBlogs = () => {
 														pageNo === '2' ? <BlueBtn navlink={true} link={`/blog/`} text="First" /> : null
 													}
 													{
-														blogs ?  blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn navlink={true} link={`/blog/page/${Number(pageNo) + 1}`} text="NEXT" /> : null : null : null : null 
+														totalPages > Number(pageNo) ? <BlueBtn text="Next" navlink={true} link={`/blog/page/${Number(pageNo) + 1}`} functionality={true} /> : null
 													}
 													{
-														pageNo !== '2' ? blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.prev ? <BlueBtn navlink={true} link={`/blog/page/${Number(pageNo) - 1}`} text="Prev" /> : null : null : null : null : null
+														pageNo !== '2' && totalPages >= Number(pageNo) ? <BlueBtn text="Prev" navlink={true} link={`/blog/page/${Number(pageNo) - 1}`} /> : null
 													}
 												</Box>
 											</Grid>
