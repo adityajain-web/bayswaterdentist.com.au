@@ -40,12 +40,14 @@ const SingleBlog = () => {
 
   return (
     <>
-       <Head>
+      {
+        blog ? blog.yoast_head_json ? <Head>
           <meta name="description" content={blog.yoast_head_json.description ? blog.yoast_head_json.description : ""} />
           <meta name="robots" content="index" />
           <link rel="canonical" href={`/blog/${blog.slug}/`} />
           <title>{blog.yoast_head_json.title ? blog.yoast_head_json.title : null}</title>
-        </Head> 
+        </Head> : null : null
+      }
       <BlogBanner title={blog ? blog.title ? blog.title.rendered ? blog.title.rendered : null : null : null} hero={randomBanner} />
       <main className="singleBlog">
         <section>
