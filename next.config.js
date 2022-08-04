@@ -3,7 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
-  pageExtensions:"",
   images: {
     domains: [
       'https:/s4.gifyu.com/',
