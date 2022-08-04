@@ -15,7 +15,6 @@ const nextConfig = {
       source: "/public/wisdom-teeth.html/",
       destination: "/pages/api/wisdom-teeth.js/",
       has:[{type:"query",}],
-      basePath:""
     },
   ],
 }
