@@ -15,6 +15,7 @@ const nextConfig = {
       destination: "/pages/api/wisdom-teeth.js/",
     },
   ],
+  
 }
 
 module.exports = nextConfig

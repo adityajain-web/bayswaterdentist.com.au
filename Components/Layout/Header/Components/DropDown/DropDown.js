@@ -24,7 +24,7 @@ const DropDown = ({ menu, closeMobileMenu }) => {
                             <a className='nav-link text-dark'>{item.text}</a>
                         </Link>
                     </li>) : menu === "services" ? [
-                        { id: "service-menu-1", link: "/wisdom-teeth.html", text: "WISDOM TEETH" },
+                        { id: "service-menu-1", link: "/wisdom-teeth/", text: "WISDOM TEETH" },
                         { id: "service-menu-2", link: "/dental-implants/", text: "DENTAL IMPLANTS" },
                         { id: "service-menu-3", link: "/dentures/", text: "DENTURES" },
                         { id: "service-menu-4", link: "/teeth-whitening/", text: "TEETH WHITENING" },
