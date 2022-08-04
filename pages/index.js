@@ -126,7 +126,7 @@ const Home = () => {
                     <section>
                         <ServiceSec />
                     </section>
-                    <section style={{ overflowX: "hidden" }}>
+                    <section style={{ overflow: "hidden" }}>
                         <About />
                     </section>
                     <section className='mt-md-5 mt-3 py-md-3 py-4'>

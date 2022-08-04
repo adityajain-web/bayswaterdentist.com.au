@@ -11,7 +11,7 @@ const About = () => {
             <Container maxWidth="xxl" className="bg-light">
                 <Grid container>
                     <Grid item xs={12} md={10} className="mx-auto">
-                        <Box py={4}>
+                        <Box py={8}>
                             <Grid container spacing={5}>
                                 <Grid item xs={12} lg={6}>
                                     <Box className={Styles.ImageContainer}>
