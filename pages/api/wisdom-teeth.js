@@ -1,5 +1,5 @@
 import fs from "fs";
-const filename = "../public/wisdom-teeth.html";
+const filename = "../../public/wisdom-teeth.html";
 export default async function api(req, res) {
   res.setHeader("Content-Type", "text/html; charset=utf-8");
   res.write(await fs.readFileSync(filename, "utf-8"));
