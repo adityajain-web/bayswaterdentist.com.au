@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  trailingSlash: true,
+  pageExtensions:"",
   images: {
     domains: [
       'https:/s4.gifyu.com/',
@@ -10,8 +12,10 @@ const nextConfig = {
   },
   rewrites: async () => [
     {
-      source: "/public/wisdom-teeth.html",
-      destination: "/pages/api/wisdom-teeth.js",
+      source: "/public/wisdom-teeth.html/",
+      destination: "/pages/api/wisdom-teeth.js/",
+      has:[{type:"query",}],
+      basePath:""
     },
   ],
 }
