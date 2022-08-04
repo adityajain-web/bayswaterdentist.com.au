@@ -105,7 +105,7 @@ const index = () => {
                     <Box className="d-flex">
                       <List>
                         <ListItem>
-                          <Link href="/wisdom-teeth/" className="text-white text">
+                          <Link href="/wisdom-teeth.html" className="text-white text">
                             Wisdom Teeth
                           </Link>
                         </ListItem>
