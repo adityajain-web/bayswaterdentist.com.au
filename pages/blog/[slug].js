@@ -12,25 +12,29 @@ const SingleBlog = () => {
   const router = useRouter();
   const slug = router.query.slug
 
+  console.log(slug)
 
   const wp = new WPAPI({
     endpoint: 'https://bayswaterdentist.com.au/blog/wp-json/'
   });
 
   const fetchBlog = async (slug) => {
-    const post = await wp.posts().slug(slug).embed().get();
+    const [post] = await wp.posts().slug(slug).embed().get();
+    setBlog(post)
   }
 
   useEffect(() => {
     if (slug) {
       fetchBlog(slug)
     }
-  }, [slug]);
+  }, [slug])
 
   useEffect(() => {
     const randomBanner = Math.floor(Math.random() * 3);
     setRandomBanner(randomBanner)
   }, [slug])
+
+  console.log(blog)
 
   return (
     <>
