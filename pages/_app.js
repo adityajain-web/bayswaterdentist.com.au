@@ -29,7 +29,6 @@ function MyApp({ Component, pageProps }) {
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="facebook-domain-verification" content="9ituueu5p1lwsbqnsjhyzrlznqne8x" />
-      <link type="text/plain" rel="author" href="/humans.txt" />
     </Head>
 
     {/* <!-- Google Tag Manager --> */}
