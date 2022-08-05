@@ -150,7 +150,7 @@ const TNC = () => {
                   <Typography className="para">It cannot be used with offers.</Typography>
                   </Box>
                   <Box mt={3}>
-                  <PageSectionalHeading title="DPatient Referral Program – Terms and Conditions" variant="h2" align={width > 600 ? 'left' : 'center'} />
+                  <PageSectionalHeading title="Patient Referral Program – Terms and Conditions" variant="h2" align={width > 600 ? 'left' : 'center'} />
                   <Typography className="para">For each successful referral, you will go ahead and receive a $25 credit for your next appointment.</Typography>
                   <Typography className="para">Referral credit is usable for you or a family member.</Typography>
                   <Typography className="para">Credits cannot be redeemed for cash.</Typography>
