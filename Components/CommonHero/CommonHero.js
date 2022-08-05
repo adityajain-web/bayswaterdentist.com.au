@@ -28,6 +28,8 @@ import Invisalign from '../../public/Invisalign/invisalign-bg.jpg'
 import DentalFillings from '../../public/Dental-Fillings/dentalfillings-bg.jpg'
 import Book from '../../public/Book/ap-2.jpg'
 import ThankU from '../../public/Thank-You/ThankYou.jpg'
+import TNC from '../../public/TNC/termsConditions.jpg';
+import PrivacyPolicy from '../../public/PrivacyPolicy/privacy-2.jpg'
 
 const CommonHero = ({ grid, align }) => {
     const { pathname } = useRouter()
@@ -96,6 +98,10 @@ const CommonHero = ({ grid, align }) => {
         { id: "book", slug: "/book", bg: Book, title: "<span class='headingSpan1'>Book Bayswater Dentist</span> <br /> <span class='headingSpan2'>Appointment Online</span>", bookNow: false, subtitle:"" },
 
         { id: "thank-you", slug: "/thank-you", bg: ThankU, title: "<span class='headingSpan2'>THANK YOU!</span>", bookNow: false, subtitle:"<span class='HeroPara'>We will get back to you. Having trouble?   <a href='/contact/'>Contact us</a></span>" },
+
+        { id: "privacy-policy", slug: "/privacy-policy", bg: PrivacyPolicy, title: "<span class='headingSpan1'>Privacy Policy</span>", bookNow: false, subtitle:"" },
+
+        { id: "terms-and-conditions", slug: "/terms-and-conditions", bg: TNC, title: "<span class='headingSpan1'>Terms And Conditions</span>", bookNow: false, subtitle:"" },
     ]
 
     const bgImage = background.filter(entries => entries.slug === pathname)

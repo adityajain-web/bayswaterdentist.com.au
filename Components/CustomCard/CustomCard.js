@@ -31,7 +31,7 @@ const CustomCard = ({ height, cardMedia, cardMediaAlt, mediaHeight, navlink, anc
                             cardText ? <Typography className="para" dangerouslySetInnerHTML={{ __html: cardText }} /> : null
                         }
                         {
-                            cardList !== null ? cardList.length > 0 ? <Box>
+                            cardList !== null ? cardList.length > 0 ? <Box mb={3}>
                                 <List>
                                     {
                                         cardList.map(item => <ListItem key={item.id}>

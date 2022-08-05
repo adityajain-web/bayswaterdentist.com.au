@@ -98,7 +98,7 @@ p,
 .para {
   font-family: var(--para-font-family) !important;
   font-size: 1rem;
-  margin-bottom: 0.67rem;
+  margin-bottom: 0.8rem;
   display: block;
   color: #555;
 }
@@ -217,7 +217,7 @@ h3.subtitle {
 }
 
 .headingSpan1 {
-  font-size: 3.6rem !important;
+  font-size: 3.1rem !important;
   color: var(--navy);
 }
 

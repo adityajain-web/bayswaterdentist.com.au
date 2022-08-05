@@ -110,6 +110,7 @@ const DentalImplants = () => {
                     <section className='mt-3'>
                       <Container maxWidth="xxl" className='p-3' >
                         <PageSectionalHeading title="Different types of dental plants" variant="h2" align={width > 600 ? 'left' : 'center'} />
+                        <Typography className='para'>So far, there are only two popular types of dental implants that are ideal tooth replacement options. They include:</Typography>
                         <Grid container spacing={3}>
                           <Grid item xs={12} md={6}>
                             <Box>

@@ -72,7 +72,7 @@ const Offer = () => {
                             <Box style={{ height: "7rem" }}>
                               <Typography className='subtitle text-white' variant="h3" gutterBottom align="center">{item.text}</Typography>
                             </Box>
-                            <Box className="d-flex justify-content-center align-items-center">
+                            <Box mt={3} className="d-flex justify-content-center align-items-center">
                               <Box className="offerCircle">
                                 {item.icon}
                               </Box>

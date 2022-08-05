@@ -97,7 +97,9 @@ const Veneers = () => {
                           </Grid>
                           <Grid item xs={12} md={6}>
                             <Typography className='para'>Dental veneers are tooth-coloured shells mostly made from resin-composite and porcelain materials that are attached to the surface of affected teeth. Veneers are thin, allowing them to comfortably bond to your teeth and improve the overall appearance. Depending on the level of damage, you can get a single veneer to cover a chipped tooth, or you can get a number of them to create a symmetrical smile that’s also evenly coloured.</Typography>
-                            <Typography className='para'>At Bayswater Dentist, we ensure that all dental veneers match your preferred colour, size. The first step of the veneers process involves planning, whereby one of our dental specialists will take you through the visualization process and come up with the best design to restore your smile. This allows you to get precisely what you want, whether it’s perfectly white teeth or a natural-looking appearance or covering up damaged teeth.</Typography>
+                          </Grid>
+                          <Grid item xs={12} className="pt-0">
+                          <Typography className='para'>At Bayswater Dentist, we ensure that all dental veneers match your preferred colour, size. The first step of the veneers process involves planning, whereby one of our dental specialists will take you through the visualization process and come up with the best design to restore your smile. This allows you to get precisely what you want, whether it’s perfectly white teeth or a natural-looking appearance or covering up damaged teeth.</Typography>
                           </Grid>
                         </Grid>
                       </Container>

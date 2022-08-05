@@ -17,7 +17,7 @@ const About = () => {
                                     <Box className={Styles.ImageContainer}>
                                         <Image src={Clinic} alt="Bayswater Dentist Clinic" />
                                         <Box className={`${Styles.aboutAppointment} shadow-lg`}>
-                                            <Typography className={Styles.head} gutterBottom>BOOK YOUR DENTAL APPOINTMENT ONLINE</Typography>
+                                            <Typography className={Styles.head} gutterBottom style={{fontWeight:600}}>BOOK YOUR DENTAL APPOINTMENT ONLINE</Typography>
                                             <Typography className={Styles.bluePara} gutterBottom>We are here for you, always!</Typography>
                                             <BlueBtn navlink={true} link="/book/" text="BOOK NOW" />
                                         </Box>

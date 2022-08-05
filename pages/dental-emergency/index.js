@@ -141,25 +141,25 @@ const DentalEmergency = () => {
                       <Container maxWidth="xxl" className='p-3'>
                         <PageSectionalHeading title="Physical impact on wisdom teeth" variant="h2" align={width > 600 ? 'left' : 'center'} />
                         <Typography className="para">Physical impact on wisdom teeth is more likely to impact a major nerve resulting in extreme pain and discomfort. You should seek emergency dental services immediately if you have experienced a blunt impact on your wisdom teeth.</Typography>
-                        <Box className="mt-3">
+                        <Box className="mt-4">
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Pain in the gum,jaw, or teeth</Typography>
                           <Typography className="para">Any kind of pain you experience in the oral cavity is part of a dental emergency because it could signal an underlying problem or possible infection. It’s recommended that you seek immediate dental attention to diagnose the issue, reduce tooth pain, gum pain, or jaw pain.</Typography>
                         </Box>
-                        <Box className="mt-3">
+                        <Box className="mt-4">
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>You lose a filling, crown, or bridge</Typography>
                           <Typography className="para">In the case of a crown, filling, or dental bridge falling out, your tooth is exposed to infections and needs urgent medical attention. You should see a dentist as soon as possible if you face any of these situations.</Typography>
                         </Box>
-                        <Box className="mt-3">
+                        <Box className="mt-4">
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Swelling on the jaw and gums</Typography>
                           <Typography className="para">If you have a swelling in the jaw or gum, it could be a sign of underlying infection and other dental problems that may warrant an emergency visit to the dentist to rule out risks.</Typography>
                         </Box>
-                        <Box className="mt-3">
+                        <Box className="mt-4">
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Dental emergency at Bayswater Dentist</Typography>
                           <Typography className="para">Failure to seek an immediate dental emergency can lead to teeth loss and severe dental problems. In case your tooth breaks due to disease or injury, our dentists will help you alleviate the pain and suggest the right option to save the tooth. Similarly, knocked-out teeth can be embedded back into the gap to have your teeth looking and functioning normally once the treatment is done. In case the gums develop pain in the teeth, there’s a risk of tooth abscess, which can become severe if left unchecked. You should let your dentist know as soon as you can to reduce the risk of irreparable tooth damage.</Typography>
                         </Box>
                       </Container>
                     </section>
-                    <section className='mt-3'>
+                    <section className='mt-4'>
                       <Container maxWidth="xxl">
                         <PageSectionalHeading title="What to expect at Bayswater Dentist" variant="h2" align={width > 600 ? 'left' : 'center'} />
                         <List>

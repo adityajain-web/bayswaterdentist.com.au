@@ -108,7 +108,7 @@ const Denture = () => {
                       <Container maxWidth="xxl" className="p-3">
                         <PageSectionalHeading title="Types of dentures" variant="h2" align={width > 600 ? 'left' : 'center'} />
                         <Typography className='para'>In terms of variety, dentures are of two main types; full dentures and partial dentures. However, they are available in different sizes, colours, and shapes.</Typography>
-                        <Box>
+                        <Box mb={3}>
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Partial dentures</Typography>
                           <Typography className='para'>Partial dentures are an ideal replacement option for patients who have lost some of their missing teeth. This type of denture can provide you with a functional smile if you are missing a few teeth in your oral cavity. Removable partial dentures come with a metal frame that clamps them to the adjacent teeth. In addition, for easier relining and cleaning, they are removable.</Typography>
                         </Box>
@@ -130,9 +130,10 @@ const Denture = () => {
                             </Box>
                           </Grid>
                           <Grid item xs={12} md={6}>
-                            <Typography className='para'>Once you have booked an appointment at Bayswater Dentist, our trained experts will assess your teeth and recommend the best treatment plan. In the next stage, we will capture the impression of your teeth and take the reports to our lab to initialize the process of modelling. This ensures that the dentures fit you perfectly. By the end of the modelling, we will have created a custom-fit trial denture and test it on your gums to determine areas that require modification. We are also keen to ensure they remain as natural as possible and align perfectly with the remaining natural teeth or oral orientation.</Typography>
+                            <Typography className='para'>Once you have booked an appointment at Bayswater Dentist, our trained experts will assess your teeth and recommend the best treatment plan. In the next stage, we will capture the impression of your teeth and take the reports to our lab to initialize the process of modelling. This ensures that the dentures fit you</Typography>
                           </Grid>
                           <Grid item xs={12} className="pt-0">
+                            <Typography className='para'>perfectly. By the end of the modelling, we will have created a custom-fit trial denture and test it on your gums to determine areas that require modification. We are also keen to ensure they remain as natural as possible and align perfectly with the remaining natural teeth or oral orientation.</Typography>
                             <Typography className='para'>However, that’s not all. You will still have to make several check-up visits to help us assess your progress. During these routine visits, our dentists examine your mouth’s compatibility with the fitted dentures and make the necessary adjustments.</Typography>
                           </Grid>
                         </Grid>
@@ -181,18 +182,19 @@ const Denture = () => {
                             </Box>
                           </Grid>
                           <Grid item xs={12} md={6}>
-                            <Typography className='para'>To keep your new artificial teeth in their best working condition and ensure their lifespan, you must incorporate near-perfect denture care and maintenance. Lucky for you, caring for dentures is not an uphill task. Using denture paste, a soft brush, and water, ensure that you clean your dentures before you sleep. Make sure to clean your natural gum and remaining teeth using a soft brush, water, and toothpaste before fitting your dentures. You can also use a denture cleaner to keep the temporary dentures sparkling.</Typography>
+                            <Typography className='para'>To keep your new artificial teeth in their best working condition and ensure their lifespan, you must incorporate near-perfect denture care and maintenance. Lucky for you, caring for dentures is not an uphill task. Using denture paste, a soft brush, and water, ensure that you clean your dentures before you sleep.</Typography>
                           </Grid>
                           <Grid item xs={12} className="pt-0">
-                          <Typography className='para'>Our dentures are highly feasible for eating. However, we recommend that you clean them properly and regularly, especially after taking sticky snacks to prevent plaque and bacteria from forming, as this could cause oral infections. And should the dentures fall down and chip or crack accidentally, putting them back can result in pain, misalignment, and even infection. Contact us immediately and make an appointment to see our specialists.</Typography>
+                            <Typography className='para'>Make sure to clean your natural gum and remaining teeth using a soft brush, water, and toothpaste before fitting your dentures. You can also use a denture cleaner to keep the temporary dentures sparkling.</Typography>
+                            <Typography className='para'>Our dentures are highly feasible for eating. However, we recommend that you clean them properly and regularly, especially after taking sticky snacks to prevent plaque and bacteria from forming, as this could cause oral infections. And should the dentures fall down and chip or crack accidentally, putting them back can result in pain, misalignment, and even infection. Contact us immediately and make an appointment to see our specialists.</Typography>
                           </Grid>
                         </Grid>
                       </Container>
                     </section>
                     <section className='mt-3'>
                       <Container maxWidth="xxl" className='p-3'>
-                      <PageSectionalHeading title="Get your dentures at Bayswater Dentist today" variant="h2" align={width > 600 ? 'left' : 'center'} />
-                      <Typography className='para'>When dentures are your only option to replace missing teeth, you want patient-focused care from skilled experts with good years’ experience. You would also wish to use modern technology and treatment plans that promise better success rates. Well, at Bayswater Dentist, that is exactly what you will get. What’s more, we individualize your treatment plan and assign you one of our top brains to take you through your denture installation path. We use the newest technology in the country to test and determine the level of damage the missing teeth have caused to your gum. We also help you choose a custom-fit denture—either partial dentures or full dentures that won’t compromise the quality of your smile. So, what are you waiting for? Make an appointment with us today and restore your smile and confidence.</Typography>
+                        <PageSectionalHeading title="Get your dentures at Bayswater Dentist today" variant="h2" align={width > 600 ? 'left' : 'center'} />
+                        <Typography className='para'>When dentures are your only option to replace missing teeth, you want patient-focused care from skilled experts with good years’ experience. You would also wish to use modern technology and treatment plans that promise better success rates. Well, at Bayswater Dentist, that is exactly what you will get. What’s more, we individualize your treatment plan and assign you one of our top brains to take you through your denture installation path. We use the newest technology in the country to test and determine the level of damage the missing teeth have caused to your gum. We also help you choose a custom-fit denture—either partial dentures or full dentures that won’t compromise the quality of your smile. So, what are you waiting for? Make an appointment with us today and restore your smile and confidence.</Typography>
                       </Container>
                     </section>
                     <section className="mt-3">
@@ -204,7 +206,7 @@ const Denture = () => {
                               <Box className="card-header" id="headingOne">
                                 <Typography className='subtitle mb-0' variant="h3">
                                   <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                  How much do dentures cost?
+                                    How much do dentures cost?
                                   </button>
                                 </Typography>
                               </Box>
@@ -220,7 +222,7 @@ const Denture = () => {
                               <Box className="card-header" id="headingTwo">
                                 <Typography className='subtitle mb-0' variant="h3">
                                   <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                  How to clean dentures properly?
+                                    How to clean dentures properly?
                                   </button>
                                 </Typography>
                               </Box>
@@ -235,7 +237,7 @@ const Denture = () => {
                               <Box className="card-header" id="headingThree">
                                 <Typography className='subtitle mb-0' variant="h3">
                                   <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                  Can one fix cracked dentures?
+                                    Can one fix cracked dentures?
                                   </button>
                                 </Typography>
                               </Box>
@@ -250,7 +252,7 @@ const Denture = () => {
                               <Box className="card-header" id="headingFour">
                                 <Typography className='subtitle mb-0' variant="h3">
                                   <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                  Home remedies for denture repair?
+                                    Home remedies for denture repair?
                                   </button>
                                 </Typography>
                               </Box>
@@ -265,7 +267,7 @@ const Denture = () => {
                               <Box className="card-header" id="headingFive">
                                 <Typography className='subtitle mb-0' variant="h3">
                                   <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                  How do I know if I need dentures?
+                                    How do I know if I need dentures?
                                   </button>
                                 </Typography>
                               </Box>
@@ -280,7 +282,7 @@ const Denture = () => {
                               <Box className="card-header" id="headingSix">
                                 <Typography className='subtitle mb-0' variant="h3">
                                   <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                                  How long do dentures last?
+                                    How long do dentures last?
                                   </button>
                                 </Typography>
                               </Box>

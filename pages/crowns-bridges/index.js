@@ -91,9 +91,9 @@ const CrownBridges = () => {
                           </Grid>
                           <Grid item xs={12} md={6}>
                             <Typography className='para'>If you are missing a tooth or a couple of them, getting a dental crown and bridge is the most affordable solution to restore your natural smile. Dentists rely upon these prosthetic devices in place of traditional removable options such as dentures which are bound to slide around or even fall out.</Typography>
-                            <Typography className='para'>Dental crowns cap decaying or damaged teeth or placed on top of dental implants to replace missing teeth. On the other hand, bridges replace missing teeth with replacement teeth that rest on the gums where the missing teeth were. They have two or more crowns on each end to fuse to existing teeth or get attached to dental implants.</Typography>
                           </Grid>
                           <Grid item xs={12} className="pt-0">
+                          <Typography className='para'>Dental crowns cap decaying or damaged teeth or placed on top of dental implants to replace missing teeth. On the other hand, bridges replace missing teeth with replacement teeth that rest on the gums where the missing teeth were. They have two or more crowns on each end to fuse to existing teeth or get attached to dental implants.</Typography>
                             <Typography className='para'>At Bayswater Dental, our goal is to perform restorations that feel and look natural with our custom-made crowns and bridges. Working with our dentists, we can evaluate the level of tooth damage and work on a solution that’s the best fit for your needs. All our bridges and crowns are spruced locally for quick turnaround and quality assurance. The result is undetectable dentistry with zero compromises on your comfort.</Typography>
                           </Grid>
                         </Grid>

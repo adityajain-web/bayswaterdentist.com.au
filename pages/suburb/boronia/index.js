@@ -43,25 +43,25 @@ const Boronia = () => {
                             <Grid item xs={12} md={10} className="mx-auto">
                                 <Box>
                                     <PageSectionalHeading title="Dental Services Offered at Bayswater Dentist in Boronia" variant="h2" align="center" />
-                                    <Box mt={2}>
+                                    <Box mt={3}>
                                         <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Emergency Dentist Boronia</Typography>
                                         <Box>
                                             <Typography className="para">Our dental clinic offers fast and effective emergency dental services to patients who are in pain and require urgent attention. Some of the emergency services offered at our clinic include knocked-out teeth, toothache and dental pains, dental abscesses, children&apos;s dental emergencies, and root canals. If you are in pain and in need of emergency services, call us or visit our dental clinic as soon as you can. In a dental emergency, every minute is important and might mean the difference between saving or losing your tooth. </Typography>
                                         </Box>
                                     </Box>
-                                    <Box mt={2}>
+                                    <Box mt={3}>
                                         <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Dental Implants</Typography>
                                         <Box>
                                             <Typography className="para">When you lose your natural tooth, showing your gapped smile in public might be embarrassing. It might also be challenging to chew on food. To avoid all these, you can choose to replace your missing tooth through a dental implant. The treatment uses a titanium post that will serve as the root and a dental crown. The best thing when it comes to dental implants is that it looks natural and will resemble your existing natural teeth. </Typography>
                                         </Box>
                                     </Box>
-                                    <Box mt={2}>
+                                    <Box mt={3}>
                                         <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Invisalign</Typography>
                                         <Box>
                                             <Typography className="para">Are your teeth misaligned or crooked, and you do not want to go through the discomfort as well as the embarrassment of wearing metal braces? Well, Invisalign treatment may be the best option for you. This treatment does not require metal wires to align your teeth. </Typography>
                                         </Box>
                                     </Box>
-                                    <Box mt={2}>
+                                    <Box mt={3}>
                                         <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Wisdom Teeth Removal</Typography>
                                         <Box>
                                             <Typography className="para">Wisdom teeth are the last set of teeth to emerge on either side of the jaws. These teeth are often problematic since they lack enough space to emerge and develop normally. Therefore, it is always recommended that you remove them and avoid a number of dental complications.</Typography>

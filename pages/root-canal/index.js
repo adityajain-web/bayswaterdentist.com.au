@@ -102,19 +102,19 @@ const RootCanal = () => {
                           <PageSectionalHeading title="What is the Root Canal?" variant="h2" align={width > 600 ? 'left' : 'center'} />
                           <Typography className='para'>The root canal is the space within the root of a tooth. It is comprised of the pulp chamber that contains nerves, connective tissue, and blood vessels that assist in the growth and development of the tooth roots by providing nutrients. Tooth cavities expose the tooth to bacteria causing infections and the formation of abscesses which can cause inflammation and severe root canal pain. Delaying root canal treatment can make the tooth highly sensitive, painful and increase the likelihood of bone loss. To treat this, a root canal procedure is a way to go;</Typography>
                         </Box>
-                        <Box mt={3}>
+                        <Box mt={4}>
                           <PageSectionalHeading title="Root Canal Treatment procedure" variant="h2" align={width > 600 ? 'left' : 'center'} />
                           <Typography className='para'>Root canal therapy comprises of three stages;</Typography>
-                          <Box>
+                          <Box mt={4}>
                             <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Step 1: Removing the pulp</Typography>
                             <Typography className='para'>The first step involves removing any decay and dead nerve in your tooth. At this stage, our root canal dentist puts you under anaesthesia so that you can access the soft tissue in the middle of the tooth.</Typography>
                             <Typography className='para'>There is very little pain involved with the numbing sensation taking effect immediately so that the area with the tooth decay can be worked on. An incision is made through the tooth’s top to reach the dead pulp tissue.</Typography>
                           </Box>
-                          <Box>
+                          <Box mt={4}>
                             <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Step 2: Cleaning the root canal</Typography>
                             <Typography className='para'>The root canal specialist then cleans and sterilizes the root chambers using certain chemicals that help flush out the debris. This step also involves measuring the root’s length using a root canal x-ray that has a tiny wire. The cleaning process is performed using mechanically driven files to help maximize your comfort.</Typography>
                           </Box>
-                          <Box>
+                          <Box mt={4}>
                             <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Step 3: Adding the crown</Typography>
                             <Typography className='para'>After the chamber has been decontaminated, it is filled with adhesive cement to completely seal the canals. The cap covering the tooth is made of a rubber-like material that hardens and covers the tooth to prevent bacterial infection. The tooth becomes very fragile and sensitive after the filling, which is why the root canal crown is important since it prevents it from fracturing after root canal treatment.</Typography>
                           </Box>
@@ -157,6 +157,8 @@ const RootCanal = () => {
                           </Grid>
                           <Grid item xs={12} md={6}>
                           <Typography className='para'>If you experience any of the outlined symptoms above, it is advisable to make an appointment with us at Bayswater Dentist. Always remember that delaying treatment can have a negative impact on your oral health. An early diagnosis will help you avoid extensive treatment and save your tooth.</Typography>
+                          </Grid>
+                          <Grid item xs={12} className="pt-0">
                           <Typography className='para'>Our goal at Bayswater is to get you back on track, using advanced technology that increases the procedure’s chances of success. We make effort to make sure that you receive the value for your money by providing you with options after a root canal that you can adopt to improve your oral health.</Typography>
                           <Typography className='para'>We also provide laughing gas to help ease any anxiety you might have about the root canal process.</Typography>
                           </Grid>

@@ -91,7 +91,9 @@ const TeethWhitening = () => {
                           </Grid>
                           <Grid item xs={12} md={6}>
                             <Typography className='para'>At Bayswater Dentist, we use the Zoom Tooth Whitening that restores your teeth’ natural whiteness quickly and comfortably. A brighter and healthier smile helps enhance your confidence and self-image.</Typography>
-                            <Typography className='para'>We have an in-chair Zoom whitening system and also Pola take home tooth whitening kits. Book an appointment with us, and you can rest assured to leave our facility with dazzling white teeth you can take pride in.</Typography>
+                          </Grid>
+                          <Grid item xs={12} className="pt-0">
+                          <Typography className='para'>We have an in-chair Zoom whitening system and also Pola take home tooth whitening kits. Book an appointment with us, and you can rest assured to leave our facility with dazzling white teeth you can take pride in.</Typography>
                           </Grid>
                         </Grid>
                       </Container>
@@ -150,15 +152,15 @@ const TeethWhitening = () => {
                     <section className='mt-3 bg-light' style={{ borderRadius: "0.8rem" }}>
                       <Container maxWidth="xxl" className='p-3'>
                         <PageSectionalHeading title="Benefits of zoom whitening" variant="h2" align={width > 600 ? 'left' : 'center'} />
-                        <Box>
+                        <Box mb={3}>
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>One appointment</Typography>
                           <Typography className='para'>Zoom dental whitening guarantees quick results that are visible almost immediately. You don’t have to wait more than two weeks for your teeth to attain a glistening white hue; neither do you need multiple appointments that are time-consuming and tiring. Only one appointment that consists of a 45-minutes long procedure is enough to reclaim your teeth’s natural whiteness</Typography>
                         </Box>
-                        <Box>
+                        <Box mb={3}>
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>It can be used at home to whiten teeth</Typography>
                           <Typography className='para'>At the end of the procedure, you shall be given a teeth whitening kit by our teeth whitening dentist to help maintain the brightness of your teeth at home. Additionally, it does whiten the teeth further with every application. You can use the whitener as much as you want, depending on the severity of the stains.</Typography>
                         </Box>
-                        <Box>
+                        <Box mb={3}>
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Ideal for sensitive teeth</Typography>
                           <Typography className='para'>Zoom whitening is non-invasive hence recommended for sensitive teeth. Neither the laser nor the hydrogen peroxide teeth whitening gel will irritate your teeth or gum. You may experience flashing pain or “zingers” during the laser teeth whitening. However, this is just a temporary discomfort that goes away after a while.</Typography>
                           <Typography className='para'>Research indicates that most people are willing to tolerate the slight short-lived discomfort for a brighter smile. However, to keep the session as friendly as possible, our teeth whitening dentist may inject you with a pain reliever gel that has proved to work for many of our patients.</Typography>
@@ -181,11 +183,11 @@ const TeethWhitening = () => {
                         <Typography className='para'>Normally, our Pola advanced teeth whitening costs about $400* normally, but the service is currently on offer at only $299*. Schedule an appointment with us for the best teeth whitening service.</Typography>
                         <Typography className='para'>The choice of how to achieve a whiter smile is up to you. How amazing is that!</Typography>
                         <Box>
-                          <Typography className='subtitle' variant="h4" gutterBottom align={width > 600 ? 'left' : 'center'}>Pola Day</Typography>
+                          <Typography className='subtitle' variant="h4" gutterBottom align={width > 600 ? 'left' : 'center'} style={{fontSize:"1.1rem"}}>Pola Day</Typography>
                           <Typography className='para'>Achieve a brighter smile with the unique blend of soothers as you go by your daily errands. Our dentist will provide you with a custom-fitted tray that you can wear for 30-minutes every day. Repeat this process for about 5-10 days, and you will see your teeth glow.</Typography>
                         </Box>
                         <Box>
-                          <Typography className='subtitle' variant="h4" gutterBottom align={width > 600 ? 'left' : 'center'}>Pola Night</Typography>
+                          <Typography className='subtitle' variant="h4" gutterBottom align={width > 600 ? 'left' : 'center'} style={{fontSize:"1.1rem"}}>Pola Night</Typography>
                           <Typography className='para'>You can still make your teeth brighter even when asleep. Our dentist will provide you with a custom-fitted tray that you can wear overnight or for 40 minutes before sleeping. Depending on your desired results, repeat this process for about 5-10 nights for a whiter, brighter smile.</Typography>
                         </Box>
                       </Container>

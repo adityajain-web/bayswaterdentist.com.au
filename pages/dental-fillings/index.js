@@ -140,8 +140,10 @@ const DentalFillings = () => {
                           <Grid item xs={12} md={6}>
                             <Box>
                               <Typography className='para'>Placing a dental filling is not a difficult task. We begin by cleaning the cavity, then we place and then secure your desired dental gap fillings material. The cavity removal process may vary according to the filling material you choose. However, this painless cavity treatment process is quick and with no discomfort, stress, or pain.</Typography>
-                              <Typography className="para">Recovering from cavities and fillings requires minimal time, thanks to our doctors, who are proficient at their work. You have no complications while eating after the cavity treatment procedure though at first, you may have incidences of some temperature sensitivity. However, it only takes a few days before the sensitivity</Typography>
                             </Box>
+                          </Grid>
+                          <Grid item xs={12} className="pt-0">
+                          <Typography className="para">Recovering from cavities and fillings requires minimal time, thanks to our doctors, who are proficient at their work. You have no complications while eating after the cavity treatment procedure though at first, you may have incidences of some temperature sensitivity. However, it only takes a few days before the sensitivity</Typography>
                           </Grid>
                         </Grid>
                       </Container>

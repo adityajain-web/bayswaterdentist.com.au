@@ -148,23 +148,23 @@ const Invisalign = () => {
                         <PageSectionalHeading title="Benefits of Invisalign" variant="h2" align={width > 600 ? 'left' : 'center'} />
                         <Typography className="para">Invisalign is popular for its ease-of-maintenance and natural look. Some of the benefits of these clear teeth aligners include;</Typography>
                         <Typography className="para">Regardless of age, you may require this tooth replacement option if;</Typography>
-                        <Box className="mt-3">
+                        <Box className="mt-4">
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>They are almost invisible</Typography>
                           <Typography className="para">Invisalign is a clear plastic mouthpiece that is hard to notice. Unlike metal brackets and wires, you can carry them everywhere, from business summits to casual events.</Typography>
                         </Box>
-                        <Box className="mt-3">
+                        <Box className="mt-4">
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>They are removable</Typography>
                           <Typography className="para">Unlike metal brackets, you don’t need help from your dentist to remove these clear aligners. You can comfortably remove them during mealtime or when brushing your teeth and re-install them after. They won’t restrict you to eating certain meals to avoid food getting stuck in the braces. Also, you will not have to spend so much time having the clear teeth aligners cleaned like in metal braces.</Typography>
                         </Box>
-                        <Box className="mt-3">
+                        <Box className="mt-4">
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>They are custom-fit</Typography>
                           <Typography className="para">At Bayswater dentist, we use the latest 3D technology and modelling techniques to replicate the looks of your teeth as well as design a tray that fits snugly into it. The tray will help shift your crooked teeth gradually and help keep them straight.</Typography>
                         </Box>
-                        <Box className="mt-3">
+                        <Box className="mt-4">
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>They are less painful</Typography>
                           <Typography className="para">The success of using Invisalign teeth relies on gradual and less pressure the plastic aligner exerts on the teeth. You may experience some minor pain, especially at the start of the corrective procedure. However, this pain is nowhere near what you’ll get from braces.</Typography>
                         </Box>
-                        <Box className="mt-3">
+                        <Box className="mt-4">
                           <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>They require fewer dental visits</Typography>
                           <Typography className="para">With metallic brackets, you must visit your dental clinic every month so that your dentist can track your progress and tighten the braces. But for Invisalign aligners, a single complete set of trays is enough to keep you on the correct healing path and help you attain straighter teeth with just a few visits.</Typography>
                         </Box>
