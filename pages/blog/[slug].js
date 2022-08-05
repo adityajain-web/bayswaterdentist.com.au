@@ -19,12 +19,6 @@ const SingleBlog = () => {
 
   const fetchBlog = async (slug) => {
     const post = await wp.posts().slug(slug).embed().get();
-
-    if (post.length > 0) {
-      setBlog(post[0])
-    } else {
-      router.push("/404/")
-    }
   }
 
   useEffect(() => {
