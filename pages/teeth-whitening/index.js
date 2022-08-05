@@ -93,7 +93,7 @@ const TeethWhitening = () => {
                             <Typography className='para'>At Bayswater Dentist, we use the Zoom Tooth Whitening that restores your teeth’ natural whiteness quickly and comfortably. A brighter and healthier smile helps enhance your confidence and self-image.</Typography>
                           </Grid>
                           <Grid item xs={12} className="pt-0">
-                          <Typography className='para'>We have an in-chair Zoom whitening system and also Pola take home tooth whitening kits. Book an appointment with us, and you can rest assured to leave our facility with dazzling white teeth you can take pride in.</Typography>
+                            <Typography className='para'>We have an in-chair Zoom whitening system and also Pola take home tooth whitening kits. Book an appointment with us, and you can rest assured to leave our facility with dazzling white teeth you can take pride in.</Typography>
                           </Grid>
                         </Grid>
                       </Container>
@@ -103,7 +103,8 @@ const TeethWhitening = () => {
                         <PageSectionalHeading title="What is zoom teeth whitening?" variant="h2" align={width > 600 ? 'left' : 'center'} />
                         <Box mt={2}>
                           <Typography className='para'>Zoom teeth whitening is an advanced teeth whitening process that involves the use of endodontic technology to clean and scale the teeth inside out. A special lamp produces the zoom laser, which is then used for flushing out and get rid of discoloration for a more natural look.</Typography>
-                          <Typography className='para' dangerouslySetInnerHTML={{ __html: `Zoom teeth whitening is non-invasive hence perfect for patients with <a href="/blog/dealing-with-tooth-sensitivity-heres-what-you-need-to-know/">tooth sensitivity</a>. It is one of the best teeth whitening services out there and for various reasons. To begin with, the whole process takes less than an hour, so you do not have to wait too long to achieve that desired glamour. Even better, the results are long-lasting as compared to what you will get from some other options that require multiple appointments before getting whiter teeth.` }} />
+                          <Typography className='para' dangerouslySetInnerHTML={{
+                            __html: `Zoom teeth whitening is non-invasive hence perfect for patients with <a href="/blog/dealing-with-tooth-sensitivity-heres-what-you-need-to-know/">tooth sensitivity</a>. It is one of the best teeth whitening services out there and for various reasons. To begin with, the whole process takes less than an hour, so you do not have to wait too long to achieve that desired glamour. Even better, the results are long-lasting as compared to what you will get from some other options that require multiple appointments before getting whiter teeth.` }} />
                           <Typography className='para'>While you can get the sparkling results in a relatively short time, maintaining the spotless teeth after zoom is also a real breeze. When done by a professional like our specialist at Bayswater Dentist, zoom teeth whitening is very effective. Our expert dentist will comfortably handle your stained teeth and recommend the best maintenance practices that will help you keep up the brighter smile.</Typography>
                         </Box>
                       </Container>
@@ -183,11 +184,11 @@ const TeethWhitening = () => {
                         <Typography className='para'>Normally, our Pola advanced teeth whitening costs about $400* normally, but the service is currently on offer at only $299*. Schedule an appointment with us for the best teeth whitening service.</Typography>
                         <Typography className='para'>The choice of how to achieve a whiter smile is up to you. How amazing is that!</Typography>
                         <Box>
-                          <Typography className='subtitle' variant="h4" gutterBottom align={width > 600 ? 'left' : 'center'} style={{fontSize:"1.1rem"}}>Pola Day</Typography>
+                          <Typography className='subtitle' variant="h4" gutterBottom align={width > 600 ? 'left' : 'center'} style={{ fontSize: "1.1rem" }}>Pola Day</Typography>
                           <Typography className='para'>Achieve a brighter smile with the unique blend of soothers as you go by your daily errands. Our dentist will provide you with a custom-fitted tray that you can wear for 30-minutes every day. Repeat this process for about 5-10 days, and you will see your teeth glow.</Typography>
                         </Box>
                         <Box>
-                          <Typography className='subtitle' variant="h4" gutterBottom align={width > 600 ? 'left' : 'center'} style={{fontSize:"1.1rem"}}>Pola Night</Typography>
+                          <Typography className='subtitle' variant="h4" gutterBottom align={width > 600 ? 'left' : 'center'} style={{ fontSize: "1.1rem" }}>Pola Night</Typography>
                           <Typography className='para'>You can still make your teeth brighter even when asleep. Our dentist will provide you with a custom-fitted tray that you can wear overnight or for 40 minutes before sleeping. Depending on your desired results, repeat this process for about 5-10 nights for a whiter, brighter smile.</Typography>
                         </Box>
                       </Container>

@@ -139,7 +139,7 @@ const TNC = () => {
                   <Typography className="para">Total costs include consultation fees of $60 on the day of consultation.</Typography>
                   <Typography className="para">Not all customers meet the requirements for this offer. We can confirm your eligibility when you visit for consultation.</Typography>
                   <Typography className="para">Higher initial payment may be required if the patient does not meet the requirements.</Typography>
-                  <Typography className="para">The credit provider is Openpay Pty Ltd, and T&C available at <a href='Openpay.com.au' target="_blank" rel="noreferrer">Openpay.com.au</a>.</Typography>
+                  <Typography className="para">The credit provider is Openpay Pty Ltd, and T&C available at <a href='https://www.opy.com/au/' target="_blank" rel="noreferrer">openpay.com.au</a>.</Typography>
                   <Typography className="para">The treatment plan begins only after the payment is processed successfully.</Typography>
                   <Typography className="para">The offer does not include other procedures such as CT Scans and Radiographs performed outside our dental clinic.</Typography>
                   <Typography className="para">Offer includes X-rays and consultation done in preparation of the treatment in our facility.</Typography>

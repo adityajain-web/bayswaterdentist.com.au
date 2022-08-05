@@ -1564,55 +1564,6 @@
                     // $('.nav-link').addClass('text-white') && $('.nav-link').removeClass('text-dark');
                 }
             });
-
-
-
-
-            // wordpress blog fetch
-
-            const api = "https://carrumdownsdental.com.au/wp-json/wp/v2/posts?_embed=true";
-
-            const fetchApi = async () => {
-                await fetch(api).then(res => res.json()).then(data => data.slice(0, 2).map(item => {
-                    document.querySelector('#postContainer .row').insertAdjacentHTML(
-                        'afterbegin', `<div class="col-md-6 col-12">
-                        <div class="card shadow border-0 ">
-                        <img src=${item._embedded['wp:featuredmedia'][0].source_url} alt=${item._embedded['wp:featuredmedia'][0].alt_text} class="card-img-top" />
-                        <div class="card-body py-sm-4">
-                            <h4><a href={/${item.slug}/ class="text-decoration-none" style="color: #115278;"}>${item.title.rendered} </a></h4>
-                            <p class="customPara card-text">${item.excerpt.rendered}</p>
-                            </div>
-                        </div>
-                        </div>`)
-                }))
-            }
-
-            fetchApi()
-
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 50,
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 2,
-                        loop: true,
-                        nav: true,
-                    },
-                    600: {
-                        items: 2,
-                        loop: true,
-                        nav: false,
-                    },
-                    1000: {
-                        items: 4,
-                        nav: true,
-                        loop: true
-                    }
-                }
-            })
-
-        });
     </script>
 
 </body>
