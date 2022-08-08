@@ -126,7 +126,7 @@ const RootCanal = () => {
                         <PageSectionalHeading title="When Do You Need a Root Canal?" variant="h2" align='center' />
                         <Grid container spacing={3}>
                           <Grid item xs={12} md={6}>
-                            <Typography className='para'>Some of the root canal symptoms that indicate that you are in need of root canal treatment include;</Typography>
+                            <Typography className='para' dangerouslySetInnerHTML={{ __html:`Some of the <a href="/blog/symptoms-that-you-need-a-root-canal-treatment/">root canal symptoms</a> that indicate that you are in need of root canal treatment include:`}} />;
                             <List>
                               {
                                 ["Tooth paining when you chew", "Gum or facial swelling", "Teeth being too sensitive to hot or cold drinks", "Presence of puss that sips into your mouth", "The appearance of a large cavity", "Increased tenderness and swelling of lymph nodes", "Foul mouth taste that does not go away even after you brush.", "Greying or discoloration of the tooth"].map(item => <ListItem key={item}>

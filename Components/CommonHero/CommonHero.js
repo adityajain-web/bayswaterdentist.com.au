@@ -73,7 +73,7 @@ const CommonHero = ({ grid, align }) => {
 
         { id: "wantirna-south", slug: "/suburb/wantirna-south", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Wantirna South</span>", bookNow: true },
 
-        { id: "services", slug: "/services", bg: ServiceBg, title: "<span class='text-white headingHead'>Dental Health Services</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Our team of experts is dedicated to providing you with advanced dental services forFamily, Restorative, Cosmetic,Prosthetic and General Dentistry services.</span>" },
+        { id: "services", slug: "/services", bg: ServiceBg, title: "<span class='text-white headingHead'>Dental Health Services</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Our team of experts is dedicated to providing you with advanced dental services for Family, Restorative, Cosmetic,Prosthetic and General Dentistry services.</span>" },
 
         { id: "dental-implants", slug: "/dental-implants", bg: DentalImplantsBg, title: "<span class='text-white headingHead'>Dental Implant Services at Bayswater</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Our facility offers a solution to missing teeth. <br /> We use dental implants of the highest quality to restore your confidence and enhance your smile</span>" },
 

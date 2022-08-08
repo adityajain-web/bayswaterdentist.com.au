@@ -170,7 +170,7 @@ const ScaleClean = () => {
                             <Typography className='para'>At Bayswater dentist, teeth scale and clean entails;</Typography>
                             <List>
                               {
-                                ["alculus removal. Calculus is the hard yellow film that forms on the teeth.", "Plaque removal. Plaque is the white sticky substance that is constantly forming on the teeth.", "Using paste to polish the teeth after removing stains and plaque."].map(item => <ListItem key={item}>
+                                ["Calculus removal. Calculus is the hard yellow film that forms on the teeth.", "Plaque removal. Plaque is the white sticky substance that is constantly forming on the teeth.", "Using paste to polish the teeth after removing stains and plaque."].map(item => <ListItem key={item}>
                                   <ListItemIcon>
                                     <CheckCircleOutline style={{ color: "#117295" }} />
                                   </ListItemIcon>

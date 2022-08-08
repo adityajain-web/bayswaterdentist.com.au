@@ -23,7 +23,7 @@ const ServiceSidebar = () => {
                             { id: "service-8", title: "Crowns & Bridges", link: "/crowns-bridges" },
                             { id: "service-9", title: "Dental Emergency", link: "/dental-emergency" },
                             { id: "service-10", title: "Invisalign", link: "/invisalign" },
-                            { id: "service-11", title: "Tooth Fillings", link: "/dental-fillings" },
+                            { id: "service-11", title: "Dental Fillings", link: "/dental-fillings" },
                         ].map(item => <Link key={item.id} href={`${item.link}/`}><Box className={`d-flex justify-content-between align-items-center ${Styles.box} ${router.pathname === item.link ? Styles.active : null}`} mb={1} p={2}>
                             <Typography className={`${Styles.title}`}>
                                 {item.title}

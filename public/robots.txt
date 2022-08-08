@@ -1,3 +1,9 @@
+//robots.txt
+
+# Block all crawlers for /accounts
 User-agent: *
-Disallow:
-Sitemap: https://bayswaterdentist.com.au/sitemap.xml
+Disallow: /accounts
+
+# Allow all crawlers
+User-agent: *
+Allow: /

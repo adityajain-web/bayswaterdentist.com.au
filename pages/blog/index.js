@@ -14,7 +14,7 @@ const Blog = () => {
   });
 
   const fetchBlogs = async () => {
-    const posts = await wp.posts().embed().perPage(10).page(1).get();
+    const posts = await wp.posts().embed().order().perPage(10).page(1).get();
     setBlogs(posts)
   }
 
@@ -61,7 +61,6 @@ const Blog = () => {
                           </Box>
                           <Box className="d-flex justify-content-center align-items-center py-2">
                             <BlueBtn navlink={true} link={'/blog/page/2'} text="NEXT" /> 
-                            
                           </Box>
                         </Grid>
                         <Grid item xs={12} lg={4}>

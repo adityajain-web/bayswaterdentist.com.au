@@ -31,7 +31,7 @@ const BlogsPerCategory = () => {
     }, [slug]);
   
     const fetchBlog = async (id) => {
-      const posts = await wp.posts().embed().param({ categories: [id] }).perPage(10).page(pageNo).get()
+      const posts = await wp.posts().embed().param({ categories: [id] }).order().perPage(10).page(pageNo).get()
       setBlogs(posts)
     }
   
@@ -46,13 +46,6 @@ const BlogsPerCategory = () => {
       setRandomBanner(randomBanner)
     }, [slug])
 
-    useEffect(() => {
-      if (blogs && blogs._paging && blogs._paging.totalPages) {
-        seTotalPages(blogs._paging.totalPages);
-      } else {
-        seTotalPages(100)
-      }
-    }, [blogs])
 
   return (
     <>
@@ -84,16 +77,16 @@ const BlogsPerCategory = () => {
                             </XMasonry>
                           </Box>
                           <Box className="d-flex justify-content-center align-items-center py-2">
-                          {
+													{
 														pageNo === '2' ? <BlueBtn navlink={true} link={`/blog/`} text="First" /> : null
 													}
 													{
-														totalPages > Number(pageNo) ? <BlueBtn text="Next" navlink={true} link={`/blog/page/${Number(pageNo) + 1}`} functionality={true} /> : null
+														blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="NEXT" navlink={true} link={`/blog/page/${Number(pageNo) + 1}`} /> : null : null : null : null
 													}
 													{
-														pageNo !== '2' && totalPages >= Number(pageNo) ? <BlueBtn text="Prev" navlink={true} link={`/blog/page/${Number(pageNo) - 1}`} /> : null
+														pageNo !== '2' && blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="PREV" navlink={true} link={`/blog/page/${Number(pageNo) - 1}`} /> : null : null : null : null
 													}
-                          </Box>
+												</Box>
                     </Grid>
                     <Grid item xs={12} lg={4}>
                       <BlogSideBar />

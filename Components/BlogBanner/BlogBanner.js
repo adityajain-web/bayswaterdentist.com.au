@@ -14,7 +14,7 @@ const BlogBanner = ({ title, hero }) => {
                     <Grid item xs={12} md={10} className="mx-auto" style={{height:"inherit"}}>
                         <Box style={{height:"inherit"}} className="d-flex justify-content-md-start justify-content-center align-items-center">
                             <Grid container>
-                                <Grid items xs={12} md={8}>
+                                <Grid item xs={12} md={8}>
                                     <Typography variant="h1">{title}</Typography>
                                 </Grid>
                             </Grid>

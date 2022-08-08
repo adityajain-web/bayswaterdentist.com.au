@@ -99,7 +99,7 @@ const DentalFillings = () => {
                           </Grid>
                           <Grid item xs={12} md={6}>
                             <Box>
-                              <Typography className='para'>Compared to composite fillings, Porcelain fillings can last for about seven years. However, dental pricing in this type of cavity treatment has a wide range. That being said, you can get a preferred filling at a price you can afford. Also, the filling matches your teeth’ colour and doesn’t get easily stained compared to composite fillings.</Typography>
+                              <Typography className='para'>Composite fillings are made by mixing plastic and fine glass particles. The most interesting thing is that they are a good match for your teeth. Besides, composite tooth filling cost is lower than other options. However, they are temporary tooth filling options, and dental filling removal may be required someday.</Typography>
                             </Box>
                           </Grid>
                         </Grid>
@@ -143,7 +143,7 @@ const DentalFillings = () => {
                             </Box>
                           </Grid>
                           <Grid item xs={12} className="pt-0">
-                          <Typography className="para">Recovering from cavities and fillings requires minimal time, thanks to our doctors, who are proficient at their work. You have no complications while eating after the cavity treatment procedure though at first, you may have incidences of some temperature sensitivity. However, it only takes a few days before the sensitivity</Typography>
+                          <Typography className="para">Recovering from cavities and fillings requires minimal time, thanks to our doctors, who are proficient at their work. You have no complications while eating after the cavity treatment procedure though at first, you may have incidences of some temperature sensitivity. However, it only takes a few days before the sensitivity.</Typography>
                           </Grid>
                         </Grid>
                       </Container>

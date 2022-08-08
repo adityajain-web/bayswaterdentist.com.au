@@ -231,7 +231,7 @@ const DentalEmergency = () => {
                               <Box className="card-header" id="headingFour">
                                 <Typography className='subtitle mb-0' variant="h3">
                                   <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                  How can I relieve unbearable tooth pain
+                                  How can I relieve unbearable tooth pain?
                                   </button>
                                 </Typography>
                               </Box>

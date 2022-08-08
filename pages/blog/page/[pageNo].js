@@ -18,7 +18,7 @@ const MultpleBlogs = () => {
 	});
 
 	const fetchBlog = async (pageNo) => {
-		const posts = await wp.posts().embed().perPage(10).page(pageNo).get();
+		const posts = await wp.posts().embed().order().perPage(10).page(pageNo).get();
 		setBlogs(posts)
 	}
 
@@ -33,13 +33,7 @@ const MultpleBlogs = () => {
 		setRandomBanner(randomBanner)
 	}, [pageNo]);
 
-	useEffect(() => {
-		if (blogs && blogs._paging && blogs._paging.totalPages) {
-			seTotalPages(blogs._paging.totalPages);
-		} else {
-			seTotalPages(100)
-		}
-	}, [blogs])
+	console.log(blogs)
 
 	return (
 		<>
@@ -78,10 +72,10 @@ const MultpleBlogs = () => {
 														pageNo === '2' ? <BlueBtn navlink={true} link={`/blog/`} text="First" /> : null
 													}
 													{
-														totalPages > Number(pageNo) ? <BlueBtn text="Next" navlink={true} link={`/blog/page/${Number(pageNo) + 1}`} functionality={true} /> : null
+														blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="NEXT" navlink={true} link={`/blog/page/${Number(pageNo) + 1}`} /> : null : null : null : null
 													}
 													{
-														pageNo !== '2' && totalPages >= Number(pageNo) ? <BlueBtn text="Prev" navlink={true} link={`/blog/page/${Number(pageNo) - 1}`} /> : null
+														pageNo !== '2' && blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="PREV" navlink={true} link={`/blog/page/${Number(pageNo) - 1}`} /> : null : null : null : null
 													}
 												</Box>
 											</Grid>

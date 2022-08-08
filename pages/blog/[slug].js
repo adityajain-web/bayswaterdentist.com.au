@@ -1,79 +1,86 @@
-import { useRouter } from "next/router";
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
-import { BlogBanner, BlogSideBar } from '../../Components/components'
-import { Box, Container, Grid, Typography } from "@mui/material";
-import WPAPI from "wpapi";
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import Image from 'next/image'
+import { BlogBanner, BlogSideBar } from '../../Components/components';
+import { Box, Container, Grid } from '@mui/material';
 
-const SingleBlog = () => {
-  const [blog, setBlog] = useState([])
-  const [randomBanner, setRandomBanner] = useState(0)
-  const router = useRouter();
-  const slug = router.query.slug
-
-  console.log(slug)
-
-  const wp = new WPAPI({
-    endpoint: 'https://bayswaterdentist.com.au/blog/wp-json/'
-  });
-
-  const fetchBlog = async (slug) => {
-    const [post] = await wp.posts().slug(slug).embed().get();
-    setBlog(post)
-  }
-
-  useEffect(() => {
-    if (slug) {
-      fetchBlog(slug)
+export async function getStaticPaths() {
+  const res = await fetch('https://bayswaterdentist.com.au/blog/wp-json/wp/v2/posts');
+  const data = await res.json();
+  const paths = data.map((item) => {
+    return {
+      params: {
+        slug: item.slug.toString()
+      }
     }
-  }, [slug])
+  })
+
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+export async function getStaticProps(context) {
+  const slug = context.params.slug
+  const res = await fetch(`https://bayswaterdentist.com.au/blog/wp-json/wp/v2/posts?_embed=true&slug=${slug}`);
+  const data = await res.json()
+  return {
+    props: {
+      data,
+    }
+  }
+}
+
+
+const SingleBlog = ({ data }) => {
+  const [blog] = data
+  const [randomBanner, setRandomBanner] = useState(0)
+  console.log(blog)
 
   useEffect(() => {
     const randomBanner = Math.floor(Math.random() * 3);
     setRandomBanner(randomBanner)
-  }, [slug])
-
-  console.log(blog)
+  }, [blog])
 
   return (
     <>
       {
-        blog ? blog.yoast_head_json ? <Head>
-          <meta name="description" content={blog.yoast_head_json.description ? blog.yoast_head_json.description : ""} />
+        blog ? <Head>
+          <meta name="description" content={blog.yoast_head_json.description} />
           <meta name="robots" content="index" />
-          <link rel="canonical" href={`/blog/${blog.slug}/`} />
-          <title>{blog.yoast_head_json.title ? blog.yoast_head_json.title : null}</title>
-        </Head> : null : null
+          <link rel="canonical" href={`/blog/${blog.slug}`} />
+          <title>{blog.title.rendered}</title>
+        </Head> : null
       }
-      <BlogBanner title={blog ? blog.title ? blog.title.rendered ? blog.title.rendered : null : null : null} hero={randomBanner} />
-      <main className="singleBlog">
-        <section>
-          <Container maxWidth="xxl">
-            <Box py={5}>
+      <BlogBanner hero={randomBanner} title={blog.title.rendered} />
+      {
+        blog ? <main>
+          <section>
+            <Container maxWidth="xxl">
               <Grid container>
                 <Grid item xs={12} md={10} className="mx-auto">
-                  <Grid container spacing={10}>
-                    <Grid item xs={12} md={8}>
-                      <Container maxWidth="xxl">
-                        <Box mt={1}>
-                          <img src={blog ? blog._embedded ? blog._embedded['wp:featuredmedia'] ? blog._embedded['wp:featuredmedia'][0] ? blog._embedded['wp:featuredmedia'][0].source_url ? blog._embedded['wp:featuredmedia'][0].source_url : null : null : null : null : null} alt={blog ? blog._embedded ? blog._embedded['wp:featuredmedia'] ? blog._embedded['wp:featuredmedia'][0] ? blog._embedded['wp:featuredmedia'][0].alt_text ? blog._embedded['wp:featuredmedia'][0].alt_text : null : null : null : null : null} className="img-fluid" />
+                  <Box py={5}>
+                    <Grid container spacing={10}>
+                      <Grid item xs={12} lg={8}>
+                        <Box>
+                          <Box mt={1}>
+                            <img src={blog._embedded['wp:featuredmedia'][0].source_url} alt={blog._embedded['wp:featuredmedia'][0].alt_text} className="img-fluid" />
+                          </Box>
+                          <Box mt={3} dangerouslySetInnerHTML={{ __html: blog.content.rendered }} />
                         </Box>
-                        {
-                          blog ? blog.content ? blog.content.rendered ? <Box mt={3} dangerouslySetInnerHTML={{ __html: blog.content.rendered }} /> : null : null : null
-                        }
-                      </Container>
+                      </Grid>
+                      <Grid item xs={12} lg={4}>
+                        <BlogSideBar />
+                      </Grid>
                     </Grid>
-                    <Grid item xs={12} md={4}>
-                      <BlogSideBar />
-                    </Grid>
-                  </Grid>
+                  </Box>
                 </Grid>
               </Grid>
-            </Box>
-          </Container>
-        </section>
-      </main>
+            </Container>
+          </section>
+        </main> : null
+      }
     </>
   )
 }
