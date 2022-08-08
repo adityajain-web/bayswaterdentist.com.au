@@ -11,7 +11,6 @@ const MultpleBlogs = () => {
 	const [randomBanner, setRandomBanner] = useState(0)
 	const router = useRouter();
 	const pageno = router.query.pageno;
-	const [totalPages, seTotalPages] = useState()
 
 	const wp = new WPAPI({
 		endpoint: "https://bayswaterdentist.com.au/blog/wp-json/"
