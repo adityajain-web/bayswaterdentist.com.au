@@ -36,7 +36,7 @@ const ScaleClean = () => {
   const Popup = () => {
     return (<>
       <Container maxWidth="xxl" style={{ height: "100%", backgroundColor: "rgba(0,0,0,0.7)", position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }} className="d-flex justify-content-center align-items-center">
-        <Box p={3} mt={4}>
+        <Box p={3} mt={6}>
           <Box className='d-flex justify-content-end'>
             <IconButton onClick={() => setOpen(true)}>
               <Close style={{ color: "#fff" }} />

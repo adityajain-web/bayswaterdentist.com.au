@@ -13,7 +13,7 @@ const ServiceSidebar = () => {
                 <Box>
                     {
                         [
-                            { id: "service-1", title: "Wisdom Teeth", link: "/wisdom-teeth/" },
+                            { id: "service-1", title: "Wisdom Teeth", link: "/wisdom-teeth.html/" },
                             { id: "service-2", title: "Dental Implants", link: "/dental-implants" },
                             { id: "service-3", title: "Dentures", link: "/dentures" },
                             { id: "service-4", title: "Teeth Whitening", link: "/teeth-whitening" },

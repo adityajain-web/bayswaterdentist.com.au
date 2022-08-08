@@ -11,11 +11,10 @@ const nextConfig = {
   },
   rewrites: async () => [
     {
-      source: "/public/wisdom-teeth.html/",
+      source: "/public/wisdom-teeth.html",
       destination: "/pages/api/wisdom-teeth.js/",
     },
   ],
-  
 }
 
 module.exports = nextConfig

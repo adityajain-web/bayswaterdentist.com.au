@@ -3,7 +3,7 @@ import Head from 'next/head';
 import WPAPI from "wpapi";
 import { XMasonry, XBlock } from 'react-xmasonry'
 import { BlogSideBar, BlueBtn, CommonHero, CustomCard, SectionalHeading } from '../../Components/components';
-import { Container, Grid, Box, Typography, LinearProgress } from "@mui/material";
+import { Container, Grid, Box, Button, LinearProgress } from "@mui/material";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -54,7 +54,7 @@ const Blog = () => {
                             <XMasonry maxColumns={2} responsive targetBlockWidth={400}>
                               {
                                 blogs.map(item => <XBlock key={item.id}>
-                                  <CustomCard blogMedia={item._embedded['wp:featuredmedia'][0].source_url} cardMediaAlt={item._embedded['wp:featuredmedia'][0].alt_text} cardTitle={item.title.rendered} navlink={true} link={`/blog/${item.slug}/`} cardText={`${item.excerpt.rendered.split(" ").slice(0, 20).join(" ")}[...]`} cardList={null} cls="m-3" />
+                                  <CustomCard blogMedia={item._embedded['wp:featuredmedia'][0].source_url} cardMediaAlt={item._embedded['wp:featuredmedia'][0].alt_text} cardTitle={item.title.rendered} anchor={true} link={`/blog/${item.slug}/`} cardText={`${item.excerpt.rendered.split(" ").slice(0, 20).join(" ")}[...]`} cardList={null} cls="m-3" />
                                 </XBlock>)
                               }
                             </XMasonry>

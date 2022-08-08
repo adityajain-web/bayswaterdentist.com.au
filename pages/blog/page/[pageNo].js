@@ -10,28 +10,28 @@ const MultpleBlogs = () => {
 	const [blogs, setBlogs] = useState([])
 	const [randomBanner, setRandomBanner] = useState(0)
 	const router = useRouter();
-	const pageNo = router.query.pageNo;
+	const pageno = router.query.pageno;
 	const [totalPages, seTotalPages] = useState()
 
 	const wp = new WPAPI({
 		endpoint: "https://bayswaterdentist.com.au/blog/wp-json/"
 	});
 
-	const fetchBlog = async (pageNo) => {
-		const posts = await wp.posts().embed().order().perPage(10).page(pageNo).get();
+	const fetchBlog = async (pageno) => {
+		const posts = await wp.posts().embed().order().perPage(10).page(pageno).get();
 		setBlogs(posts)
 	}
 
 	useEffect(() => {
-		if (pageNo) {
-			fetchBlog(pageNo)
+		if (pageno) {
+			fetchBlog(pageno)
 		}
-	}, [blogs, pageNo])
+	}, [blogs, pageno])
 
 	useEffect(() => {
 		const randomBanner = Math.floor(Math.random() * 3);
 		setRandomBanner(randomBanner)
-	}, [pageNo]);
+	}, [pageno]);
 
 	console.log(blogs)
 
@@ -40,7 +40,7 @@ const MultpleBlogs = () => {
 			<Head>
 				<meta name="description" content="Bayswater dentist blog contains various dental tips and blogs about dental conditions and their treatments. Read our blog to know more." />
 				<meta name="robots" content="index" />
-				<link rel="canonical" href={`/blog/${pageNo}/`} />
+				<link rel="canonical" href={`/blog/${pageno}/`} />
 				<title>Dental Care Tips and Dental Blog | Bayswater Dentist Blog</title>
 				<script type="application/ld+json">
 					{
@@ -62,20 +62,20 @@ const MultpleBlogs = () => {
 													<XMasonry maxColumns={2} responsive targetBlockWidth={400}>
 														{
 															blogs.map(item => <XBlock key={item.id}>
-																<CustomCard blogMedia={item._embedded['wp:featuredmedia'][0].source_url} cardMediaAlt={item._embedded['wp:featuredmedia'][0].alt_text} cardTitle={item.title.rendered} navlink={true} link={`/blog/${item.slug}/`} cardText={`${item.excerpt.rendered.split(" ").slice(0, 20).join(" ")}[...]`} cardList={null} cls="m-3" />
+																<CustomCard blogMedia={item._embedded['wp:featuredmedia'][0].source_url} cardMediaAlt={item._embedded['wp:featuredmedia'][0].alt_text} cardTitle={item.title.rendered} anchor={true} link={`/blog/${item.slug}/`} cardText={`${item.excerpt.rendered.split(" ").slice(0, 20).join(" ")}[...]`} cardList={null} cls="m-3" />
 															</XBlock>)
 														}
 													</XMasonry>
 												</Box>
 												<Box className="d-flex justify-content-center align-items-center py-2">
 													{
-														pageNo === '2' ? <BlueBtn navlink={true} link={`/blog/`} text="First" /> : null
+														pageno === '2' ? <BlueBtn navlink={true} link={`/blog/`} text="First" /> : null
 													}
 													{
-														blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="NEXT" navlink={true} link={`/blog/page/${Number(pageNo) + 1}`} /> : null : null : null : null
+														blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="NEXT" navlink={true} link={`/blog/page/${Number(pageno) + 1}`} /> : null : null : null : null
 													}
 													{
-														pageNo !== '2' && blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="PREV" navlink={true} link={`/blog/page/${Number(pageNo) - 1}`} /> : null : null : null : null
+														pageno !== '2' && blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="PREV" navlink={true} link={`/blog/page/${Number(pageno) - 1}`} /> : null : null : null : null
 													}
 												</Box>
 											</Grid>

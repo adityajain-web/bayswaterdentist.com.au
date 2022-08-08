@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
+import {useRouter} from 'next/router'
 import { BlogBanner, BlogSideBar } from '../../Components/components';
-import { Box, Container, Grid } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 
 export async function getStaticPaths() {
-  const res = await fetch('https://bayswaterdentist.com.au/blog/wp-json/wp/v2/posts');
+  const res = await fetch('https://bayswaterdentist.com.au/blog/wp-json/wp/v2/posts?per_page=99');
   const data = await res.json();
   const paths = data.map((item) => {
     return {
@@ -17,7 +18,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false
+    fallback: true
   }
 }
 
@@ -28,7 +29,8 @@ export async function getStaticProps(context) {
   return {
     props: {
       data,
-    }
+    },
+    revalidate: 10,
   }
 }
 
@@ -36,12 +38,19 @@ export async function getStaticProps(context) {
 const SingleBlog = ({ data }) => {
   const [blog] = data
   const [randomBanner, setRandomBanner] = useState(0)
+  const router = useRouter();
   console.log(blog)
 
   useEffect(() => {
     const randomBanner = Math.floor(Math.random() * 3);
     setRandomBanner(randomBanner)
   }, [blog])
+
+  if(router.isFallback){
+    return <Box>
+      <Typography>Loading...</Typography>
+    </Box>
+  }
 
   return (
     <>
