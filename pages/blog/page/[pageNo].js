@@ -10,36 +10,34 @@ const MultpleBlogs = () => {
 	const [blogs, setBlogs] = useState([])
 	const [randomBanner, setRandomBanner] = useState(0)
 	const router = useRouter();
-	const pageno = router.query.pageno;
+	const pageNo = router.query.pageNo;
 
 	const wp = new WPAPI({
 		endpoint: "https://bayswaterdentist.com.au/blog/wp-json/"
 	});
 
-	const fetchBlog = async (pageno) => {
-		const posts = await wp.posts().embed().order().perPage(10).page(pageno).get();
+	const fetchBlog = async (pageNo) => {
+		const posts = await wp.posts().embed().order().perPage(10).page(pageNo).get();
 		setBlogs(posts)
 	}
 
 	useEffect(() => {
-		if (pageno) {
-			fetchBlog(pageno)
+		if (pageNo) {
+			fetchBlog(pageNo)
 		}
-	}, [blogs, pageno])
+	}, [blogs, pageNo])
 
 	useEffect(() => {
 		const randomBanner = Math.floor(Math.random() * 3);
 		setRandomBanner(randomBanner)
-	}, [pageno]);
-
-	console.log(blogs)
+	}, [pageNo]);
 
 	return (
 		<>
 			<Head>
 				<meta name="description" content="Bayswater dentist blog contains various dental tips and blogs about dental conditions and their treatments. Read our blog to know more." />
 				<meta name="robots" content="index" />
-				<link rel="canonical" href={`/blog/${pageno}/`} />
+				<link rel="canonical" href={`/blog/${pageNo}/`} />
 				<title>Dental Care Tips and Dental Blog | Bayswater Dentist Blog</title>
 				<script type="application/ld+json">
 					{
@@ -68,13 +66,13 @@ const MultpleBlogs = () => {
 												</Box>
 												<Box className="d-flex justify-content-center align-items-center py-2">
 													{
-														pageno === '2' ? <BlueBtn navlink={true} link={`/blog/`} text="First" /> : null
+														pageNo === '2' ? <BlueBtn navlink={true} link={`/blog/`} text="First" /> : null
 													}
 													{
-														blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="NEXT" navlink={true} link={`/blog/page/${Number(pageno) + 1}`} /> : null : null : null : null
+														blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="NEXT" navlink={true} link={`/blog/page/${Number(pageNo) + 1}`} /> : null : null : null : null
 													}
 													{
-														pageno !== '2' && blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="PREV" navlink={true} link={`/blog/page/${Number(pageno) - 1}`} /> : null : null : null : null
+														pageNo !== '2' && blogs ? blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn text="PREV" navlink={true} link={`/blog/page/${Number(pageNo) - 1}`} /> : null : null : null : null
 													}
 												</Box>
 											</Grid>
