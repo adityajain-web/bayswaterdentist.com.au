@@ -30,12 +30,6 @@ const MultipleBlogs = ({ data }) => {
   const router = useRouter();
 
   useEffect(() => {
-    if (blog.length < 1) {
-      router.push(`/blog/page/${Number(router.query.pageNo) - 1}`)
-    }
-  })
-
-  useEffect(() => {
     if (typeof (window) !== undefined) {
       setBlog(data)
     }
