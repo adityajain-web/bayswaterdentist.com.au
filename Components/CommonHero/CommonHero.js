@@ -22,7 +22,7 @@ import TeethWhitening from '../../public/Teeth-Whitening/teeth-whitening-2.jpg'
 import RootCanal from '../../public/Root-Canal/root-canal-2.jpg'
 import ScaleClean from '../../public/Scale-Clean/scb.jpg'
 import Venners from '../../public/Veeneers/veneers-1.jpg';
-import CNB from '../../public/CNB/crown-bridges-banner.webp';
+import CNB from '../../public/CNB/crown-bridges-banner.jpg';
 import DentalEmergency from '../../public/Dental-Emergency/dentalemergency.jpg'
 import Invisalign from '../../public/Invisalign/invisalign-bg.jpg'
 import DentalFillings from '../../public/Dental-Fillings/dentalfillings-bg.jpg'

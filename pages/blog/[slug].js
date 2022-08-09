@@ -39,7 +39,6 @@ const SingleBlog = ({ data }) => {
   const [blog] = data
   const [randomBanner, setRandomBanner] = useState(0)
   const router = useRouter();
-  console.log(blog)
 
   useEffect(() => {
     const randomBanner = Math.floor(Math.random() * 3);
