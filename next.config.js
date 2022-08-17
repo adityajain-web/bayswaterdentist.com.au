@@ -7,7 +7,12 @@ const nextConfig = {
     domains: [
       'https:/s4.gifyu.com/',
       "https://bayswaterdentist.com.au"
-    ]
+    ],
+  },
+  experimental:{
+    images:{
+      unoptimized: true
+    }
   },
   rewrites: async () => [
     {
