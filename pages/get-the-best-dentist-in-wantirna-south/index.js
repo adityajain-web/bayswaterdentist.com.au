@@ -16,7 +16,7 @@ const WantirnaSouth = () => {
         <meta name="description" content="We at Bayswater Dentist near Wantirna South are heard for you. We offer several dental services, including emergency dentistry. Call us at (03)-9069 3100." />
         <meta name="robots" content="index" />
         <link rel="canonical" href="/get-the-best-dentist-in-wantirna-south/" />
-        <title>wDentist in Wantirna South | Bayswater Dentist</title>
+        <title>Dentist in Wantirna South | Bayswater Dentist</title>
       </Head>
       <CommonHero />
       <main>
