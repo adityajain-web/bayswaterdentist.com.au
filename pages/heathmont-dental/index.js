@@ -26,8 +26,8 @@ const Heathmont = () => {
             <Grid container>
               <Grid xs={12} md={10} className="mx-auto">
                 <Box py={2}>
-                  <Typography className="para">Do you need dental services personalised to your needs? Then you’ve come to the right place! At Bayswater Dentist, adjacent to Heathmont, we provide top-notch services designed to enhance your dental appearance, give you the smile you want, and restore your confidence. Some of these services, such as dental implants, are guaranteed to last for a long time, all at affordable prices. </Typography>
-                  <Typography className="para">Heathmont is a suburb located in Melbourne, Victoria, Australia, 24 km east of Melbourne’s Central Business District. As of 2021, Heathmont has a recorded population of 9,933 people, up from 8,787 people in 2001. That said, Heathmont is only a stone-throw away from Bayswater Dentist. </Typography>
+                  <Typography className="para mb-3">Do you need dental services personalised to your needs? Then you’ve come to the right place! At Bayswater Dentist, adjacent to Heathmont, we provide top-notch services designed to enhance your dental appearance, give you the smile you want, and restore your confidence. Some of these services, such as dental implants, are guaranteed to last for a long time, all at affordable prices. </Typography>
+                  <Typography className="para mb-3">Heathmont is a suburb located in Melbourne, Victoria, Australia, 24 km east of Melbourne’s Central Business District. As of 2021, Heathmont has a recorded population of 9,933 people, up from 8,787 people in 2001. That said, Heathmont is only a stone-throw away from Bayswater Dentist. </Typography>
                 </Box>
               </Grid>
             </Grid>
@@ -39,17 +39,17 @@ const Heathmont = () => {
               <Grid item xs={12} md={10} className="mx-auto">
                 <Box py={2}>
                   <PageSectionalHeading title="Dental Services Offered by Bayswater Dentist in Heathmont" variant="h2" align="center" />
-                  <Typography className="para" align="center">At Bayswater Dentist, we offer premium dental services, which include but are not limited to;</Typography>
+                  <Typography className="para mb-3" align="center">At Bayswater Dentist, we offer premium dental services, which include but are not limited to;</Typography>
                   <Box className="mt-3">
                     <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Wisdom Teeth Removal</Typography>
-                    <Typography className="para">Wisdom teeth, unlike your milk teeth, don’t need to be removed. However, certain instances can prompt you to have them removed. According to the Australian Dental Association, ‘‘Wisdom teeth that are causing problems or at high risk of causing problems in the future are best removed at a younger age’’. Failure to remove them can lead to severe dental issues such as bacterial infection and the development of Fluid-filled sacs (cysts). </Typography>
-                    <Typography className="para">At Bayswater Dentist, we are here to prevent such infections from occurring. Our wisdom teeth removal services will improve your oral health and alleviate any pain and discomfort initially experienced. </Typography>
+                    <Typography className="para mb-3">Wisdom teeth, unlike your milk teeth, don’t need to be removed. However, certain instances can prompt you to have them removed. According to the Australian Dental Association, ‘‘Wisdom teeth that are causing problems or at high risk of causing problems in the future are best removed at a younger age’’. Failure to remove them can lead to severe dental issues such as bacterial infection and the development of Fluid-filled sacs (cysts). </Typography>
+                    <Typography className="para mb-3">At Bayswater Dentist, we are here to prevent such infections from occurring. Our wisdom teeth removal services will improve your oral health and alleviate any pain and discomfort initially experienced. </Typography>
                   </Box>
 
                   <Box className="mt-3">
                     <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Cosmetic Treatment</Typography>
-                    <Typography className="para">Cosmetic dentistry is a myriad of procedures done to improve the appearance of your teeth.</Typography>
-                    <Typography className="para">The procedures include;</Typography>
+                    <Typography className="para mb-3">Cosmetic dentistry is a myriad of procedures done to improve the appearance of your teeth.</Typography>
+                    <Typography className="para mb-3">The procedures include;</Typography>
                     <Box>
                       <List>
                         {
@@ -62,19 +62,19 @@ const Heathmont = () => {
                         }
                       </List>
                     </Box>
-                    <Typography className="para">Thanks to dental treatment advancements, these cosmetic procedures have become highly affordable, and it won’t cost you thousands to achieve your ideal smile. </Typography>
-                    <Typography className="para">When you visit our Dentist, Hearhmount, we will examine your oral health, listen to your needs and requirements then take you through each procedure until you find the best one for you.</Typography>
+                    <Typography className="para mb-3">Thanks to dental treatment advancements, these cosmetic procedures have become highly affordable, and it won’t cost you thousands to achieve your ideal smile. </Typography>
+                    <Typography className="para mb-3">When you visit our Dentist, Hearhmount, we will examine your oral health, listen to your needs and requirements then take you through each procedure until you find the best one for you.</Typography>
                   </Box>
 
                   <Box className="mt-3">
                     <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Invisalign</Typography>
-                    <Typography className="para">Invisalign is largely gaining popularity not just in kids and teenagers but also in young adults, and there’s a good reason for this. Invisalign is the modern version of traditional braces but much better, more convenient, and effective. While not everyone qualifies for Invisalign, these clear aligners are ideal for people who want a comfortable and almost invisible option to straighten their teeth.</Typography>
-                    <Typography className="para">Additionally, the average period of using the clear aligners is between 6-12 months which restores your freedom to eat whatever you want and still get the best results. Before you book an appointment for Invisalign, we recommend you have a checkup done at Bayswater Dentist to ensure you qualify for the procedure.  </Typography>
+                    <Typography className="para mb-3">Invisalign is largely gaining popularity not just in kids and teenagers but also in young adults, and there’s a good reason for this. Invisalign is the modern version of traditional braces but much better, more convenient, and effective. While not everyone qualifies for Invisalign, these clear aligners are ideal for people who want a comfortable and almost invisible option to straighten their teeth.</Typography>
+                    <Typography className="para mb-3">Additionally, the average period of using the clear aligners is between 6-12 months which restores your freedom to eat whatever you want and still get the best results. Before you book an appointment for Invisalign, we recommend you have a checkup done at Bayswater Dentist to ensure you qualify for the procedure.  </Typography>
                   </Box>
 
                   <Box className="mt-3">
                     <Typography className='subtitle' variant="h3" gutterBottom align={width > 600 ? 'left' : 'center'}>Emergency Dental Services</Typography>
-                    <Typography className="para">Cases of dental emergencies in Australia are becoming increasingly common. These emergencies range from; </Typography>
+                    <Typography className="para mb-3">Cases of dental emergencies in Australia are becoming increasingly common. These emergencies range from; </Typography>
                     <Box>
                       <List>
                         {
@@ -87,8 +87,8 @@ const Heathmont = () => {
                         }
                       </List>
                     </Box>
-                    <Typography className="para">What’s worse? These emergencies can happen to anyone at any time, even at night.</Typography>
-                    <Typography className="para">Seeking immediate treatment is necessary to prevent future damage. As such, you need to have your to-go Emergency Dental Heathmount. At Bayswater Dentist, we are available around the clock to provide you with the urgent care you need should you find yourself in any of the above emergencies.</Typography>
+                    <Typography className="para mb-3">What’s worse? These emergencies can happen to anyone at any time, even at night.</Typography>
+                    <Typography className="para mb-3">Seeking immediate treatment is necessary to prevent future damage. As such, you need to have your to-go Emergency Dental Heathmount. At Bayswater Dentist, we are available around the clock to provide you with the urgent care you need should you find yourself in any of the above emergencies.</Typography>
                   </Box>
                 </Box>
               </Grid>
@@ -101,7 +101,7 @@ const Heathmont = () => {
               <Grid item xs={12} md={10} className="mx-auto">
                 <Box py={2}>
                 <PageSectionalHeading title="Conclusion" variant="h2" align={width > 600 ? 'left' : 'center'} />
-                  <Typography className="para">A simple visit to your Dentist near Heathmount can help you avoid costly and unwanted dental problems such as bacterial infection. We offer quality services in emergency dental care, cosmetic treatment, Invisalign, and wisdom teeth removal, among others. In case you require services outside the ones mentioned, visit us today for further consultation. </Typography>
+                  <Typography className="para mb-3">A simple visit to your Dentist near Heathmount can help you avoid costly and unwanted dental problems such as bacterial infection. We offer quality services in emergency dental care, cosmetic treatment, Invisalign, and wisdom teeth removal, among others. In case you require services outside the ones mentioned, visit us today for further consultation. </Typography>
                 </Box>
               </Grid>
             </Grid>
