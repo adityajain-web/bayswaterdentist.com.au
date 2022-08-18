@@ -5,7 +5,7 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 import Image from 'next/image'
 import pic1 from '../../public/smile-design/1.jpg'
 import pic2 from '../../public/smile-design/2.jpg'
-import pic3 from '../../public/smile-design/3.jpg'
+import pic3 from '../../public/smile-design/3.png'
 
 
 const SmileDesign = () => {
