@@ -98,7 +98,7 @@ p,
 .para {
   font-family: var(--para-font-family) !important;
   font-size: 1rem;
-  margin-bottom: 1rem !important;
+  margin-bottom: 1rem;
   display: block;
   color: #555;
 }
