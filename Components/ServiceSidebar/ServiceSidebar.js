@@ -26,7 +26,7 @@ const ServiceSidebar = () => {
                             { id: "service-11", title: "DENTAL FILLINGS", link: "/dental-fillings" },
                             { id: "service-12", title: "SMILE DESIGN", link: "/smile-design" },
                         ].map(item => <Link key={item.id} href={`${item.link}/`}><Box className={`d-flex justify-content-between align-items-center ${Styles.box} ${router.pathname === item.link ? Styles.active : null}`} mb={1} p={2}>
-                            <Typography className={`${Styles.title}`}>
+                            <Typography className={`${Styles.title} m-0`}>
                                 {item.title}
                             </Typography>
                             <ArrowForwardIos />
