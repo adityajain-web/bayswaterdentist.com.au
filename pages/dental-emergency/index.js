@@ -184,7 +184,7 @@ const DentalEmergency = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingOne">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                   When is it a dental emergency?
                                   </button>
                                 </Typography>
@@ -200,7 +200,7 @@ const DentalEmergency = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingTwo">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                   Where can I find emergency dental care in Victoria?
                                   </button>
                                 </Typography>
@@ -215,7 +215,7 @@ const DentalEmergency = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingThree">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                   Can Emergency Departments help with a dental emergency?
                                   </button>
                                 </Typography>
@@ -230,7 +230,7 @@ const DentalEmergency = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingFour">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                                   How can I relieve unbearable tooth pain?
                                   </button>
                                 </Typography>
@@ -245,7 +245,7 @@ const DentalEmergency = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingFive">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                                   How can I numb my tooth pain?
                                   </button>
                                 </Typography>

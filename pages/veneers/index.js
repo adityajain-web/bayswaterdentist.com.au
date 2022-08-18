@@ -148,7 +148,7 @@ const Veneers = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingOne">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                   What are teeth veneers?
                                   </button>
                                 </Typography>
@@ -164,7 +164,7 @@ const Veneers = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingTwo">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                   How much do veneers cost?
                                   </button>
                                 </Typography>
@@ -179,7 +179,7 @@ const Veneers = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingThree">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                   Are veneers permanent?
                                   </button>
                                 </Typography>
@@ -194,7 +194,7 @@ const Veneers = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingFour">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                                   How do veneers work?
                                   </button>
                                 </Typography>
@@ -209,7 +209,7 @@ const Veneers = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingFive">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                                   Does dental insurance cater to veneers?
                                   </button>
                                 </Typography>
@@ -224,7 +224,7 @@ const Veneers = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingSeven">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
                                   Are dental veneers worth getting?
                                   </button>
                                 </Typography>
@@ -239,7 +239,7 @@ const Veneers = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingSeven">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
                                   Does dental insurance cover dental veneers?
                                   </button>
                                 </Typography>
@@ -254,7 +254,7 @@ const Veneers = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingEight">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
                                   Are veneers permanent?
                                   </button>
                                 </Typography>

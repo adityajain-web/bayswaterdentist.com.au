@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
-import '../styles/globals.css'
 import '../styles/Footer.css'
 import '../styles/Header.css'
 import '../styles/media.css'
@@ -9,7 +8,7 @@ import "swiper/css/bundle";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import '../node_modules/aos/dist/aos.css'
-
+import '../styles/globals.css'
 import { Header, Footer } from '../Components/components'
 
 function MyApp({ Component, pageProps }) {
@@ -64,9 +63,9 @@ function MyApp({ Component, pageProps }) {
       height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe>`}}></noscript>
      {/* <!-- End Google Tag Manager (noscript) -->  */}
 
-      <Script strategy="afterInteractive" data-he-id="89445" data-alignment="left" data-he-fixed="true" data-background-color="#003a4c" src="https://healthengine.com.au/webplugin/appointments.js"></Script>
+     {/* <Script strategy="afterInteractive" data-he-id="89445" data-alignment="left" data-he-fixed="true" data-background-color="#003a4c" src="https://healthengine.com.au/webplugin/appointments.js"></Script>
 
-     <Script strategy="afterInteractive" defer src="https://connect.podium.com/widget.js#ORG_TOKEN=6fcbac5a-ab67-46ba-adae-2b930504d726" id="podium-widget" data-organization-api-token="6fcbac5a-ab67-46ba-adae-2b930504d726"></Script>
+     <Script strategy="afterInteractive" defer src="https://connect.podium.com/widget.js#ORG_TOKEN=6fcbac5a-ab67-46ba-adae-2b930504d726" id="podium-widget" data-organization-api-token="6fcbac5a-ab67-46ba-adae-2b930504d726"></Script>   */}
     <Header />
     <Component {...pageProps} />
     <Footer />

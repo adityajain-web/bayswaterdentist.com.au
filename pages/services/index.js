@@ -13,6 +13,7 @@ import CrownNBridges from '../../public/Services/dental crown and bridge 1.jpg'
 import DentalEmergency from '../../public/Services/dental emergency 1.jpg';
 import Invisalign from '../../public/Services/Invisalign 1.jpg';
 import ToothFillings from '../../public/Services/dentists-treat-patients-teeth.jpg';
+import Smile from '../../public/Services/smile.jpg';
 
 const index = () => {
   return (
@@ -56,6 +57,8 @@ const index = () => {
                           { id: "service-10", title: "Invisalign", link: "/invisalign/", para: "Our dental team gives you a brighter smile with Invisalign. Get your beautiful, healthy smile today by straightening your teeth with Invisalign!", image: Invisalign, alt: "invisalign" },
 
                           { id: "service-11", title: "Tooth Fillings", link: "/dental-fillings/", para: "Tooth decay, if left untreated, remains the main cause of the cavity. In most cases, it can result in more severe damage to your teeth.", image: ToothFillings, alt: "tooth fillings" },
+
+                          { id: "service-12", title: "Smile Design", link: "/smile-design/", para: "Smile Design is a procedure that uses the latest in digital technology to rectify dental flaws and enhance a patient's smile.", image: Smile, alt: "smiling girl" },
 
                         ].map(item => <Grid key={item.id} item xs={12} sm={6} lg={4}>
                           <CustomCard cardMedia={item.image} cardMediaAlt={item.alt} navlink={true} cardText={item.para} link={item.link} cardList={null} cardTitle={item.title} height="24rem" />

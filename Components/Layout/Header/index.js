@@ -102,7 +102,7 @@ const Header = () => {
                   </Link>
                   <ul className="dropdown-menu border-0 shadow p-2">
                     <li className="nav-item">
-                      <Link href="/wisdom-teeth/">
+                      <Link href="/wisdom-teeth.html/">
                         <a className="nav-link dropdown-item">WISDOM TEETH</a>
                       </Link>
                     </li>
@@ -154,6 +154,11 @@ const Header = () => {
                     <li className="nav-item">
                       <Link href="/dental-fillings/">
                         <a className="nav-link dropdown-item">DENTAL FILLINGS</a>
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link href="/smile-design/">
+                        <a className="nav-link dropdown-item">SMILE DESIGN</a>
                       </Link>
                     </li>
                   </ul>

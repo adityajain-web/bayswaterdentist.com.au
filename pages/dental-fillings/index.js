@@ -165,7 +165,7 @@ const DentalFillings = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingOne">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                   What is Dental Filling?
                                   </button>
                                 </Typography>
@@ -181,7 +181,7 @@ const DentalFillings = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingTwo">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                   How long does a dental filling last?
                                   </button>
                                 </Typography>
@@ -196,7 +196,7 @@ const DentalFillings = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingThree">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                   Can you get a dental filling while pregnant?
                                   </button>
                                 </Typography>
@@ -211,7 +211,7 @@ const DentalFillings = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingFour">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                                   Which tooth filling is the best?
                                   </button>
                                 </Typography>
@@ -226,7 +226,7 @@ const DentalFillings = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingFive">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                                   What material makes dental fillings?
                                   </button>
                                 </Typography>

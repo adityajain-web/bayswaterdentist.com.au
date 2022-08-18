@@ -163,7 +163,7 @@ const ScaleClean = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingOne">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     What does a scale and clean do?
                                   </button>
                                 </Typography>
@@ -179,7 +179,7 @@ const ScaleClean = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingTwo">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                     Do a scale and clean hurt?
                                   </button>
                                 </Typography>
@@ -194,7 +194,7 @@ const ScaleClean = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingThree">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                     How often should you get a scale and clean?
                                   </button>
                                 </Typography>
@@ -209,7 +209,7 @@ const ScaleClean = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingFour">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                                     Are a scale and clean good for your teeth?
                                   </button>
                                 </Typography>
@@ -224,7 +224,7 @@ const ScaleClean = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingFive">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                                     How much do a scale and clean cost?
                                   </button>
                                 </Typography>

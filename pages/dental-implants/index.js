@@ -170,7 +170,7 @@ const DentalImplants = () => {
                         </Box>
                       </Container>
                     </section>
-                    <section className='mt-3 bg-light' align={width > 600 ? 'left' : 'center'}>
+                    <section className='mt-3 bg-light' align={width > 600 ? 'left' : 'center'} style={{ borderRadius: "0.8rem" }}>
                       <Container maxWidth="xxl" className="p-3">
                         <PageSectionalHeading title="Dental implant procedure at Bayswater Dentist" variant="h2" align={width > 600 ? 'left' : 'center'} />
                         <Typography className='para' dangerouslySetInnerHTML={{ __html: 'At Bayswater Dentist, we pride ourselves on a team of highly-trained dental implant Dentist with vast years of experience in fitting and fixing dental implants. We source our implant kits from <strong>MIS implants Australia</strong>, so you can rest assured they won’t be another dreary sub-standard fixture.' }} />
@@ -188,7 +188,7 @@ const DentalImplants = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingOne">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     What is the cost of dental implants in Australia?
                                   </button>
                                 </Typography>
@@ -204,7 +204,7 @@ const DentalImplants = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingTwo">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                     Can a dental implant that is loose be fixed?
                                   </button>
                                 </Typography>
@@ -219,7 +219,7 @@ const DentalImplants = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingThree">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                     After dental implant surgery, what foods can I consume?
                                   </button>
                                 </Typography>
@@ -235,7 +235,7 @@ const DentalImplants = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingFour">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                                     Is a person who is diabetic a candidate for dental implants?
                                   </button>
                                 </Typography>
@@ -250,7 +250,7 @@ const DentalImplants = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingFive">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                                     Are dental implants covered by many dental plans?
                                   </button>
                                 </Typography>
@@ -265,7 +265,7 @@ const DentalImplants = () => {
                             <Box className="card">
                               <Box className="card-header" id="headingSix">
                                 <Typography className='subtitle mb-0' variant="h3">
-                                  <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                  <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
                                     Is dental implant safe?
                                   </button>
                                 </Typography>

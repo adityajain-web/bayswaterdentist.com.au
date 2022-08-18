@@ -30,6 +30,7 @@ import Book from '../../public/Book/ap-2.jpg'
 import ThankU from '../../public/Thank-You/ThankYou.jpg'
 import TNC from '../../public/TNC/termsConditions.jpg';
 import PrivacyPolicy from '../../public/PrivacyPolicy/privacy-2.jpg'
+import SmileDesign from '../../public/smile-design/healthcare.jpg'
 
 const CommonHero = ({ grid, align }) => {
     const { pathname } = useRouter()
@@ -53,25 +54,25 @@ const CommonHero = ({ grid, align }) => {
 
         { id: "contact", slug: "/contact", bg: ContactBg, title: "<span class='headingSpan1'>Contact Us</span>", subtitle: "<span class='text-white'>Our Dental clinic is dedicated to provide you with the most up to date General, Cosmetic, Restorative and Family Dentistry.</span>", bookNow: true },
 
-        { id: "boronia", slug: "/suburb/boronia", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Boronia</span>", bookNow: true },
+        { id: "boronia", slug: "/find-the-best-dentist-in-boronia", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Boronia</span>", bookNow: true },
 
-        { id: "boronia", slug: "/suburb/heathmont", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Heathmont</span>", bookNow: true },
+        { id: "heathmont-dental", slug: "/heathmont-dental", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Heathmont</span>", bookNow: true },
 
-        { id: "boronia", slug: "/suburb/kilsyth", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Kilsyth</span>", bookNow: true },
+        { id: "kilsyth-dentist", slug: "/kilsyth-dentist", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Kilsyth</span>", bookNow: true },
 
-        { id: "knox", slug: "/suburb/knox", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Knox</span>", bookNow: true },
+        { id: "dental-knox", slug: "/dental-knox", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Knox</span>", bookNow: true },
 
-        { id: "mooroolbark", slug: "/suburb/mooroolbark", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Mooroolbark</span>", bookNow: true },
+        { id: "mooroolbark-dentist", slug: "/mooroolbark-dentist", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Mooroolbark</span>", bookNow: true },
 
-        { id: "ringwood", slug: "/suburb/ringwood", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Ringwood</span>", bookNow: true },
+        { id: "ringwood-dental", slug: "/ringwood-dental", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Ringwood</span>", bookNow: true },
 
-        { id: "the-basin", slug: "/suburb/the-basin", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>The Basin</span>", bookNow: true },
+        { id: "affordable-dental-services-at-the-basin", slug: "/affordable-dental-services-at-the-basin", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>The Basin</span>", bookNow: true },
 
-        { id: "vermont", slug: "/suburb/vermont", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Vermont</span>", bookNow: true },
+        { id: "vermont-dental", slug: "/vermont-dental", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Vermont</span>", bookNow: true },
 
-        { id: "wantirna", slug: "/suburb/wantirna", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Wantirna</span>", bookNow: true },
+        { id: "looking-for-a-dentist-in-wantirna", slug: "/looking-for-a-dentist-in-wantirna", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Wantirna</span>", bookNow: true },
 
-        { id: "wantirna-south", slug: "/suburb/wantirna-south", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Wantirna South</span>", bookNow: true },
+        { id: "get-the-best-dentist-in-wantirna-south", slug: "/get-the-best-dentist-in-wantirna-south", bg: SubUrbBg, title: "<span class='headingSpan1'>Dentist In</span> <br /> <span class='headingSpan2'>Wantirna South</span>", bookNow: true },
 
         { id: "services", slug: "/services", bg: ServiceBg, title: "<span class='text-white headingHead'>Dental Health Services</span>", bookNow: true, subtitle:"<span class='text-white HeroPara'>Our team of experts is dedicated to providing you with advanced dental services for Family, Restorative, Cosmetic,Prosthetic and General Dentistry services.</span>" },
 
@@ -102,6 +103,8 @@ const CommonHero = ({ grid, align }) => {
         { id: "privacy-policy", slug: "/privacy-policy", bg: PrivacyPolicy, title: "<span class='headingSpan1'>Privacy Policy</span>", bookNow: false, subtitle:"" },
 
         { id: "terms-and-conditions", slug: "/terms-and-conditions", bg: TNC, title: "<span class='headingSpan1'>Terms And Conditions</span>", bookNow: false, subtitle:"" },
+
+        { id: "smile-design", slug: "/smile-design", bg: SmileDesign, title: "<span class='headingSpan2'>Smile Design</span> <br /> <span class='headingSpan1'>at Bayswater</span>", bookNow: true, subtitle:"" },
     ]
 
     const bgImage = background.filter(entries => entries.slug === pathname)
