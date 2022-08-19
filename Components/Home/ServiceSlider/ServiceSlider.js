@@ -39,7 +39,7 @@ const ServiceSlider = () => {
                             >
                                 {
                                     Services.map(item => <SwiperSlide key={item.id}>
-                                        <CustomCard cardMedia={item.image} cardMediaAlt={item.alt} cardTitle={item.title} cardText={item.para} navlink={true} link={item.link} height="27.2rem" bgColor={false} cardList={null} />
+                                        <CustomCard cardMedia={item.image} cardMediaAlt={item.alt} cardTitle={item.title} cardText={item.para} navlink={true} link={item.link} height="24rem" bgColor={false} cardList={null} />
                                     </SwiperSlide>)
                                 }
                             </Swiper>
