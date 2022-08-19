@@ -8,8 +8,8 @@ import "swiper/css/bundle";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import '../node_modules/aos/dist/aos.css'
-import '../styles/globals.css'
 import { Header, Footer } from '../Components/components'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
