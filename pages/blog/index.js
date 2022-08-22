@@ -26,6 +26,9 @@ const Blog = () => {
     setWidth(window.innerWidth)
   }, [width]);
 
+  console.log(blogs)
+
+
   return (
     <>
       <Head>
