@@ -57,7 +57,7 @@ const SingleBlog = ({ data }) => {
         blog ? <Head>
           <meta name="description" content={blog.yoast_head_json.description} />
           <meta name="robots" content="index" />
-          <link rel="canonical" href={`/blog/${blog.slug}`} />
+          <link rel="canonical" href={`/blog/${blog.slug}/`} />
           <title>{blog.title.rendered}</title>
         </Head> : null
       }
