@@ -16,7 +16,7 @@ const nextConfig = {
   },
   rewrites: async () => [
     {
-      source: "/public/wisdom-teeth.html",
+      source: "/public/wisdom-teeth/index.html",
       destination: "/pages/api/wisdom-teeth.js",
     },
   ],
