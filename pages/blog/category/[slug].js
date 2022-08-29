@@ -6,65 +6,93 @@ import { BlogBanner, BlogSideBar, CustomCard, BlueBtn, SectionalHeading } from '
 import { Box, Container, Grid, LinearProgress } from "@mui/material";
 import { XMasonry, XBlock } from 'react-xmasonry'
 
-const SingleCategory = () => {
+export const getStaticPaths = async () => {
+  const res = await fetch('https://bayswaterdentist.com.au/blog/wp-json/wp/v2/categories?_embed=true&per_page=99');
+  const data = await res.json();
+  const paths = data.map(item => {
+    return {
+      params: {
+        slug: item.slug.toString()
+      }
+    }
+  })
+
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+export const getStaticProps = async (context) => {
+  const { slug } = context.params;
+  const res = await fetch(`https://bayswaterdentist.com.au/blog/wp-json/wp/v2/categories?slug=${slug}`);
+  const data = await res.json();
+  return {
+    props: {
+      data
+    }
+  }
+}
+
+const BlogsPerCategory = ({ data }) => {
+  const [show, setShow] = useState(false)
   const [blogs, setBlogs] = useState([])
-  const [category, setCategory] = useState([])
   const [randomBanner, setRandomBanner] = useState(0)
   const router = useRouter();
   const { slug } = router.query;
 
   const wp = new WPAPI({
     endpoint: "https://bayswaterdentist.com.au/blog/wp-json/"
-  })
-
-  const fetchCategory = async (slug) => {
-    const [group] = await wp.categories().slug(slug).get();
-    setCategory(group)
-  }
-
-  useEffect(() => {
-    if (slug) {
-      fetchCategory(slug)
-    }
-  }, [slug]);
+  });
 
   const fetchBlog = async (id) => {
-    const posts = await wp.posts().embed().param({ categories: [id] }).perPage(10).page(1).get()
+    const posts = await wp.posts().embed().param({ categories: [id] }).perPage(99).page(1).get()
     setBlogs(posts)
   }
 
   useEffect(() => {
-    if(category.id){
-      fetchBlog(category.id)
+    if (data[0].id) {
+      fetchBlog(data[0].id)
     }
-  }, [category, blogs]);
+  }, [data[0].id]);
 
   useEffect(() => {
     const randomBanner = Math.floor(Math.random() * 3);
     setRandomBanner(randomBanner)
   }, [slug])
 
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      setShow(true)
+    } else {
+      setShow(false)
+    }
+  }, []);
+
   return (
     <>
       {
-        category ? <Head>
+        data ? <><Head>
           <meta name="description" content="" />
           <meta name="robots" content="noindex" />
-          <link rel="canonical" href={`/blog/category/${slug}/`} />
-          <title>{category.yoast_head_json ? category.yoast_head_json.title ? category.yoast_head_json.title : null : null}</title>
-        </Head> : null
+          <link rel="canonical" href={`/blog/category/${data[0].slug}/`} />
+          <title>{data[0].yoast_head_json ? data[0].yoast_head_json.title ? data[0].yoast_head_json.title : null : null}</title>
+        </Head>
+          <BlogBanner title={data[0] ? data[0].name ? data[0].name : null : null} hero={randomBanner} />
+        </> : null
       }
-      <BlogBanner title={category ? category.name ? category.name : null : null} hero={randomBanner} />
-      <main>
-        <section>
-          <Container maxWidth="xxl">
-            <Grid container>
-              <Grid item xs={12} md={10} className="mx-auto">
-                {
-                  category && blogs ? blogs.length > 0 ? <Box py={5}>
-                  <Grid container spacing={10}>
-                    <Grid item xs={12} lg={8}>
-                    <Box>
+      {
+        show ? <main>
+          <section>
+            <Container maxWidth="xxl">
+              <Grid container>
+                <Grid item xs={12} md={10} className="mx-auto">
+                  {
+                    data && blogs ? blogs.length > 0 ? <Box py={5}>
+                      <Grid container spacing={10}>
+                        <Grid item xs={12} lg={8}>
+                          <Box>
                             <XMasonry maxColumns={2} responsive targetBlockWidth={400}>
                               {
                                 blogs.map(item => <XBlock key={item.id}>
@@ -73,30 +101,26 @@ const SingleCategory = () => {
                               }
                             </XMasonry>
                           </Box>
-                          <Box className="d-flex justify-content-center align-items-center py-2">
-                          {
-														blogs ?  blogs._paging ? blogs._paging.links ? blogs._paging.links.next ? <BlueBtn navlink={true} link={`/blog/page/2`} text="NEXT" /> : null : null : null : null 
-													}
-                          </Box>
-                    </Grid>
-                    <Grid item xs={12} lg={4}>
-                      <BlogSideBar />
-                    </Grid>
-                  </Grid>
-                </Box> : <Box py={5}>
-										<Box sx={{ width: '100%' }}>
-											<LinearProgress />
-										</Box>
-										<SectionalHeading variant="h2" align="center" title="We make your smile shine like the sun 😊" />
-									</Box> : null
-                }
+                        </Grid>
+                        <Grid item xs={12} lg={4}>
+                          <BlogSideBar />
+                        </Grid>
+                      </Grid>
+                    </Box> : <Box py={5}>
+                      <Box sx={{ width: '100%' }}>
+                        <LinearProgress />
+                      </Box>
+                      <SectionalHeading variant="h2" align="center" title="We make your smile shine like the sun 😊" />
+                    </Box> : null
+                  }
+                </Grid>
               </Grid>
-            </Grid>
-          </Container>
-        </section>
-      </main>
+            </Container>
+          </section>
+        </main> : null
+      }
     </>
   )
 }
 
-export default SingleCategory
+export default BlogsPerCategory

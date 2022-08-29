@@ -5,33 +5,35 @@ import { XMasonry, XBlock } from 'react-xmasonry'
 import { BlogSideBar, BlueBtn, CommonHero, CustomCard, SectionalHeading } from '../../Components/components';
 import { Container, Grid, Box, Button, LinearProgress } from "@mui/material";
 
-const Blog = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [width, setWidth] = useState();
-
-  const wp = new WPAPI({
-    endpoint: "https://bayswaterdentist.com.au/blog/wp-json/"
-  });
-
-  const fetchBlogs = async () => {
-    const posts = await wp.posts().embed().order().perPage(10).page(1).get();
-    setBlogs(posts)
+export const getStaticProps = async()=>{
+  const res = await fetch('https://bayswaterdentist.com.au/blog/wp-json/wp/v2/posts?_embed');
+  const data = await res.json();
+  return{
+    props:{
+      data
+    }
   }
+}
 
-  useEffect(() => {
-    fetchBlogs()
-  }, [blogs]);
-
+const Blogs = ({data}) => {
+  const [width, setWidth] = useState();
+  const [show, setShow] = useState(false)
+  
   useEffect(() => {
     setWidth(window.innerWidth)
   }, [width]);
 
-  console.log(blogs)
-
+  useEffect(()=>{
+    if(typeof window !== undefined){
+      setShow(true)
+    }else{
+      setShow(false)
+    }
+  },[])
 
   return (
     <>
-      <Head>
+       <Head>
         <meta name="description" content="Bayswater dentist blog contains various dental tips and blogs about dental conditions and their treatments. Read our blog to know more." />
         <meta name="robots" content="index" />
         <link rel="canonical" href="/blog/" />
@@ -43,27 +45,28 @@ const Blog = () => {
         </script>
       </Head>
       <CommonHero grid={true} align={width > 600 ? 'left' : 'center'} />
-      <main>
+      {
+        show ? <main>
         <section>
           <Container maxWidth="xxl">
             <Grid container>
               <Grid item xs={12} md={10} className="mx-auto">
                 <Box py={5}>
                   {
-                    blogs ? blogs.length > 0 ? <Box>
+                    data ? data.length > 0 ? <Box>
                       <Grid container spacing={10}>
                         <Grid item xs={12} lg={8}>
                           <Box>
                             <XMasonry maxColumns={2} responsive targetBlockWidth={400}>
                               {
-                                blogs.map(item => <XBlock key={item.id}>
+                                data.map(item => <XBlock key={item.id}>
                                   <CustomCard blogMedia={item._embedded['wp:featuredmedia'][0].source_url} cardMediaAlt={item._embedded['wp:featuredmedia'][0].alt_text} cardTitle={item.title.rendered} anchor={true} link={`/blog/${item.slug}/`} cardText={`${item.excerpt.rendered.split(" ").slice(0, 20).join(" ")}[...]`} cardList={null} cls="m-3" />
                                 </XBlock>)
                               }
                             </XMasonry>
                           </Box>
                           <Box className="d-flex justify-content-center align-items-center py-2">
-                            <BlueBtn anchor={true} link={'/blog/page/2'} text="NEXT" /> 
+                            <BlueBtn navlink={true} link={'/blog/page/2'} text="NEXT" /> 
                           </Box>
                         </Grid>
                         <Grid item xs={12} lg={4}>
@@ -82,9 +85,10 @@ const Blog = () => {
             </Grid>
           </Container>
         </section>
-      </main>
+      </main>: null
+      }
     </>
   )
 }
 
-export default Blog
+export default Blogs
