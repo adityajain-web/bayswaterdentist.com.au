@@ -3,7 +3,7 @@ import teethWhitening from '../../../../public/Home/Offer/TakeHome Teeth Whiteni
 import DentalImplants from '../../../../public/Home/Offer/Dental Implant.jpg';
 
 const offer = [
-{id:"home_offer1", title:"$149 Scale and Clean & Check-up* or Gap-Free", list:["Comprehensive Dental Examination","Scale & clean","Fluoride"], image: ScaleNClean, alt:"Scale & Clean", offerBtn: true, price: "149*", small: null},
+{id:"home_offer1", title:"$149 Scale and Clean & Check-up* or Gap-Free", list:["Comprehensive Dental Examination","Scale & clean","Fluoride"], image: ScaleNClean, alt:"Scale & Clean", offerBtn: true, price: "149*", small: '*only for new patient'},
 
 {id:"home_offer2", title:"TakeHome Teeth Whitening Offer", list:["Whitening consultation with Dentist","Whitening trays made to fit you","Whitening Gel and Demonstration of how to use it"], image: teethWhitening, alt:"Teeth Whitening", offerBtn: true, price: "$249*", small:"or 4 equal payments of $62.25*"},
 
