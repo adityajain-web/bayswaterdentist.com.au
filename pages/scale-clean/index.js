@@ -7,10 +7,64 @@ import pageImage1 from '../../public/Scale-Clean/What’s-the-Deal-With-Plaque.p
 import pageImage2 from '../../public/Scale-Clean/scale and clean 1.jpg'
 import pageImage3 from '../../public/Scale-Clean/teeth cleaning.jpg'
 import { useEffect, useState } from 'react';
-import { CheckCircleOutline } from '@mui/icons-material'
+import { CheckCircleOutline, Close } from '@mui/icons-material'
+import PopupImage from '../../public/Home/Popup/Scale-Clean.jpg';
+import { useRouter } from 'next/router'
 
 const ScaleClean = () => {
   const [width, setWidth] = useState();
+  const router = useRouter()
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (open === false) {
+      document.querySelector('footer').style.display = "none"
+    } else if (open === true) {
+      document.querySelector('footer').style.display = "block"
+    }
+  }, [open])
+
+  useEffect(() => {
+    if (router.pathname === "/scale-clean") {
+      let timer1 = setTimeout(setOpen(false), 30000)
+
+      return () => {
+        clearTimeout(timer1)
+      }
+    }
+  }, [router.pathname])
+
+
+  const Popup = () => {
+    return (<>
+        <Container maxWidth="xxl" style={{ height: "100%", backgroundColor: "rgba(0,0,0,0.7)", position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }} className="d-flex justify-content-center align-items-center">
+            <Box p={3}>
+                <Box className='d-flex justify-content-end'>
+                    <IconButton onClick={() => setOpen(true)}>
+                        <Close style={{ color: "#fff" }} />
+                    </IconButton>
+                </Box>
+                <Box mt={2}>
+                    <Card className='shadow grow' style={{ width: "20rem" }}>
+                        <CardMedia component="img" image={PopupImage.src} alt="scale and clean" />
+                        <CardContent>
+                            <Typography variant='h3' align='center' className='subtitle'>$199 Scale & Clean and Check-up Offer*</Typography>
+                            <Typography className='para' align="center"><strong>*Limited time offer.</strong></Typography>
+                            <Box mt={3}>
+                                <Button fullWidth className="blueBtn">
+                                    <Link href="/book/">
+                                        <a style={{ color: "#fff", fontWeight: "bold", textDecoration: "none" }}>BOOK NOW</a>
+                                    </Link>
+                                </Button>
+                            </Box>
+                        </CardContent>
+                    </Card>
+                </Box>
+            </Box>
+        </Container>
+    </>)
+}
+
 
   useEffect(() => {
     setWidth(window.innerWidth)
@@ -71,7 +125,7 @@ const ScaleClean = () => {
         </script>
       </Head>
       <CommonHero align="center" />
-      <main>
+      {open ? <main>
         <Container maxWidth="xxl">
           <Grid container>
             <Grid item xs={12} md={10} className="mx-auto">
@@ -251,7 +305,7 @@ const ScaleClean = () => {
             </Grid>
           </Grid>
         </Container>
-      </main> 
+      </main> : <Popup />}
     </>
   )
 }

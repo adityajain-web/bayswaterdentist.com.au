@@ -12,7 +12,7 @@ const Team = () => {
 
   useEffect(() => {
     setWidth(window.innerWidth)
-  })
+  },[width])
 
   return (
     <>
