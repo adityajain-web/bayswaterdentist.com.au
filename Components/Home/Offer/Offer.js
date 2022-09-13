@@ -20,7 +20,7 @@ const Offer = () => {
                                     }
                                 </Grid>
                             </Box>
-                            <Box className="text-center">
+                            <Box mt={5} className="text-center">
                                 <Typography align="center"><Link href="/terms-and-conditions/">
                                     <a style={{ color: "var(--navy)", fontWeight: "600", textDecoration: "none" }}>*Terms and Conditions apply. More Afterpay Offer</a>
                                 </Link></Typography>

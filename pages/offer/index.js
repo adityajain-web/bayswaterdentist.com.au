@@ -36,7 +36,7 @@ const Offer = () => {
                     <Grid container spacing={3}>
                       {
                         [
-                          { id: "offer-1", title: "$149 Scale and Clean & Check-up* or Gap-Free", list: ["Comprehensive Dental Examination", "Scale & Clean", "Fluoride"], para: null, image: Offer1, alt: "A smiling man showing thmbsup" },
+                          { id: "offer-1", title: "$199 Scale and Clean & Check-up* or Gap-Free", list: ["Comprehensive Dental Examination", "Scale & Clean", "Fluoride"], para: null, image: Offer1, alt: "A smiling man showing thmbsup" },
 
                           { id: "offer-2", title: "$149 Kids Dental Offer or Gap-Free", list: ["Comprehensive Dental Examination", "Scale & Clean", "Fluoride"], para: null, image: Offer2, alt: "dentist with happy family" },
 

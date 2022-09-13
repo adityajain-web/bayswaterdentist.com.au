@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { About, Hero, Offer, ServiceSec, ServiceSlider, PaymentOpt, MapAddress, BlogSec, } from '../Components/components'
-import {Container, Box, IconButton, Card, CardMedia, CardContent, Typography, Button} from '@mui/material'
+import { Container, Box, IconButton, Card, CardMedia, CardContent, Typography, Button } from '@mui/material'
 import Link from 'next/link'
 import { Close } from '@mui/icons-material'
 import { useRouter } from 'next/router'
@@ -21,14 +21,14 @@ const Home = () => {
     }, [open])
 
     useEffect(() => {
+        let timer;
         if (router.pathname === "/") {
-            let timer1 = setTimeout(setOpen(false), 30000)
-
-            return () => {
-                clearTimeout(timer1)
-            }
+            timer = setTimeout(() => {
+                setOpen(true)
+            }, 30000)
         }
-    }, [router.pathname])
+        return () => clearTimeout(timer);
+    }, [router.pathname, open])
 
     useEffect(() => {
         setWidth(window.innerWidth)
@@ -39,7 +39,7 @@ const Home = () => {
     const Popup = () => {
         return (<>
             <Container maxWidth="xxl" style={{ height: "100%", backgroundColor: "rgba(0,0,0,0.7)", position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }} className="d-flex justify-content-center align-items-center">
-                <Box p={3}>
+                <Box mt={10} p={3}>
                     <Box className='d-flex justify-content-end'>
                         <IconButton onClick={() => setOpen(true)}>
                             <Close style={{ color: "#fff" }} />
@@ -52,7 +52,7 @@ const Home = () => {
                                 <Typography variant='h3' align='center' className='subtitle'>$199 Scale & Clean and Check-up Offer*</Typography>
                                 <Typography className='para' align="center"><strong>*Limited time offer.</strong></Typography>
                                 <Box mt={3}>
-                                    <Button fullWidth className="blueBtn" onClick={()=>setOpen(true)}>
+                                    <Button fullWidth className="blueBtn" onClick={() => setOpen(true)}>
                                         <Link href="/book/">
                                             <a style={{ color: "#fff", fontWeight: "bold", textDecoration: "none" }}>BOOK NOW</a>
                                         </Link>
@@ -122,7 +122,7 @@ const Home = () => {
             </script>
         </Head>
         <Hero />
-        { open ? <><main>
+        {open ? <><main>
             <section>
                 <ServiceSec />
             </section>

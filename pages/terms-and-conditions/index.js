@@ -73,7 +73,7 @@ const TNC = () => {
               <Grid item xs={12} md={10} className='mx-auto'>
                 <Box py={5}>
                   <Box>
-                    <PageSectionalHeading title="$149 Scale & Clean and Check-up offer" variant="h2" align={width > 600 ? 'left' : 'center'} />
+                    <PageSectionalHeading title="$199 Scale & Clean and Check-up offer" variant="h2" align={width > 600 ? 'left' : 'center'} />
                     <Typography className="para">This offer is only available for appointments made before Aug 4th 2022.</Typography>
                     <Typography className="para">The offer is available on the basis of the availability of appointments with practitioners This service will only be given to patients who clinically need it. In other words, service is dependent on necessity.</Typography>
                     <Typography className="para">X-ray and other dental procedures are not part of this offer.</Typography>
