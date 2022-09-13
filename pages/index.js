@@ -21,13 +21,12 @@ const Home = () => {
     }, [open])
 
     useEffect(() => {
-        let timer;
+        
         if (router.pathname === "/") {
-            timer = setTimeout(() => {
+           let timer = setTimeout(() => {
                 setOpen(true)
             }, 30000)
         }
-        return () => clearTimeout(timer);
     }, [router.pathname, open])
 
     useEffect(() => {

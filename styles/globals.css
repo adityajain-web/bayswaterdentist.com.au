@@ -347,3 +347,33 @@ h3.subtitle {
     font-size: 3.9rem !important;
   }
 }
+
+.MuiListItem-root {
+  align-items: flex-start !important;
+  padding-left: 0;
+}
+
+.MuiListItem-root .MuiListItemIcon-root {
+  min-width: 2rem !important;
+}
+
+.MuiListItem-root .MuiListItemText-root {
+  margin: 0 !important;
+}
+
+.MuiListItem-root .MuiListItemText-root span {
+  font-family: var(--para-font) !important;
+  font-size: 1.1rem !important;
+}
+
+#singleBlogId h2{
+  font-size: 1.5rem !important;
+}
+
+#singleBlogId h3{
+  font-size: 1.3rem !important;
+}
+
+#singleBlogId h4{
+  font-size: 1rem !important;
+}

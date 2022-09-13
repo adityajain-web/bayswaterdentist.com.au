@@ -63,7 +63,7 @@ const SingleBlog = ({ data }) => {
       }
       <BlogBanner hero={randomBanner} title={blog.title.rendered} />
       {
-        blog ? <main>
+        blog ? <main id="singleBlogId">
           <section>
             <Container maxWidth="xxl">
               <Grid container>

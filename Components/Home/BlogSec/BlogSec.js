@@ -31,7 +31,7 @@ const BlogSec = () => {
                                     <Grid container spacing={3} justifyContent="center">
                                         {
                                             blogs.map(item => <Grid key={item.id} item xs={12} md={6} lg={4}>
-                                                <CustomCard blogMedia={item._embedded['wp:featuredmedia'][0].source_url} cardMediaAlt={item._embedded['wp:featuredmedia'][0].alt_text} cardTitle={item.title.rendered} navlink={true} link={`/blog/${item.slug}/`} cardText={`${item.excerpt.rendered.split(" ").slice(0, 20).join(" ")}[...]`} cardList={null} height="24.8rem" />
+                                                <CustomCard blogMedia={item._embedded['wp:featuredmedia'][0].source_url} cardMediaAlt={item._embedded['wp:featuredmedia'][0].alt_text} cardTitle={item.title.rendered} navlink={true} link={`/blog/${item.slug}/`} cardText={`${item.excerpt.rendered.split(" ").slice(0, 20).join(" ")}[...]`} cardList={null} height="26.8rem" />
                                             </Grid>)
                                         }
                                     </Grid>
