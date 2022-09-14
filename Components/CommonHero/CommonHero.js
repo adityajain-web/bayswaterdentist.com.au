@@ -31,6 +31,7 @@ import ThankU from '../../public/Thank-You/ThankYou.jpg'
 import TNC from '../../public/TNC/termsConditions.jpg';
 import PrivacyPolicy from '../../public/PrivacyPolicy/privacy-2.jpg'
 import SmileDesign from '../../public/smile-design/healthcare.jpg'
+import WisdomTeeth from '../../public/wisdom-teeth/wisdom-banner.jpg'
 
 const CommonHero = ({ grid, align }) => {
     const { pathname } = useRouter()
@@ -105,6 +106,8 @@ const CommonHero = ({ grid, align }) => {
         { id: "terms-and-conditions", slug: "/terms-and-conditions", bg: TNC, title: "<span class='headingSpan1'>Terms And Conditions</span>", bookNow: false, subtitle:"" },
 
         { id: "smile-design", slug: "/smile-design", bg: SmileDesign, title: "<span class='headingSpan2'>Smile Design</span> <br /> <span class='headingSpan1'>at Bayswater</span>", bookNow: true, subtitle:"" },
+
+        { id: "wisdom-teeth", slug: "/wisdom-teeth", bg: WisdomTeeth, title: "<span class='text-white'>Wisdom Teeth Extraction</span> <br /> <span class='text-white'>at Bayswater Dentist</span>", bookNow: true, subtitle:"<span class='text-white'>Our dentists are experienced and well-trained in the procedure of wisdom teeth extraction.Wisdom teeth in Bayswater is done in a caring and compassionate way.</span>" },
     ]
 
     const bgImage = background.filter(entries => entries.slug === pathname)

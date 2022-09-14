@@ -7,10 +7,22 @@ import { Close } from '@mui/icons-material'
 import { useRouter } from 'next/router'
 import PopupImage from '../public/Home/Popup/Scale-Clean.jpg'
 
-const Home = () => {
+export const getServerSideProps = async () => {
+    const res = await fetch(`https://bayswaterdentist.com.au/blog/wp-json/wp/v2/posts?_embed=true&page=1&per_page=3`);
+    const data = await res.json();
+    return {
+      props: {
+        data,
+      },
+    }
+}
+
+const Home = ({data}) => {
     const [width, setWidth] = useState()
     const [open, setOpen] = useState(false)
     const router = useRouter()
+
+    console.log(data)
 
     useEffect(() => {
         if (open === false) {
@@ -21,9 +33,9 @@ const Home = () => {
     }, [open])
 
     useEffect(() => {
-        
+
         if (router.pathname === "/") {
-           let timer = setTimeout(() => {
+            let timer = setTimeout(() => {
                 setOpen(true)
             }, 30000)
         }
@@ -141,7 +153,7 @@ const Home = () => {
                 <MapAddress />
             </section>
             <section style={{ overflowX: "hidden" }} className='mt-md-2 mt-3 py-md-3 py-4'>
-                <BlogSec />
+                <BlogSec blogs={data} />
             </section>
         </main></> : <Popup />}
     </>)

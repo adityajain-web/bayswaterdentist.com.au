@@ -5,7 +5,7 @@ import { XMasonry, XBlock } from 'react-xmasonry'
 import { BlogSideBar, BlueBtn, CommonHero, CustomCard, SectionalHeading } from '../../Components/components';
 import { Container, Grid, Box, Button, LinearProgress } from "@mui/material";
 
-export const getStaticProps = async()=>{
+export const getServerSideProps = async()=>{
   const res = await fetch('https://bayswaterdentist.com.au/blog/wp-json/wp/v2/posts?_embed');
   const data = await res.json();
   return{

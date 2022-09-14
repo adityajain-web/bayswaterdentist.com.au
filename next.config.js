@@ -14,12 +14,6 @@ const nextConfig = {
       unoptimized: true
     }
   },
-  rewrites: async () => [
-    {
-      source: "/public/wisdom-teeth/index.html",
-      destination: "/pages/api/wisdom-teeth.js",
-    },
-  ],
 }
 
 module.exports = nextConfig

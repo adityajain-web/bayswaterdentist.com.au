@@ -3,22 +3,7 @@ import { Container, Grid, Box } from '@mui/material';
 import WPAPI from 'wpapi';
 import { SectionalHeading, CustomCard } from '../../components';
 
-const BlogSec = () => {
-    const [blogs, setBlogs] = useState([])
-
-    const wp = new WPAPI({
-        endpoint: "https://bayswaterdentist.com.au/blog/wp-json/"
-    })
-
-    const fetchBlog = async () => {
-        const posts = await wp.posts().embed().perPage(3).page(1).get();
-        setBlogs(posts)
-    }
-
-    useEffect(() => {
-        fetchBlog()
-    }, [blogs])
-
+const BlogSec = ({blogs}) => {
     return (
         <>
             {
