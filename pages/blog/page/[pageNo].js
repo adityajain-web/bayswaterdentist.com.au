@@ -6,16 +6,7 @@ import { BlogBanner, BlogSideBar, BlueBtn, CustomCard } from '../../../Component
 import { XMasonry, XBlock } from 'react-xmasonry'
 import WPAPI from 'wpapi'
 
-export const getStaticPaths = () => {
-  return {
-    paths: [
-      { params: { pageNo: '2' } },
-    ],
-    fallback: true,
-  }
-}
-
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const pageNo = context.params.pageNo
   const res = await fetch(`https://bayswaterdentist.com.au/blog/wp-json/wp/v2/posts?_embed=true&page=${pageNo}`);
   const data = await res.json();
@@ -23,7 +14,6 @@ export async function getStaticProps(context) {
     props: {
       data,
     },
-    revalidate: 10,
   }
 }
 

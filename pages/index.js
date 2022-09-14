@@ -22,8 +22,6 @@ const Home = ({data}) => {
     const [open, setOpen] = useState(false)
     const router = useRouter()
 
-    console.log(data)
-
     useEffect(() => {
         if (open === false) {
             document.querySelector('footer').style.display = "none"
