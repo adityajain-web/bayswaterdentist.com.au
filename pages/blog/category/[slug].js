@@ -6,24 +6,7 @@ import { BlogBanner, BlogSideBar, CustomCard, BlueBtn, SectionalHeading } from '
 import { Box, Container, Grid, LinearProgress } from "@mui/material";
 import { XMasonry, XBlock } from 'react-xmasonry'
 
-export const getStaticPaths = async () => {
-  const res = await fetch('https://bayswaterdentist.com.au/blog/wp-json/wp/v2/categories?_embed=true&per_page=99');
-  const data = await res.json();
-  const paths = data.map(item => {
-    return {
-      params: {
-        slug: item.slug.toString()
-      }
-    }
-  })
-
-  return {
-    paths,
-    fallback: false
-  }
-}
-
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const { slug } = context.params;
   const res = await fetch(`https://bayswaterdentist.com.au/blog/wp-json/wp/v2/categories?slug=${slug}`);
   const data = await res.json();

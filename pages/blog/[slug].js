@@ -5,24 +5,8 @@ import {useRouter} from 'next/router'
 import { BlogBanner, BlogSideBar } from '../../Components/components';
 import { Box, Container, Grid, Typography } from '@mui/material';
 
-export async function getStaticPaths() {
-  const res = await fetch('https://bayswaterdentist.com.au/blog/wp-json/wp/v2/posts?per_page=99');
-  const data = await res.json();
-  const paths = data.map((item) => {
-    return {
-      params: {
-        slug: item.slug.toString()
-      }
-    }
-  })
 
-  return {
-    paths,
-    fallback: false
-  }
-}
-
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const slug = context.params.slug
   const res = await fetch(`https://bayswaterdentist.com.au/blog/wp-json/wp/v2/posts?_embed=true&slug=${slug}`);
   const data = await res.json()
@@ -30,7 +14,6 @@ export async function getStaticProps(context) {
     props: {
       data,
     },
-    revalidate: 10,
   }
 }
 

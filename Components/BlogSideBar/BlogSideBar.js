@@ -46,9 +46,9 @@ const BlogSideBar = () => {
                                         <Box className='d-flex' style={{ position: "relative" }}>
                                             <img src={item._embedded['wp:featuredmedia'][0].source_url} alt={item._embedded['wp:featuredmedia'][0].alt_text} className="mr-3" style={{ width: "30%" }} />
                                             <Box className='flex-grow-1' style={{ width: "70%" }}>
-                                                <Typography variant='h6'><a href={`/blog/${item.slug}/`} style={{ fontSize: "0.9rem" }}>
+                                                <Typography variant='h6'><Link href={`/blog/${item.slug}/`} style={{ fontSize: "0.9rem" }}>
                                                     {item.title.rendered}
-                                                </a></Typography>
+                                                </Link></Typography>
                                             </Box>
                                         </Box>
                                     </Box>)
