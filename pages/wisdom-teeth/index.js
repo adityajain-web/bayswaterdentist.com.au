@@ -17,8 +17,9 @@ const WisdomTeeth = () => {
         useremail: "",
         message: ""
     })
-    // const [selectedFile, setSelectedFile] = useState({})
-    const router = useRouter()
+    const [selectedFile, setSelectedFile] = useState({})
+
+const router = useRouter()
 
     useEffect(() => {
         setWidth(window.innerWidth)
@@ -27,35 +28,32 @@ const WisdomTeeth = () => {
     const handleOnChange = (e) => {
         const { name, value } = e.target;
         setMail((previousValue) => {
-            return {
-                ...previousValue,
-                [name]: value
-            }
+          return {
+            ...previousValue,
+            [name]: value
+          }
         })
-    }
+      }
 
-    const handleOnSubmit = async (e) => {
+      const handleOnSubmit = async (e) => {
         e.preventDefault()
-
+    
         let data = new FormData();
-
-        // data.append('file', selectedFile);
-
-
-        data.append('mail', mail);
-        fetch('/api/contact/', {
-            method: "POST",
-            body: JSON.stringify(mail)
-        }).then(res => {
-            const { status } = res
-            if (status == 200) {
-                router.push('thank-you')
-            }else{
-                console.log(res)
+    
+        data.append('file', selectedFile);
+    
+    
+        data.append('mail', JSON.stringify(mail));
+        fetch('/api/emailwithattachment/', {
+          method: "POST",
+          body: data
+        }).then(res=>{
+            if(res.status == 200){
+                router.push('/thank-you')
             }
         })
-
-    }
+    
+      }
 
     return (
         <>
@@ -147,11 +145,11 @@ const WisdomTeeth = () => {
                                                                                 <input type="email" placeholder='Email' className='form-control' onChange={handleOnChange} value={mail.useremail} name="useremail" required />
                                                                             </div>
                                                                         </div>
-                                                                        {/* <div className='col-12 col-md-6'>
+                                                                        <div className='col-12 col-md-6'>
                                                                             <div className='form-group'>
-                                                                                <input className='form-control' type="file" name="attachment" onChange={(e) => setSelectedFile(e.target.files[0])} />
+                                                                            <input className='form-control' type="file" name="attachment" onChange={(e) => setSelectedFile(e.target.files[0])} />
                                                                             </div>
-                                                                        </div> */}
+                                                                        </div>
                                                                         <div className='col-12'>
                                                                             <div className='form-group'>
                                                                                 <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" rows="2" placeholder="Your message" name="message" onChange={handleOnChange} value={mail.message} required></textarea>
