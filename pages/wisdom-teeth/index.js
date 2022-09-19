@@ -10,10 +10,44 @@ import { CheckCircleOutline } from '@mui/icons-material'
 
 const WisdomTeeth = () => {
     const [width, setWidth] = useState();
+    const [mail, setMail] = useState({
+        username: "",
+        userphone: "",
+        useremail: "",
+        message: ""
+    })
+    const [selectedFile, setSelectedFile] = useState({})
 
     useEffect(() => {
         setWidth(window.innerWidth)
     }, [width])
+
+    const handleOnChange = (e) => {
+        const { name, value } = e.target;
+        setMail((previousValue) => {
+          return {
+            ...previousValue,
+            [name]: value
+          }
+        })
+      }
+
+      const handleOnSubmit = async (e) => {
+        e.preventDefault()
+    
+        let data = new FormData();
+    
+        data.append('file', selectedFile);
+    
+    
+        data.append('mail', JSON.stringify(mail));
+        fetch('/api/emailwithattachment/', {
+          method: "POST",
+          body: data
+        })
+    
+      }
+
     return (
         <>
             <Head>
@@ -87,35 +121,35 @@ const WisdomTeeth = () => {
                                                         <Box className='shadow formContainer' p={3} component={Paper}>
                                                             <Typography variant="h5" align="center" style={{ color: "var(--navy)" }}>Upload your OPG or Full Mouth Xray far a Rough Quote</Typography>
                                                             <Box mt={3}>
-                                                                <form>
+                                                                <form onSubmit={handleOnSubmit}>
                                                                     <div className='row'>
                                                                         <div className='col-12 col-md-6'>
                                                                             <div className='form-group'>
-                                                                                <input type="text" placeholder='Name' className='form-control' />
+                                                                                <input type="text" placeholder='Name' className='form-control' name='username' onChange={handleOnChange} value={mail.username} required />
                                                                             </div>
                                                                         </div>
                                                                         <div className='col-12 col-md-6'>
                                                                             <div className='form-group'>
-                                                                                <input type="tel" placeholder='Phone Number' className='form-control' />
+                                                                                <input type="tel" placeholder='Phone Number' className='form-control' name='userphone' onChange={handleOnChange} value={mail.userphone} required />
                                                                             </div>
                                                                         </div>
                                                                         <div className='col-12 col-md-6'>
                                                                             <div className='form-group'>
-                                                                                <input type="email" placeholder='Email' className='form-control' />
+                                                                                <input type="email" placeholder='Email' className='form-control' onChange={handleOnChange} value={mail.useremail} name="useremail" required />
                                                                             </div>
                                                                         </div>
                                                                         <div className='col-12 col-md-6'>
                                                                             <div className='form-group'>
-                                                                                <input type="file" className='form-control' />
+                                                                            <input className='form-control' type="file" name="attachment" onChange={(e) => setSelectedFile(e.target.files[0])} />
                                                                             </div>
                                                                         </div>
                                                                         <div className='col-12'>
                                                                             <div className='form-group'>
-                                                                                <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" rows="2" placeholder="Your message" name="message"></textarea>
+                                                                                <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" rows="2" placeholder="Your message" name="message" onChange={handleOnChange} value={mail.message} required></textarea>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <Button focusRipple fullWidth className='blueBtn text-white font-weight-bold' style={{ fontSize: "1.2rem !important" }}>Submit</Button>
+                                                                    <Button focusRipple fullWidth className='blueBtn text-white font-weight-bold' type='submit' style={{ fontSize: "1.2rem !important" }}>Submit</Button>
                                                                 </form>
                                                             </Box>
                                                         </Box>
@@ -245,7 +279,7 @@ const WisdomTeeth = () => {
                                                             <Box className="card-header" id="headingOne">
                                                                 <Typography className='subtitle mb-0' variant="h3">
                                                                     <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                                    How long does wisdom teeth swelling last after extraction?
+                                                                        How long does wisdom teeth swelling last after extraction?
                                                                     </button>
                                                                 </Typography>
                                                             </Box>
@@ -261,7 +295,7 @@ const WisdomTeeth = () => {
                                                             <Box className="card-header" id="headingTwo">
                                                                 <Typography className='subtitle mb-0' variant="h3">
                                                                     <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                                                    How are wisdom teeth removed?
+                                                                        How are wisdom teeth removed?
                                                                     </button>
                                                                 </Typography>
                                                             </Box>
@@ -276,7 +310,7 @@ const WisdomTeeth = () => {
                                                             <Box className="card-header" id="headingThree">
                                                                 <Typography className='subtitle mb-0' variant="h3">
                                                                     <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                                                    Common side effects of wisdom teeth removal?
+                                                                        Common side effects of wisdom teeth removal?
                                                                     </button>
                                                                 </Typography>
                                                             </Box>
@@ -291,7 +325,7 @@ const WisdomTeeth = () => {
                                                             <Box className="card-header" id="headingFour">
                                                                 <Typography className='subtitle mb-0' variant="h3">
                                                                     <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                                                    How much does wisdom teeth extraction cost?
+                                                                        How much does wisdom teeth extraction cost?
                                                                     </button>
                                                                 </Typography>
                                                             </Box>
@@ -306,7 +340,7 @@ const WisdomTeeth = () => {
                                                             <Box className="card-header" id="headingFive">
                                                                 <Typography className='subtitle mb-0' variant="h3">
                                                                     <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                                                    Is wisdom teeth removal necessary?
+                                                                        Is wisdom teeth removal necessary?
                                                                     </button>
                                                                 </Typography>
                                                             </Box>
@@ -321,7 +355,7 @@ const WisdomTeeth = () => {
                                                             <Box className="card-header" id="headingSix">
                                                                 <Typography className='subtitle mb-0' variant="h3">
                                                                     <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                                                                    Does wisdom teeth removal alter the shape of your face?
+                                                                        Does wisdom teeth removal alter the shape of your face?
                                                                     </button>
                                                                 </Typography>
                                                             </Box>
@@ -336,7 +370,7 @@ const WisdomTeeth = () => {
                                                             <Box className="card-header" id="headingSeven">
                                                                 <Typography className='subtitle mb-0' variant="h3">
                                                                     <button className="btn font-weight-bold shadow-none btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                                                                    Is removing all four wisdom teeth necessary?
+                                                                        Is removing all four wisdom teeth necessary?
                                                                     </button>
                                                                 </Typography>
                                                             </Box>
