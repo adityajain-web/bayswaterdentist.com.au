@@ -7,6 +7,7 @@ import pageImage2 from '../../public/wisdom-teeth/wisdom-teeth-2.jpg'
 import pageImage3 from '../../public/wisdom-teeth/Wisdom-teeth-pain.jpg'
 import { useEffect, useState } from 'react';
 import { CheckCircleOutline } from '@mui/icons-material'
+import { useRouter } from 'next/router';
 
 const WisdomTeeth = () => {
     const [width, setWidth] = useState();
@@ -17,6 +18,7 @@ const WisdomTeeth = () => {
         message: ""
     })
     const [selectedFile, setSelectedFile] = useState({})
+    const router = useRouter()
 
     useEffect(() => {
         setWidth(window.innerWidth)
@@ -25,28 +27,33 @@ const WisdomTeeth = () => {
     const handleOnChange = (e) => {
         const { name, value } = e.target;
         setMail((previousValue) => {
-          return {
-            ...previousValue,
-            [name]: value
-          }
+            return {
+                ...previousValue,
+                [name]: value
+            }
         })
-      }
+    }
 
-      const handleOnSubmit = async (e) => {
+    const handleOnSubmit = async (e) => {
         e.preventDefault()
-    
+
         let data = new FormData();
-    
+
         data.append('file', selectedFile);
-    
-    
+
+
         data.append('mail', JSON.stringify(mail));
         fetch('/api/emailwithattachment/', {
-          method: "POST",
-          body: data
+            method: "POST",
+            body: data
+        }).then(res => {
+            const { status } = res
+            if (status == 200) {
+                router.push('thank-you')
+            }
         })
-    
-      }
+
+    }
 
     return (
         <>
@@ -140,7 +147,7 @@ const WisdomTeeth = () => {
                                                                         </div>
                                                                         <div className='col-12 col-md-6'>
                                                                             <div className='form-group'>
-                                                                            <input className='form-control' type="file" name="attachment" onChange={(e) => setSelectedFile(e.target.files[0])} />
+                                                                                <input className='form-control' type="file" name="attachment" onChange={(e) => setSelectedFile(e.target.files[0])} />
                                                                             </div>
                                                                         </div>
                                                                         <div className='col-12'>
