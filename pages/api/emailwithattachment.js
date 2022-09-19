@@ -45,10 +45,10 @@ handler.use(uploadFile);
 
 handler.post(async (req, res) => {
   fs.readFile(req.file.path, function (err, data) {
-    // console.log("req.file", req.file);
-    // console.log("req.body", req.body.mail.useremail);
+    console.log("req.file", req.file);
+    console.log("req.body", req.body.mail.useremail);
     let formDataObject = JSON.parse(req.body.mail);
-    // console.log("req.body", formDataObject.useremail);
+    console.log("req.body", formDataObject.useremail);
    var message = {   
     sender: "adityaj.nonstop@gmail.com",    
     to:formDataObject.useremail,   
@@ -72,5 +72,6 @@ transporter.sendMail(message), function(err, success) {
 }); 
   res.status(200).end(JSON.stringify({ message:'Send Mail' }))
 });
+
 
 export default handler;
